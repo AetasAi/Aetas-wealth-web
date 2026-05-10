@@ -12,11 +12,17 @@ Content has been adapted from `aetas-wealth.com/home` and the relevant sections 
 aetas-wealth/
 ├── index.html                    Home
 ├── our-approach.html             About / Lifetime to Legacy (was: aetas-wealth.html)
+├── our-people.html               Team hub
 ├── individuals.html              Personal Planning hub (9 service cards)
 ├── businesses.html               Businesses hub (Owners + Workplace paths)
 ├── business-owners.html          Personal advice for SME owners and directors
 ├── workplace.html                ITW summary, links to itw.aetaspartners.com
 ├── contact.html                  Enquiry form & contact details
+│
+├── team/                         Adviser profile pages
+│   ├── matthew-steiner.html
+│   ├── daniel-cottam.html
+│   └── peter-rose.html
 │
 ├── services/                     Nine service pages (one per offering)
 │   ├── cash-flow-planning.html
@@ -37,7 +43,8 @@ aetas-wealth/
 ├── assets/
 │   ├── css/styles.css            Single design-system stylesheet
 │   ├── js/main.js                Nav toggle, active link, scroll reveal
-│   └── images/                   Placeholder for site imagery
+│   └── images/                   Placeholder for site imagery (team headshots
+│                                 currently hot-linked from aetas-partners.com)
 │
 ├── 404.html                      Custom not-found page
 ├── robots.txt                    SEO crawler rules
@@ -47,7 +54,7 @@ aetas-wealth/
 └── README.md                     This file
 ```
 
-**Top navigation**: Home · Our approach · Individuals · Businesses · Insights · Contact · Book a meeting
+**Top navigation**: Home · Our approach · Our People · Individuals · Businesses · Insights · Contact · Book a meeting
 
 ---
 
