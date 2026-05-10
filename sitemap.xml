@@ -54,6 +54,12 @@
   </url>
 
   <url>
+    <loc>https://aetas-wealth.com/working-with-us.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://aetas-wealth.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -63,11 +69,23 @@
   <url><loc>https://aetas-wealth.com/terms.html</loc><priority>0.4</priority></url>
   <url><loc>https://aetas-wealth.com/complaints.html</loc><priority>0.4</priority></url>
 
+  <!-- Case studies -->
+  <url><loc>https://aetas-wealth.com/case-studies/index.html</loc><priority>0.8</priority></url>
+  <url><loc>https://aetas-wealth.com/case-studies/retiring-with-confidence.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/case-studies/business-owner-exit.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/case-studies/inherited-wealth-clarity.html</loc><priority>0.7</priority></url>
+
   <url>
     <loc>https://aetas-wealth.com/insights/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Insights articles -->
+  <url><loc>https://aetas-wealth.com/insights/posts/cash-flow-planning.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/insights/posts/inheritance-tax-rising.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/insights/posts/pension-changes-ahead.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/insights/posts/market-commentary-april-2026.html</loc><priority>0.7</priority></url>
 
   <!-- Services -->
   <url><loc>https://aetas-wealth.com/services/cash-flow-planning.html</loc><priority>0.7</priority></url>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wealth &amp; Investment Management | Aetas Wealth</title>
-  <meta name="description" content="Investment advice that is straightforward, evidence-based, and aligned with your wider plan. We help you build and manage a portfolio that fits your goals and your tolerance for risk.">
+  <title>Director and Owner Advisory | Aetas Wealth</title>
+  <meta name="description" content="Personal financial advice for directors and SME owners. We help you balance pension contributions, dividends, protection and exit planning so the business and your personal wealth grow together.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
@@ -43,10 +43,10 @@
       <a href="../index.html">Home</a>
       <span class="sep">/</span>
       <a href="../individuals.html">Individuals</a>
-      <span class="sep">/</span> Wealth &amp; Investment Management
+      <span class="sep">/</span> Director and Owner Advisory
     </div>
-    <h1>Wealth &amp; Investment Management</h1>
-    <p class="lead">Investing well is more about discipline than cleverness. We help you build a portfolio that fits your goals, your timescale and your tolerance for ups and downs.</p>
+    <h1>Director and Owner Advisory</h1>
+    <p class="lead">When your business and your personal finances are tangled together, decisions in one have consequences in the other. We help directors and owner-managers make those decisions deliberately.</p>
   </div>
 </section>
 
@@ -55,21 +55,21 @@
     <div class="grid grid-2" style="gap: 4rem; align-items: start;">
       <div>
         <span class="eyebrow">Overview</span>
-        <h2>Investing with purpose, not on hunches</h2>
-        <p>Good investing is rarely about picking winners. It is about getting the basics right and sticking to them. The right mix of investments for your timescale. A sensible level of risk. Costs kept under control. A clear plan you can follow when markets get bumpy.</p>
-        <p>We start by understanding what the money is for. Retirement income in twenty years looks very different from a house deposit in three. From there we build a portfolio that matches the job, using straightforward, well-known funds, and we keep the costs and the tax wrappers as efficient as we can.</p>
-        <p>Then we leave it alone, mostly. Rebalancing when needed, reviewing each year, and only making bigger changes when something in your life or the plan genuinely calls for it.</p>
+        <h2>Your business and your personal wealth, planned together</h2>
+        <p>Generic financial advice treats personal and business finances as two separate worlds. For most directors and owner-managers, that is not how life works. How you take income, how the company pays into your pension, when you protect against losing a key person, when and how you eventually sell or step back, all of these sit in the overlap.</p>
+        <p>Our job is to make sense of that overlap. We work with you on the personal side, with your accountant on the company side, and bring it together into a plan that works for both. The aim is to build personal wealth efficiently while keeping the business resilient and your family protected.</p>
+        <p>The starting point is always your situation. How the business is structured, what stage it is at, what you want personally, and how soon. The plan grows from there.</p>
       </div>
       <aside class="hero-aside" style="margin: 0;">
-        <h3>How we manage your money</h3>
+        <h3>Where we typically help</h3>
         <ul>
-          <li>Goals first, products second</li>
-          <li>ISA, pension and general investment accounts used properly</li>
-          <li>Diversified across regions, asset types and styles</li>
-          <li>Cost-aware, mostly low-cost funds</li>
-          <li>Risk profile reviewed at least annually</li>
-          <li>Ethical and sustainable options where you want them</li>
-          <li>Clear reporting in plain English</li>
+          <li>Salary, dividends and employer pension contributions</li>
+          <li>Pension structures including SSAS and SIPP</li>
+          <li>Director and key person cover</li>
+          <li>Shareholder protection arrangements</li>
+          <li>Business Asset Disposal Relief and exit planning</li>
+          <li>Family succession and intergenerational planning</li>
+          <li>Inheritance tax and Business Property Relief</li>
         </ul>
       </aside>
     </div>
@@ -79,41 +79,41 @@
 <section class="section section-soft">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">How we think about investing</span>
-      <h2>Six principles we keep coming back to</h2>
-      <p>These are not slogans. They are the things we believe deliver the best results for clients over time, and they shape every recommendation we make.</p>
+      <span class="eyebrow">Six conversations worth having</span>
+      <h2>The areas where good advice tends to pay for itself</h2>
+      <p>Not every meeting covers every topic. We start with what matters most for you now and build from there.</p>
     </div>
 
     <div class="grid grid-3">
       <div class="card reveal">
         <div class="card-icon">01</div>
-        <h3>Match the investment to the goal</h3>
-        <p>Money you need next year should not be invested like money you need in twenty. We separate short, medium and long-term pots, and invest each one accordingly.</p>
+        <h3>How you take your income</h3>
+        <p>The mix of salary, dividends and employer pension contributions matters. Get it right and the same money in your pocket can cost the company materially less. We work this through with your accountant each year.</p>
       </div>
       <div class="card reveal">
         <div class="card-icon">02</div>
-        <h3>Diversify properly</h3>
-        <p>Spreading risk across regions, sectors and types of investment means no single bad outcome wrecks the plan. We do not bet the portfolio on any one country, sector or style.</p>
+        <h3>Pension contributions from the company</h3>
+        <p>Employer pension contributions sit outside the salary tax trade-off and use a different allowance. For most directors, they are the most tax-efficient way of building personal wealth from the business. We make sure you are using them properly.</p>
       </div>
       <div class="card reveal">
         <div class="card-icon">03</div>
-        <h3>Keep costs low</h3>
-        <p>Every percent of charges is a percent less for you. We use low-cost funds where they do the job well, and only pay more when there is a clear reason.</p>
+        <h3>Protecting the business</h3>
+        <p>What happens if a key director cannot work, or dies? Key person cover replaces the lost profits. Shareholder protection lets the remaining owners buy the affected share without forcing a sale or borrowing. Both sit alongside the legal agreements.</p>
       </div>
       <div class="card reveal">
         <div class="card-icon">04</div>
-        <h3>Use the right wrappers</h3>
-        <p>ISAs, pensions and general investment accounts have different tax treatment. Using each one properly can make a meaningful difference over the years, without changing the underlying investments.</p>
+        <h3>Planning the exit early</h3>
+        <p>Whether you sell, pass the business to family, or step back gradually, the planning is best started years in advance. Business Asset Disposal Relief, sale structuring, and what you do with the proceeds all sit here.</p>
       </div>
       <div class="card reveal">
         <div class="card-icon">05</div>
-        <h3>Stay invested</h3>
-        <p>The biggest mistake most investors make is jumping in and out at the wrong moments. We help you stay the course when markets wobble, because that is where most of the long-term returns come from.</p>
+        <h3>Inheritance tax and the business</h3>
+        <p>The Finance Act 2026 capped Business Property Relief at £1 million per person. For owners with substantial business interests, this changed the IHT planning conversation overnight. There may be steps worth taking sooner rather than later.</p>
       </div>
       <div class="card reveal">
         <div class="card-icon">06</div>
-        <h3>Review, but do not tinker</h3>
-        <p>An annual review keeps the portfolio aligned with the plan. Outside of that, we resist the urge to react to every news cycle. Quiet discipline tends to beat constant activity.</p>
+        <h3>Family and succession</h3>
+        <p>Who takes over, when, and on what terms is rarely a financial question alone. We work alongside your solicitor and accountant on the parts of succession that touch on personal wealth, family conversations and long-term security.</p>
       </div>
     </div>
   </div>
@@ -129,7 +129,7 @@
 
 <section class="section section-tight" style="background: var(--paper-warm); border-top: 1px solid var(--line);">
   <div class="container text-center">
-    <h2 style="font-weight: 300;">Talk to an investment adviser</h2>
+    <h2 style="font-weight: 300;">Talk to an adviser who understands directors</h2>
     <p style="max-width: 600px; margin: 0 auto 2rem;">Book a no-obligation conversation. We will talk through where you are now and explore whether we can help.</p>
     <a href="../contact.html#meeting" class="btn btn-primary btn-arrow">Book a meeting</a>
   </div>
