@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pensions &amp; Retirement Planning | Aetas Wealth</title>
-  <meta name="description" content="Plain-English advice on pensions and retirement. We help you understand what you have, what it will give you, and how to get the most from it.">
+  <title>Wealth &amp; Investment Management | Aetas Wealth</title>
+  <meta name="description" content="Investment advice that is straightforward, evidence-based, and aligned with your wider plan. We help you build and manage a portfolio that fits your goals and your tolerance for risk.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
@@ -43,10 +43,10 @@
       <a href="../index.html">Home</a>
       <span class="sep">/</span>
       <a href="../individuals.html">Individuals</a>
-      <span class="sep">/</span> Pensions &amp; Retirement Planning
+      <span class="sep">/</span> Wealth &amp; Investment Management
     </div>
-    <h1>Pensions &amp; Retirement Planning</h1>
-    <p class="lead">Retirement should be something to look forward to, not something to worry about. We help you understand your pensions, your options, and what comes next.</p>
+    <h1>Wealth &amp; Investment Management</h1>
+    <p class="lead">Investing well is more about discipline than cleverness. We help you build a portfolio that fits your goals, your timescale and your tolerance for ups and downs.</p>
   </div>
 </section>
 
@@ -55,20 +55,21 @@
     <div class="grid grid-2" style="gap: 4rem; align-items: start;">
       <div>
         <span class="eyebrow">Overview</span>
-        <h2>A clearer view of your retirement</h2>
-        <p>Most of us have a vague sense of what we want retirement to look like. Travel a bit more. Work a bit less. Spend more time with family. The harder question is whether the money will actually support that life, and for how long.</p>
-        <p>We start by looking at what you already have. Old pensions from past jobs, current pension contributions, ISAs, other savings, and any property or business interests that will play a part. We make sense of the whole picture, identify gaps, and build a plan that fits the retirement you actually want.</p>
-        <p>Whether retirement is decades away, just around the corner, or already underway, the goal is the same: clarity on where you stand, and a plan you can trust.</p>
+        <h2>Investing with purpose, not on hunches</h2>
+        <p>Good investing is rarely about picking winners. It is about getting the basics right and sticking to them. The right mix of investments for your timescale. A sensible level of risk. Costs kept under control. A clear plan you can follow when markets get bumpy.</p>
+        <p>We start by understanding what the money is for. Retirement income in twenty years looks very different from a house deposit in three. From there we build a portfolio that matches the job, using straightforward, well-known funds, and we keep the costs and the tax wrappers as efficient as we can.</p>
+        <p>Then we leave it alone, mostly. Rebalancing when needed, reviewing each year, and only making bigger changes when something in your life or the plan genuinely calls for it.</p>
       </div>
       <aside class="hero-aside" style="margin: 0;">
-        <h3>How we help</h3>
+        <h3>How we manage your money</h3>
         <ul>
-          <li>Track down and review old pensions</li>
-          <li>Combine pensions where it makes sense</li>
-          <li>Show you how much income you can expect</li>
-          <li>Plan how to take it tax-efficiently</li>
-          <li>Help with final-salary (defined benefit) pensions</li>
-          <li>Cash flow modelling so you can see the years ahead</li>
+          <li>Goals first, products second</li>
+          <li>ISA, pension and general investment accounts used properly</li>
+          <li>Diversified across regions, asset types and styles</li>
+          <li>Cost-aware, mostly low-cost funds</li>
+          <li>Risk profile reviewed at least annually</li>
+          <li>Ethical and sustainable options where you want them</li>
+          <li>Clear reporting in plain English</li>
         </ul>
       </aside>
     </div>
@@ -78,21 +79,41 @@
 <section class="section section-soft">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">How we help</span>
-      <h2>Whether you are working, near retirement or already retired</h2>
-      <p>Most clients fall into one of two camps. The advice for each is different.</p>
+      <span class="eyebrow">How we think about investing</span>
+      <h2>Six principles we keep coming back to</h2>
+      <p>These are not slogans. They are the things we believe deliver the best results for clients over time, and they shape every recommendation we make.</p>
     </div>
 
-    <div class="grid grid-2" style="gap: 2.5rem;">
-      <div class="card reveal" style="padding: 2.5rem;">
+    <div class="grid grid-3">
+      <div class="card reveal">
         <div class="card-icon">01</div>
-        <h3>For individuals and families</h3>
-        <p>We help people review their existing pensions, work out whether they are saving enough, and plan how to take the income when the time comes. We will show you what your retirement could look like at different ages, and what changes today could mean for the years ahead.</p>
+        <h3>Match the investment to the goal</h3>
+        <p>Money you need next year should not be invested like money you need in twenty. We separate short, medium and long-term pots, and invest each one accordingly.</p>
       </div>
-      <div class="card reveal" style="padding: 2.5rem;">
-        <div class="card-icon" style="background: var(--aetas-gold); color: #fff;">02</div>
-        <h3>For business owners</h3>
-        <p>Many business owners put their company first and their own retirement second. We help directors and owner-managers build a plan that uses the business sensibly, including pension contributions from the company, and that lines up with how and when you want to step back. Personal and business goals, planned together.</p>
+      <div class="card reveal">
+        <div class="card-icon">02</div>
+        <h3>Diversify properly</h3>
+        <p>Spreading risk across regions, sectors and types of investment means no single bad outcome wrecks the plan. We do not bet the portfolio on any one country, sector or style.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">03</div>
+        <h3>Keep costs low</h3>
+        <p>Every percent of charges is a percent less for you. We use low-cost funds where they do the job well, and only pay more when there is a clear reason.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">04</div>
+        <h3>Use the right wrappers</h3>
+        <p>ISAs, pensions and general investment accounts have different tax treatment. Using each one properly can make a meaningful difference over the years, without changing the underlying investments.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">05</div>
+        <h3>Stay invested</h3>
+        <p>The biggest mistake most investors make is jumping in and out at the wrong moments. We help you stay the course when markets wobble, because that is where most of the long-term returns come from.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">06</div>
+        <h3>Review, but do not tinker</h3>
+        <p>An annual review keeps the portfolio aligned with the plan. Outside of that, we resist the urge to react to every news cycle. Quiet discipline tends to beat constant activity.</p>
       </div>
     </div>
   </div>
@@ -108,7 +129,7 @@
 
 <section class="section section-tight" style="background: var(--paper-warm); border-top: 1px solid var(--line);">
   <div class="container text-center">
-    <h2 style="font-weight: 300;">Talk to a retirement specialist</h2>
+    <h2 style="font-weight: 300;">Talk to an investment adviser</h2>
     <p style="max-width: 600px; margin: 0 auto 2rem;">Book a no-obligation conversation. We will talk through where you are now and explore whether we can help.</p>
     <a href="../contact.html#meeting" class="btn btn-primary btn-arrow">Book a meeting</a>
   </div>
