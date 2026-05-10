@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Aetas Wealth</title>
+  <meta name="description" content="Get in touch with Aetas Wealth. Book an initial meeting, send us an enquiry, or visit us at our Mayfair office.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- SHARED: site-header -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Aetas Wealth home">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">
+        <span>Aetas Wealth</span>
+        <span>Lifetime to Legacy</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aetas-wealth.html">Aetas Wealth</a></li>
+      <li><a href="individuals.html">Individuals</a></li>
+      <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#meeting" class="nav-cta">Book a meeting</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="container">
+    <div class="breadcrumbs"><a href="index.html">Home</a><span class="sep">/</span> Contact</div>
+    <h1>Get in touch</h1>
+    <p class="lead">If you would like to review your finances, plan for retirement, or explore ways to structure your wealth more efficiently, we would be happy to have an initial conversation.</p>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="section" id="meeting">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 4rem;">
+
+      <!-- FORM -->
+      <div>
+        <span class="eyebrow">Enquiry form</span>
+        <h2>Send us a message</h2>
+        <p>Tell us a little about what you'd like to discuss, and one of our advisers will be in touch within one working day.</p>
+
+        <!-- Form: replace action= with your form handler endpoint (e.g. Formspree, Netlify forms, GHL) -->
+        <form class="form-grid" action="#" method="post" style="margin-top: 2rem;">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="topic">I would like help with</label>
+            <select id="topic" name="topic">
+              <option>Ensuring my money is working as hard as possible</option>
+              <option>Planning for retirement</option>
+              <option>Protecting my family's financial future</option>
+              <option>Inheritance tax and estate planning</option>
+              <option>Reviewing existing investments and pensions</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Anything you'd like us to know</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <div class="form-field" style="font-size: 0.85rem; color: var(--ink-muted);">
+            <label style="display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; color: var(--ink-soft); text-transform: none; letter-spacing: 0;">
+              <input type="checkbox" name="consent" required style="margin-top: 4px;">
+              <span>I'm happy for Aetas Wealth to contact me about my enquiry. Personal information will be handled in line with the Data Protection Act 2018 and our Privacy Policy.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-arrow" style="justify-self: start;">Send enquiry</button>
+        </form>
+      </div>
+
+      <!-- DETAILS -->
+      <div>
+        <span class="eyebrow">Direct contact</span>
+        <h2>Speak to an adviser</h2>
+        <p>You're welcome to phone us directly, send an email, or visit us at our Mayfair office.</p>
+
+        <div class="contact-strip" style="margin-top: 2rem;">
+          <div>
+            <h4>London office</h4>
+            <p>Aetas Wealth<br>13 Hanover Square<br>Mayfair, London<br>W1S 1HN</p>
+          </div>
+          <div>
+            <h4>Telephone</h4>
+            <p><a href="tel:02036330579">020 3633 0579</a></p>
+            <h4 style="margin-top: 1.25rem;">Email</h4>
+            <p><a href="mailto:enquiries@aetas-wealth.com">enquiries@aetas-wealth.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-strip" style="margin-top: 1.5rem;">
+          <div>
+            <h4>Registered office</h4>
+            <p>Aetas Wealth<br>Insight House<br>7a Alkmaar Way<br>Norwich International Business Park<br>Norwich, NR6 6BF</p>
+          </div>
+          <div>
+            <h4>Complaints</h4>
+            <p><a href="mailto:complaints@aetas-wealth.com">complaints@aetas-wealth.com</a></p>
+            <h4 style="margin-top: 1.25rem;">Data protection</h4>
+            <p><a href="mailto:dataprotection@aetas-wealth.com">dataprotection@aetas-wealth.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="section-tight">
+  <div class="container-narrow">
+    <div class="disclaimer">
+      <p style="margin: 0;"><strong>Data protection.</strong> You voluntarily choose to provide personal details to us via this website. Personal information will be treated as confidential and held in accordance with the Data Protection Act 2018. By submitting this form you agree that your information may be used to provide you with details of services and products in writing, by email or by telephone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHARED: site-footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark" style="background:#fff; color: var(--aetas-blue);">A</span>
+          <span class="brand-text">
+            <span style="color:#fff;">Aetas Wealth</span>
+            <span>Lifetime to Legacy</span>
+          </span>
+        </div>
+        <p>Independent financial planning for individuals, families and business owners across the UK.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aetas-wealth.html">Aetas Wealth</a></li>
+          <li><a href="individuals.html">Individuals</a></li>
+          <li><a href="insights/index.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/pensions-retirement.html">Pensions &amp; retirement</a></li>
+          <li><a href="services/investment-management.html">Investment management</a></li>
+          <li><a href="services/inheritance-tax.html">Inheritance tax planning</a></li>
+          <li><a href="services/protection-planning.html">Protection planning</a></li>
+          <li><a href="services/financial-planning.html">Financial planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>London office</h4>
+        <ul>
+          <li>13 Hanover Square</li>
+          <li>Mayfair, London</li>
+          <li>W1S 1HN</li>
+          <li><a href="tel:02036330579">020 3633 0579</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><strong>Aetas Wealth</strong> is a trading style of Insight Financial Associates Ltd, authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Insight Financial Associates Ltd is a company incorporated in England and Wales with company number 05054886. Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.</p>
+      <p>© <span data-year>2026</span> Aetas Wealth. All rights reserved. <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="#">Cookies</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
