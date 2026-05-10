@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wealth &amp; Investment Management | Aetas Wealth</title>
-  <meta name="description" content="Investment advice that is straightforward, evidence-based, and aligned with your wider plan. We help you build and manage a portfolio that fits your goals and your tolerance for risk.">
+  <title>Peter Rose | Aetas Wealth</title>
+  <meta name="description" content="Peter Rose, Chartered Financial Planner and Pensions Specialist with over 50 years' experience, focused on the transition into retirement and the years that follow.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<!-- SHARED: site-header -->
 <header class="site-header">
   <div class="container nav-inner">
     <a href="../index.html" class="brand" aria-label="Aetas Wealth home">
@@ -30,6 +31,7 @@
       <li><a href="../our-people.html">Our People</a></li>
       <li><a href="../individuals.html">Individuals</a></li>
       <li><a href="../businesses.html">Businesses</a></li>
+          <li><a href="../fees.html">Fees</a></li>
       <li><a href="../insights/index.html">Insights</a></li>
       <li><a href="../contact.html">Contact</a></li>
       <li><a href="../contact.html#meeting" class="nav-cta">Book a meeting</a></li>
@@ -37,104 +39,75 @@
   </div>
 </header>
 
+<!-- PAGE BANNER -->
 <section class="page-banner">
   <div class="container">
     <div class="breadcrumbs">
-      <a href="../index.html">Home</a>
-      <span class="sep">/</span>
-      <a href="../individuals.html">Individuals</a>
-      <span class="sep">/</span> Wealth &amp; Investment Management
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../our-people.html">Our People</a><span class="sep">/</span> Peter Rose
     </div>
-    <h1>Wealth &amp; Investment Management</h1>
-    <p class="lead">Investing well is more about discipline than cleverness. We help you build a portfolio that fits your goals, your timescale and your tolerance for ups and downs.</p>
+    <span class="eyebrow turquoise" style="color: var(--aetas-gold-soft);">Chartered Financial Planner</span>
+    <h1>Peter Rose</h1>
+    <p class="lead">Chartered Financial Planner and Pensions Specialist with over 50 years' experience advising private clients, families and business owners.</p>
   </div>
 </section>
 
+<!-- PROFILE -->
 <section class="section">
   <div class="container">
-    <div class="grid grid-2" style="gap: 4rem; align-items: start;">
-      <div>
-        <span class="eyebrow">Overview</span>
-        <h2>Investing with purpose, not on hunches</h2>
-        <p>Good investing is rarely about picking winners. It is about getting the basics right and sticking to them. The right mix of investments for your timescale. A sensible level of risk. Costs kept under control. A clear plan you can follow when markets get bumpy.</p>
-        <p>We start by understanding what the money is for. Retirement income in twenty years looks very different from a house deposit in three. From there we build a portfolio that matches the job, using straightforward, well-known funds, and we keep the costs and the tax wrappers as efficient as we can.</p>
-        <p>Then we leave it alone, mostly. Rebalancing when needed, reviewing each year, and only making bigger changes when something in your life or the plan genuinely calls for it.</p>
-      </div>
-      <aside class="hero-aside" style="margin: 0;">
-        <h3>How we manage your money</h3>
-        <ul>
-          <li>Goals first, products second</li>
-          <li>ISA, pension and general investment accounts used properly</li>
-          <li>Diversified across regions, asset types and styles</li>
-          <li>Cost-aware, mostly low-cost funds</li>
-          <li>Risk profile reviewed at least annually</li>
-          <li>Ethical and sustainable options where you want them</li>
-          <li>Clear reporting in plain English</li>
-        </ul>
+    <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
+
+      <!-- LEFT: photo + contact card -->
+      <aside style="position: sticky; top: 90px;">
+        <img src="https://aetas-partners.com/wp-content/uploads/2026/03/peter-rose-650x650.png" alt="Peter Rose"
+             style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md); margin-bottom: 1.5rem;"
+             loading="lazy">
+        <div class="contact-strip" style="padding: 1.5rem; margin: 0;">
+          <div>
+            <h4>Role</h4>
+            <p style="font-size: 0.95rem;">Chartered Financial Planner</p>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p style="font-size: 0.95rem;"><a href="mailto:peter.rose@aetas-wealth.com">peter.rose@aetas-wealth.com</a></p>
+          </div>
+          <div>
+            <h4>Office</h4>
+            <p style="font-size: 0.95rem;">13 Hanover Square<br>Mayfair, London<br>W1S 1HN</p>
+          </div>
+        </div>
+        <a href="https://links.aetas-partners.com/widget/booking/65kC9dm2WgkoxziAWlFE" class="btn btn-primary btn-arrow" style="display: block; text-align: center; margin-top: 1.5rem;">Book a meeting with Peter</a>
       </aside>
+
+      <!-- RIGHT: bio -->
+      <div class="post-body" style="max-width: none;">
+        <p>Peter is a Chartered Financial Planner and Pensions Specialist with over 50 years' experience advising private clients, families and business owners.</p>
+        <p>He focuses particularly on the transition into retirement and the years that follow, helping clients structure their affairs to support sustainable income, capital preservation and long-term planning. His work centres on bringing clarity to complex financial arrangements, ensuring that decisions made today continue to support clients and their families over time.</p>
+        <p>Peter is known for a measured and straightforward approach, grounded in experience, sound judgement and a clear sense of responsibility to the clients he advises.</p>
+        <p>Outside of his professional work, Peter has a long-standing interest in chess, along with a well-developed appreciation for food, wine and travel. He also enjoys the cinema and theatre and, when time allows, driving his Alfa Romeo Spider, while maintaining a pragmatic distance from DIY.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">How we think about investing</span>
-      <h2>Six principles we keep coming back to</h2>
-      <p>These are not slogans. They are the things we believe deliver the best results for clients over time, and they shape every recommendation we make.</p>
-    </div>
-
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <div class="card-icon">01</div>
-        <h3>Match the investment to the goal</h3>
-        <p>Money you need next year should not be invested like money you need in twenty. We separate short, medium and long-term pots, and invest each one accordingly.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">02</div>
-        <h3>Diversify properly</h3>
-        <p>Spreading risk across regions, sectors and types of investment means no single bad outcome wrecks the plan. We do not bet the portfolio on any one country, sector or style.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">03</div>
-        <h3>Keep costs low</h3>
-        <p>Every percent of charges is a percent less for you. We use low-cost funds where they do the job well, and only pay more when there is a clear reason.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">04</div>
-        <h3>Use the right wrappers</h3>
-        <p>ISAs, pensions and general investment accounts have different tax treatment. Using each one properly can make a meaningful difference over the years, without changing the underlying investments.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">05</div>
-        <h3>Stay invested</h3>
-        <p>The biggest mistake most investors make is jumping in and out at the wrong moments. We help you stay the course when markets wobble, because that is where most of the long-term returns come from.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">06</div>
-        <h3>Review, but do not tinker</h3>
-        <p>An annual review keeps the portfolio aligned with the plan. Outside of that, we resist the urge to react to every news cycle. Quiet discipline tends to beat constant activity.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- DISCLAIMER -->
 <section class="section-tight">
   <div class="container-narrow">
     <div class="disclaimer">
-      <p style="margin: 0;">The Financial Conduct Authority does not regulate Wills, Trusts or Tax advice. Tax treatment depends on individual circumstances and may be subject to change in the future. The value of your investments can go down as well as up, so you could get back less than you invested.</p>
+      <p style="margin: 0;">Aetas Wealth is a trading style of Insight Financial Associates Ltd, authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Advice provided by named advisers is given on behalf of the firm. The Financial Conduct Authority does not regulate Wills, Trusts or Tax advice.</p>
     </div>
   </div>
 </section>
 
-<section class="section section-tight" style="background: var(--paper-warm); border-top: 1px solid var(--line);">
+<!-- BACK TO TEAM -->
+<section class="section-tight" style="background: var(--paper-warm); border-top: 1px solid var(--line);">
   <div class="container text-center">
-    <h2 style="font-weight: 300;">Talk to an investment adviser</h2>
-    <p style="max-width: 600px; margin: 0 auto 2rem;">Book a no-obligation conversation. We will talk through where you are now and explore whether we can help.</p>
-    <a href="../contact.html#meeting" class="btn btn-primary btn-arrow">Book a meeting</a>
+    <a href="../our-people.html" class="btn btn-ghost">← Back to Our People</a>
   </div>
 </section>
 
+<!-- SHARED: site-footer -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -156,6 +129,7 @@
           <li><a href="../our-people.html">Our People</a></li>
           <li><a href="../individuals.html">Individuals</a></li>
           <li><a href="../businesses.html">Businesses</a></li>
+          <li><a href="../fees.html">Fees</a></li>
           <li><a href="../insights/index.html">Insights</a></li>
           <li><a href="../contact.html">Contact</a></li>
         </ul>
@@ -163,11 +137,11 @@
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="pensions-retirement.html">Pensions &amp; retirement</a></li>
-          <li><a href="investment-management.html">Investment management</a></li>
-          <li><a href="inheritance-tax.html">Inheritance tax planning</a></li>
-          <li><a href="later-life-planning.html">Later life planning</a></li>
-          <li><a href="financial-planning.html">Financial planning</a></li>
+          <li><a href="../services/pensions-retirement.html">Pensions &amp; retirement</a></li>
+          <li><a href="../services/investment-management.html">Investment management</a></li>
+          <li><a href="../services/inheritance-tax.html">Inheritance tax planning</a></li>
+          <li><a href="../services/later-life-planning.html">Later life planning</a></li>
+          <li><a href="../services/financial-planning.html">Financial planning</a></li>
         </ul>
       </div>
       <div>
@@ -180,9 +154,10 @@
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p><strong>Aetas Wealth</strong> is a trading style of Insight Financial Associates Ltd, authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Insight Financial Associates Ltd is a company incorporated in England and Wales with company number 05054886. Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.</p>
-      <p>© <span data-year>2026</span> Aetas Wealth. All rights reserved. <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="#">Cookies</a></p>
+      <p>© <span data-year>2026</span> Aetas Wealth. All rights reserved. <a href="../privacy.html">Privacy &amp; Cookies</a> · <a href="../terms.html">Terms of Use</a> · <a href="../complaints.html">Complaints</a></p>
     </div>
   </div>
 </footer>
