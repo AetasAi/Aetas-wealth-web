@@ -8,7 +8,7 @@
   </url>
 
   <url>
-    <loc>https://aetas-wealth.com/aetas-wealth.html</loc>
+    <loc>https://aetas-wealth.com/our-approach.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -17,6 +17,24 @@
     <loc>https://aetas-wealth.com/individuals.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://aetas-wealth.com/businesses.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://aetas-wealth.com/business-owners.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://aetas-wealth.com/workplace.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -37,6 +55,7 @@
   <url><loc>https://aetas-wealth.com/services/financial-planning.html</loc><priority>0.7</priority></url>
   <url><loc>https://aetas-wealth.com/services/inheritance-tax.html</loc><priority>0.7</priority></url>
   <url><loc>https://aetas-wealth.com/services/investment-management.html</loc><priority>0.7</priority></url>
+  <url><loc>https://aetas-wealth.com/services/later-life-planning.html</loc><priority>0.8</priority></url>
   <url><loc>https://aetas-wealth.com/services/mortgages.html</loc><priority>0.7</priority></url>
   <url><loc>https://aetas-wealth.com/services/pensions-retirement.html</loc><priority>0.7</priority></url>
   <url><loc>https://aetas-wealth.com/services/protection-planning.html</loc><priority>0.7</priority></url>

@@ -11,18 +11,22 @@ Content has been adapted from `aetas-wealth.com/home` and the relevant sections 
 ```
 aetas-wealth/
 ├── index.html                    Home
-├── aetas-wealth.html             About Aetas Wealth (Lifetime to Legacy)
-├── individuals.html              Personal Planning hub
+├── our-approach.html             About / Lifetime to Legacy (was: aetas-wealth.html)
+├── individuals.html              Personal Planning hub (9 service cards)
+├── businesses.html               Businesses hub (Owners + Workplace paths)
+├── business-owners.html          Personal advice for SME owners and directors
+├── workplace.html                ITW summary, links to itw.aetaspartners.com
 ├── contact.html                  Enquiry form & contact details
 │
-├── services/                     Eight service pages (one per offering)
+├── services/                     Nine service pages (one per offering)
 │   ├── cash-flow-planning.html
 │   ├── director-owner-advisory.html
 │   ├── financial-planning.html
 │   ├── inheritance-tax.html
 │   ├── investment-management.html
+│   ├── later-life-planning.html  IHT-focused, post-Finance Act 2026
 │   ├── mortgages.html
-│   ├── pensions-retirement.html  (fullest example, use as template)
+│   ├── pensions-retirement.html  (fullest individual-services template)
 │   └── protection-planning.html
 │
 ├── insights/                     Blog / insights
@@ -42,6 +46,8 @@ aetas-wealth/
 ├── .gitignore
 └── README.md                     This file
 ```
+
+**Top navigation**: Home · Our approach · Individuals · Businesses · Insights · Contact · Book a meeting
 
 ---
 
