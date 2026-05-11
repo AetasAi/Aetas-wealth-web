@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aetas-wealth.com/sitemap.xml
