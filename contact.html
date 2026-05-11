@@ -58,45 +58,24 @@
         <h2>Send us a message</h2>
         <p>Tell us a little about what you'd like to discuss, and one of our advisers will be in touch within one working day.</p>
 
-        <!-- Form: replace action= with your form handler endpoint (e.g. Formspree, Netlify forms, GHL) -->
-        <form class="form-grid" action="#" method="post" style="margin-top: 2rem;">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Full name</label>
-              <input id="name" name="name" type="text" required autocomplete="name">
-            </div>
-            <div class="form-field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="form-field">
-            <label for="topic">I would like help with</label>
-            <select id="topic" name="topic">
-              <option>Ensuring my money is working as hard as possible</option>
-              <option>Planning for retirement</option>
-              <option>Protecting my family's financial future</option>
-              <option>Inheritance tax and estate planning</option>
-              <option>Reviewing existing investments and pensions</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="message">Anything you'd like us to know</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-          </div>
-          <div class="form-field" style="font-size: 0.85rem; color: var(--ink-muted);">
-            <label style="display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; color: var(--ink-soft); text-transform: none; letter-spacing: 0;">
-              <input type="checkbox" name="consent" required style="margin-top: 4px;">
-              <span>I'm happy for Aetas Wealth to contact me about my enquiry. Personal information will be handled in line with the Data Protection Act 2018 and our Privacy Policy.</span>
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-arrow" style="justify-self: start;">Send enquiry</button>
-        </form>
+        <!-- GoHighLevel form embed. Form fields and styling are configured inside GHL. -->
+        <div class="form-embed" style="margin-top: 2rem;">
+          <iframe
+            src="https://link.aetas-wealth.com/widget/form/crliDIuvbDeEd1W5YQkw"
+            style="width: 100%; min-height: 640px; border: none; border-radius: 6px; background: #fff;"
+            id="inline-crliDIuvbDeEd1W5YQkw"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-activation-type="alwaysActivated"
+            data-deactivation-type="neverDeactivate"
+            data-form-name="Aetas Wealth — Contact form"
+            data-height="640"
+            data-layout-iframe-id="inline-crliDIuvbDeEd1W5YQkw"
+            data-form-id="crliDIuvbDeEd1W5YQkw"
+            title="Aetas Wealth contact form">
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
       </div>
 
       <!-- DETAILS -->
