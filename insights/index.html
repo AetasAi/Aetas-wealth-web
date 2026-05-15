@@ -50,12 +50,27 @@
   </div>
 </section>
 
-<!-- POST LIST -->
-<section class="section">
+<!-- CATEGORY FILTER -->
+<section class="section-tight" style="padding-top: 0; padding-bottom: 1.5rem;">
   <div class="container-narrow">
-    <ul class="post-list">
+    <div class="insights-filter" role="tablist" aria-label="Filter articles by category" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0;">
+      <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All articles</button>
+      <button class="filter-pill" data-filter="pensions" role="tab" aria-selected="false">Pensions</button>
+      <button class="filter-pill" data-filter="investments" role="tab" aria-selected="false">Investments &amp; ISAs</button>
+      <button class="filter-pill" data-filter="iht" role="tab" aria-selected="false">Inheritance Tax</button>
+      <button class="filter-pill" data-filter="markets" role="tab" aria-selected="false">Markets</button>
+      <button class="filter-pill" data-filter="planning" role="tab" aria-selected="false">Planning</button>
+      <button class="filter-pill" data-filter="workplace" role="tab" aria-selected="false">Workplace &amp; SMEs</button>
+    </div>
+  </div>
+</section>
 
-      <li>
+<!-- POST LIST -->
+<section class="section" style="padding-top: 1rem;">
+  <div class="container-narrow">
+    <ul class="post-list" id="insights-list">
+
+      <li data-categories="pensions">
         <a href="posts/pension-schemes-act-2026.html" class="post-card" style="display: block;">
           <div class="post-meta">11 May 2026 · Pensions</div>
           <h3>What the new pension laws mean for your retirement pot</h3>
@@ -64,7 +79,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="markets">
         <a href="posts/bank-of-england-holds-rates-may-2026.html" class="post-card" style="display: block;">
           <div class="post-meta">11 May 2026 · Markets</div>
           <h3>Bank of England holds rates again</h3>
@@ -73,7 +88,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="markets">
         <a href="posts/market-commentary-may-2026.html" class="post-card" style="display: block;">
           <div class="post-meta">11 May 2026 · Market commentary</div>
           <h3>Market Commentary: May 2026</h3>
@@ -82,7 +97,34 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="pensions planning">
+        <a href="posts/why-your-pension-needs-regular-reviews.html" class="post-card" style="display: block;">
+          <div class="post-meta">15 May 2026 · Pensions</div>
+          <h3>Why your pension needs regular reviews</h3>
+          <p>Pensions aren't set-and-forget. When to review, how often, what to check, and the common warning signs that your pension is no longer fit for purpose.</p>
+          <span class="card-link">Read article</span>
+        </a>
+      </li>
+
+      <li data-categories="investments">
+        <a href="posts/isa-investment-strategy-2026.html" class="post-card" style="display: block;">
+          <div class="post-meta">15 May 2026 · ISAs</div>
+          <h3>Your ISA strategy for 2026: how the new rules change your approach</h3>
+          <p>From April 2027, the Cash ISA allowance for under-65s drops to £12,000. What it means for your strategy, when to switch towards investing, and what to do this tax year.</p>
+          <span class="card-link">Read article</span>
+        </a>
+      </li>
+
+      <li data-categories="workplace">
+        <a href="posts/financial-wellbeing-business-issue-for-smes.html" class="post-card" style="display: block;">
+          <div class="post-meta">15 May 2026 · Workplace</div>
+          <h3>Why financial wellbeing has become a business issue for UK SMEs</h3>
+          <p>Financial stress in the workforce affects productivity, retention and engagement. Why financial wellbeing is now a business issue for SMEs, and what an effective approach looks like.</p>
+          <span class="card-link">Read article</span>
+        </a>
+      </li>
+
+      <li data-categories="investments planning">
         <a href="posts/how-to-start-investing-uk.html" class="post-card" style="display: block;">
           <div class="post-meta">15 May 2026 · Investments</div>
           <h3>How to start investing in the UK: a step-by-step guide</h3>
@@ -91,7 +133,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="iht">
         <a href="posts/uk-property-wealth-inheritance-tax.html" class="post-card" style="display: block;">
           <div class="post-meta">15 May 2026 · Inheritance tax</div>
           <h3>£3.84 trillion of UK property wealth is held by those aged 62 to 80</h3>
@@ -100,7 +142,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="planning">
         <a href="posts/should-i-pay-my-childs-university-fees.html" class="post-card" style="display: block;">
           <div class="post-meta">15 May 2026 · Family finances</div>
           <h3>Should I pay my child's university fees?</h3>
@@ -109,7 +151,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="iht">
         <a href="posts/inheritance-tax-rising.html" class="post-card" style="display: block;">
           <div class="post-meta">20 April 2026 · Inheritance tax</div>
           <h3>Inheritance Tax is rising, and more families are being affected</h3>
@@ -118,7 +160,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-categories="planning">
         <a href="posts/cash-flow-planning.html" class="post-card" style="display: block;">
           <div class="post-meta">20 November 2025 · Financial planning</div>
           <h3>The role of cash flow planning</h3>
@@ -128,8 +170,39 @@
       </li>
 
     </ul>
+    <p id="no-results" style="display: none; text-align: center; color: var(--ink-muted); margin: 2rem 0;">No articles in this category yet.</p>
   </div>
 </section>
+
+<script>
+(function() {
+  var pills = document.querySelectorAll('.filter-pill');
+  var items = document.querySelectorAll('#insights-list > li');
+  var noResults = document.getElementById('no-results');
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      var filter = this.getAttribute('data-filter');
+      pills.forEach(function(p) {
+        p.classList.remove('is-active');
+        p.setAttribute('aria-selected', 'false');
+      });
+      this.classList.add('is-active');
+      this.setAttribute('aria-selected', 'true');
+      var visible = 0;
+      items.forEach(function(item) {
+        var cats = (item.getAttribute('data-categories') || '').split(' ');
+        if (filter === 'all' || cats.indexOf(filter) !== -1) {
+          item.style.display = '';
+          visible++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
 
 <!-- CTA -->
 <section class="section section-soft">

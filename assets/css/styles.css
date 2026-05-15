@@ -704,3 +704,39 @@ article.post blockquote {
   .site-header, .site-footer, .nav-toggle, .hero-actions, .btn { display: none !important; }
   body { color: #000; background: #fff; }
 }
+
+/* ============================================================
+   FILTER PILLS (Insights category filter)
+   ============================================================ */
+.filter-pill {
+  display: inline-block;
+  padding: 0.45rem 1.05rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  letter-spacing: 0.01em;
+}
+.filter-pill:hover {
+  background: #fff;
+  border-color: var(--aetas-gold);
+  color: var(--aetas-navy);
+}
+.filter-pill.is-active {
+  background: var(--aetas-navy);
+  color: #fff;
+  border-color: var(--aetas-navy);
+}
+.filter-pill.is-active:hover {
+  background: var(--aetas-navy);
+  color: #fff;
+  border-color: var(--aetas-navy);
+}
+@media (max-width: 600px) {
+  .filter-pill { font-size: 0.8rem; padding: 0.4rem 0.85rem; }
+}
