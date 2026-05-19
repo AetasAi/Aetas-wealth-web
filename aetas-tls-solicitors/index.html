@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speak with Aetas Wealth | Introduced by TLS Solicitors</title>
+  <meta name="description" content="A complimentary introductory conversation with Aetas Wealth, arranged through our partnership with TLS Solicitors.">
+  <meta name="author" content="Aetas Wealth">
+  <meta name="robots" content="noindex,follow">
+
+  <meta property="og:title" content="Speak with Aetas Wealth | Introduced by TLS Solicitors">
+  <meta property="og:description" content="A complimentary introductory conversation with Aetas Wealth, arranged through our partnership with TLS Solicitors.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --aetas-blue: #00205B;
+      --aetas-blue-deep: #001640;
+      --aetas-turquoise: #009CA6;
+      --aetas-gold: #9A7B3A;
+      --ink: #1a1f2e;
+      --ink-soft: #4a5060;
+      --line: #e6e6e0;
+      --paper: #fafaf7;
+      --white: #ffffff;
+      --radius-sm: 4px;
+      --radius: 8px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 2px rgba(0, 32, 91, 0.05);
+      --shadow-md: 0 4px 16px rgba(0, 32, 91, 0.06);
+      --shadow-lg: 0 12px 32px rgba(0, 32, 91, 0.08);
+      --gutter: clamp(1.25rem, 4vw, 2.5rem);
+      --section-y: clamp(4rem, 9vw, 7rem);
+      --section-y-tight: clamp(2.5rem, 6vw, 4rem);
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a {
+      color: var(--aetas-turquoise);
+      text-decoration: none;
+      transition: color 0.2s var(--ease);
+    }
+    a:hover { color: var(--aetas-blue); }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .container-narrow {
+      max-width: 880px;
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--aetas-blue);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+      font-weight: 300;
+    }
+    h1 .accent { font-weight: 700; color: var(--aetas-blue); }
+
+    h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+    }
+    h2 .accent { font-weight: 700; }
+
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-weight: 600;
+    }
+
+    h4 { font-size: 1.125rem; font-weight: 600; }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .lead {
+      font-size: 1.2rem;
+      line-height: 1.55;
+      font-weight: 300;
+      color: var(--ink);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aetas-gold);
+      margin-bottom: 1rem;
+    }
+    .eyebrow.turquoise { color: var(--aetas-turquoise); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--aetas-blue);
+    }
+    .brand:hover { color: var(--aetas-blue); }
+
+    .brand-mark img {
+      height: 44px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .brand-text span:first-child {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--aetas-blue);
+    }
+    .brand-text span:last-child {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--aetas-turquoise);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      position: relative;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      padding: 0.5rem 0;
+    }
+    .nav-links a:hover { color: var(--aetas-blue); }
+    .nav-links a.is-active { color: var(--aetas-blue); }
+    .nav-links a.is-active::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 -2px 0;
+      height: 2px;
+      background: var(--aetas-gold);
+    }
+
+    .nav-cta {
+      background: var(--aetas-blue);
+      color: var(--white) !important;
+      padding: 0.625rem 1.25rem !important;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s var(--ease);
+    }
+    .nav-cta:hover { background: var(--aetas-turquoise); }
+
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+      .brand-text span:last-child { display: none; }
+    }
+
+    .section {
+      padding-top: var(--section-y);
+      padding-bottom: var(--section-y);
+      background: var(--white);
+    }
+    .section-soft {
+      padding-top: var(--section-y);
+      padding-bottom: var(--section-y);
+      background: var(--paper);
+    }
+
+    .hero {
+      padding-top: clamp(3rem, 7vw, 5rem);
+      padding-bottom: clamp(3rem, 7vw, 5rem);
+      background: var(--white);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+      .hero-inner { grid-template-columns: 1fr; }
+    }
+
+    .hero p.lead { margin-top: 1.25rem; max-width: 36rem; }
+
+    .hero-aside {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+    .hero-aside .partner-lockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .partner-logo-frame {
+      width: 100%;
+      padding: 1.5rem 1.75rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+    }
+    .partner-logo-frame img {
+      max-height: 150px;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .partner-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--aetas-blue);
+    }
+    .partner-note {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--aetas-blue);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--aetas-turquoise);
+      color: var(--white);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .process-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .process-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .process-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--aetas-turquoise);
+      color: var(--white);
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .process-card h3 { margin-bottom: 0.5rem; }
+    .process-card p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .section-heading-block {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section-heading-block p {
+      margin-top: 1rem;
+      color: var(--ink-soft);
+    }
+
+    .form-wrapper {
+      max-width: 720px;
+      margin: 3rem auto 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3rem);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-wrapper h3 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .form-intro {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .field { margin-bottom: 1.25rem; }
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--aetas-blue);
+      margin-bottom: 0.375rem;
+      letter-spacing: 0.02em;
+    }
+    .required { color: #c0392b; margin-left: 2px; }
+
+    .field input[type="text"],
+    .field input[type="email"],
+    .field input[type="tel"],
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 0.75rem 0.875rem;
+      font-family: inherit;
+      font-size: 0.975rem;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--aetas-turquoise);
+      box-shadow: 0 0 0 3px rgba(0, 156, 166, 0.12);
+    }
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--aetas-blue);
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s var(--ease);
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--aetas-turquoise); }
+
+    .privacy-note {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 1.25rem;
+      line-height: 1.55;
+    }
+
+    .site-footer {
+      background: var(--aetas-blue-deep);
+      color: rgba(255, 255, 255, 0.85);
+      padding: clamp(3rem, 6vw, 4.5rem) 0 2rem;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      position: relative;
+    }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+    }
+    .footer-col p,
+    .footer-col a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.82);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .footer-col a:hover { color: var(--aetas-turquoise); }
+
+    .footer-compliance {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 1.75rem;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+    }
+    .footer-compliance p { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="https://aetas-wealth.com" class="brand">
+        <span class="brand-mark">
+          <img src="https://assets.cdn.filesafe.space/iYTxfP1HHyRKz2RL1tai/media/68b6c166a0b15822bea789ff.png" alt="Aetas Wealth">
+        </span>
+        <span class="brand-text">
+          <span>Aetas Wealth</span>
+          <span>Lifetime to Legacy</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://aetas-wealth.com/home">Home</a></li>
+        <li><a href="https://aetas-partners.com/aetaswealth/">About</a></li>
+        <li><a href="https://aetas-partners.com/financial-planning-for-you-and-your-family/">Services</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Introduced by TLS Solicitors</span>
+        <h1>The financial plan <span class="accent">behind your will</span></h1>
+        <p class="lead">You've taken estate planning advice from TLS Solicitors. Aetas Wealth can help ensure your pensions and wider finances reflect that, so the plan you've put in place really works in practice.</p>
+        <p style="margin-top: 1.5rem;">
+          <a href="#contact" class="btn btn-primary">Request your introduction</a>
+        </p>
+      </div>
+      <aside class="hero-aside">
+        <div class="partner-lockup">
+          <div class="partner-logo-frame">
+            <img src="partner-logo.png" alt="TLS Solicitors logo">
+          </div>
+          <div class="partner-name">TLS Solicitors</div>
+          <p class="partner-note">Personal, practical legal advice on wills, trusts and probate.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <div class="section-heading-block">
+        <span class="eyebrow turquoise">Our process</span>
+        <h2>A clear path from <span class="accent">conversation to confidence</span></h2>
+        <p>A simple, three-step approach designed around your time, your priorities and your peace of mind.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">1</div>
+          <h3>Initial conversation</h3>
+          <p>Around 30 minutes by phone, video or in person. Your adviser listens to your goals, your circumstances and what matters most to you.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">2</div>
+          <h3>A clear financial plan</h3>
+          <p>If it makes sense to take things further, your adviser brings together pensions, investments, protection and tax planning into a single, joined-up plan.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">3</div>
+          <h3>Ongoing advice</h3>
+          <p>Regular reviews keep your plan aligned with your life as your circumstances change. You are supported at each stage, not left to work it out alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="section-heading-block">
+        <span class="eyebrow">About Aetas Wealth</span>
+        <h2>Independent advice, joined-up <span class="accent">for your life</span></h2>
+      </div>
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <p>Aetas Wealth provides independent financial advice to individuals, families and business owners. Our advisers help with pensions, investments, protection, inheritance tax and broader financial planning.</p>
+        <p style="margin-top: 1rem;">As part of Insight Financial Associates, one of the UK's leading independent advice firms, clients benefit from the strength of a national network managing over £4 billion of assets, supported by more than 55 advisers and 120 specialist staff.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" id="contact">
+    <div class="container-narrow">
+      <div class="section-heading-block">
+        <span class="eyebrow turquoise">Get in touch</span>
+        <h2>Request your <span class="accent">introduction</span></h2>
+        <p>Share a few details and we will be in touch to arrange a time that suits you.</p>
+      </div>
+
+      <div class="form-wrapper">
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+
+          <input type="hidden" name="_subject" value="New introduction request from TLS Solicitors landing page">
+          <input type="hidden" name="referral_partner" value="TLS Solicitors">
+          <input type="hidden" name="page_url" value="https://aetas-wealth.com/aetas-tls-solicitors">
+
+          <div class="field">
+            <label for="name">Full name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="help-with">I would like help to</label>
+            <select id="help-with" name="help_with">
+              <option value="">Please choose...</option>
+              <option value="Ensure my money is working as hard as possible for me">Ensure my money is working as hard as possible for me</option>
+              <option value="Ensure my retirement plans will give me the lifestyle I want">Ensure my retirement plans will give me the lifestyle I want</option>
+              <option value="Ensure my family's financial future is fully protected">Ensure my family's financial future is fully protected</option>
+              <option value="Other, I will explain below">Other, I will explain below</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Please add any relevant information (optional)</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Request my introduction</button>
+
+          <p class="privacy-note">
+            Your information is held securely and used only to arrange this introduction. By submitting this form, you agree that we may process your information in line with our <a href="https://aetas-partners.com/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Registered Address</h4>
+          <p>Aetas Wealth</p>
+          <p>Insight House</p>
+          <p>7a Alkmaar Way</p>
+          <p>Norwich International Business Park</p>
+          <p>Norwich NR6 6BF</p>
+        </div>
+        <div class="footer-col">
+          <h4>London Office</h4>
+          <p>Aetas Wealth</p>
+          <p>13 Hanover Square</p>
+          <p>London W1S 1HN</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><a href="tel:02036330579">020 3633 0579</a></p>
+          <p><a href="https://aetas-partners.com/privacy-policy/">Privacy Policy</a></p>
+          <p><a href="https://aetas-partners.com/terms-of-use/">Terms of Use</a></p>
+        </div>
+      </div>
+
+      <div class="footer-compliance">
+        <p><strong>Aetas Wealth</strong> is a trading style of Insight Financial Associates Ltd, which is authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Insight Financial Associates Ltd is a company incorporated in England and Wales under company number 05054886. Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.</p>
+        <p>The Financial Conduct Authority does not regulate Wills, Trusts or Tax advice. The value of your investments can go down as well as up, so you could get back less than you invested. The guidance and advice on this page is subject to the UK regulatory regime and is primarily targeted at consumers based in the UK.</p>
+        <p>&copy; Aetas Wealth 2026. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
