@@ -1,230 +1,84 @@
-# Aetas Wealth — website framework
+# Aetas Wealth — three batch updates in one
 
-A static-site framework for a new Aetas Wealth website, ready to host on GitHub Pages. Built around two core sections, **Aetas Wealth** (about) and **Individuals** (personal planning), with a supporting Insights/blog area.
+This bundle is 50 HTML files. Drop them into your local repo (overwriting where
+prompted), commit, push. That's it.
 
-Content has been adapted from `aetas-wealth.com/home` and the relevant sections of `aetas-partners.com`, then rewritten into a single, consistent voice (UK English, formal but warm, no em dashes, no jargon).
+## What it does
 
----
+Three things, applied across the whole site in one pass:
 
-## What's in the box
+### 1. Case studies surfaced on the homepage (`index.html` only)
+A new "Recent client work" section sits between the existing dark blue stats
+band and the "Ready to have a conversation?" CTA strip. Three cards link
+through to the existing case studies:
+- A couple in their late 50s, retiring with confidence
+- A business owner planning the right exit
+- Bringing clarity after an inheritance
 
-```
-aetas-wealth/
-├── index.html                    Home
-├── our-approach.html             About / Lifetime to Legacy
-├── our-people.html               Team hub
-├── individuals.html              Personal Planning hub (9 service cards)
-├── businesses.html               Businesses hub
-├── business-owners.html          Personal advice for SME owners and directors
-├── workplace.html                ITW summary, links to itw.aetaspartners.com
-├── fees.html                     How we charge (full Costs &amp; Charges page)
-├── contact.html                  Enquiry form & contact details
-├── privacy.html                  Privacy &amp; Cookies (bridges to Insight IFA)
-├── terms.html                    Terms of Use (bridges to Insight IFA)
-├── complaints.html               Complaints procedure
-│
-├── team/                         Adviser profile pages
-│   ├── matthew-steiner.html
-│   ├── daniel-cottam.html
-│   └── peter-rose.html
-│
-├── services/                     Nine service pages (one per offering)
-│   ├── cash-flow-planning.html
-│   ├── director-owner-advisory.html
-│   ├── financial-planning.html
-│   ├── inheritance-tax.html
-│   ├── investment-management.html
-│   ├── later-life-planning.html
-│   ├── mortgages.html
-│   ├── pensions-retirement.html
-│   └── protection-planning.html
-│
-├── insights/                     Blog / insights
-│   ├── index.html
-│   └── posts/
-│       └── sample-post.html
-│
-├── assets/
-│   ├── css/styles.css            Single design-system stylesheet
-│   ├── js/main.js                Nav toggle, active link, scroll reveal
-│   ├── docs/
-│   │   └── aetas-wealth-costs-and-charges.pdf   Linked from /fees.html
-│   └── images/                   (Team headshots currently hot-linked from
-│                                  aetas-partners.com)
-│
-├── 404.html                      Custom not-found page
-├── robots.txt                    SEO crawler rules
-├── sitemap.xml                   XML sitemap
-├── .nojekyll                     Tells GitHub Pages to skip Jekyll
-├── .gitignore
-└── README.md                     This file
-```
+A "View all case studies" link sits beneath the cards, pointing to your
+existing /case-studies/ index.
 
-**Top navigation**: Home · Our approach · Our People · Individuals · Businesses · Fees · Insights · Contact · Book a meeting
+### 2. "55+" → "50+" in the stats band (`index.html` only)
+Fixes the inconsistency between the hero (50+ advisers) and the dark blue
+stats band (55+). Both now agree.
 
-**Compliance & legal pages**: privacy.html, terms.html and complaints.html sit at the foot of every page. Privacy and Terms are bridge pages that frame the Aetas Wealth / Insight Financial Associates relationship and link out to the canonical Insight documents (https://www.insightifa.com). Complaints is a self-contained page with the firm's complaints contact details and the FOS escalation route.
+### 3. Professional Introducers added to the footer Site column
+Applied to every page in the repo that has a full footer. The link sits just
+before Contact, with the correct relative path per file depth (so insights
+posts get `../../professional-introducers.html` and root pages get
+`professional-introducers.html`).
 
----
+## Files included
 
-## Brand and design
+50 in total. The breakdown:
 
-The site uses the Aetas brand system end-to-end:
+- **Root pages (16)**: business-owners, businesses, complaints, contact, fees,
+  index, lifetime-to-legacy, our-approach, our-people, pensions-iht-2027,
+  privacy, terms, working-with-us, workplace, and others
+- **Case studies (4)**: business-owner-exit, index, inherited-wealth-clarity,
+  retiring-with-confidence
+- **Insights index + 20 posts**
+- **Services (9)**: cash-flow-planning, director-owner-advisory,
+  financial-planning, investment-management, later-life-planning, mortgages,
+  pensions-retirement, protection-planning, and others (inheritance-tax already
+  has the footer link from the earlier batch, so it's not included here)
+- **Team (3)**: daniel-cottam, matthew-steiner, peter-rose
 
-| Token | Hex | Use |
-|---|---|---|
-| Deep Blue | `#00205B` | Primary, headings, headers |
-| Turquoise | `#009CA6` | Accent, hover states, links |
-| Gold | `#9A7B3A` | Premium accent, eyebrows, rules |
+## Files NOT in the bundle (deliberately)
 
-Typography is **Open Sans** throughout, loaded from Google Fonts. Design hierarchy is built through weight (300 / 400 / 500 / 600 / 700) rather than additional font families.
+- **`home.html`** — it's just a redirect to `/`, no footer to update
+- **`404.html`** — typically no full footer, skipped to be safe
+- **`individuals.html`**, **`professional-introducers.html`**, **`services/inheritance-tax.html`** — already have the footer link from the previous batch
 
-All design tokens live as CSS custom properties at the top of `assets/css/styles.css`. Edit them once and the change flows through every page.
+## How to install
 
----
-
-## Local preview
-
-The site is plain HTML, CSS and JavaScript. No build step.
-
-To preview locally:
-
-```bash
-# Option 1: open files directly in a browser
-open index.html
-
-# Option 2 (recommended): serve over HTTP so all paths resolve correctly
-python3 -m http.server 8000
-# then open http://localhost:8000
-
-# or with Node:
-npx serve .
-```
-
----
-
-## Deploying to GitHub Pages
-
-### One-time setup
-
-1. Create a new GitHub repository (e.g. `aetas-wealth-website`)
-2. From your local machine:
-   ```bash
-   cd aetas-wealth
-   git init
-   git add .
-   git commit -m "Initial site framework"
-   git branch -M main
-   git remote add origin git@github.com:YOUR-ORG/aetas-wealth-website.git
-   git push -u origin main
+1. Extract the zip
+2. In Windows File Explorer, select all the extracted files and folders, and
+   drag them into the root of your local repo
+3. Windows will ask whether to merge folders and overwrite files. Say yes to
+   both
+4. (Optional but recommended) Preview the homepage and one other page locally
+   to confirm everything renders:
    ```
-3. In the GitHub repo, go to **Settings → Pages**
-4. Under "Build and deployment":
-   - **Source:** Deploy from a branch
-   - **Branch:** `main` / `(root)`
-   - Click **Save**
-5. After 1–2 minutes the site will be live at `https://YOUR-ORG.github.io/aetas-wealth-website/`
-
-### Custom domain (optional)
-
-To serve from a custom domain such as `aetas-wealth.com` or a sub-domain:
-
-1. Create a file named `CNAME` in the repo root containing only your domain, e.g.:
+   python -m http.server 8000
    ```
-   aetas-wealth.com
-   ```
-2. In your DNS, add records pointing at GitHub Pages:
-   - **Apex domain**: four `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - **Sub-domain (e.g. www)**: a `CNAME` record pointing to `YOUR-ORG.github.io`
-3. In **Settings → Pages**, enter the custom domain and tick "Enforce HTTPS"
+   Then open http://localhost:8000 and http://localhost:8000/contact.html
+5. In GitHub Desktop, you should see 50 changed files. Commit:
 
-### Subsequent updates
+   > Surface case studies on homepage, align stats band, add Professional Introducers footer link site-wide
 
-```bash
-git add .
-git commit -m "Edit homepage hero copy"
-git push
-```
+6. Push
 
-GitHub Pages rebuilds automatically within a minute or two.
+## Verification
 
----
+Each file has been:
+- Downloaded fresh from GitHub at the start of this batch (so we're patching
+  the current live state, not stale versions)
+- Patched only where the patch was needed
+- Validated as well-formed HTML
+- Hash-compared against the live version, so only genuinely-changed files are
+  in this bundle (no "no-op" commits cluttering the history)
 
-## Editing the site
-
-### Add a new blog post
-
-1. Copy `insights/posts/sample-post.html` and rename it (e.g. `2026-pension-changes.html`)
-2. Update the `<title>`, `<meta description>`, banner, breadcrumbs and article body
-3. In `insights/index.html`, copy the existing `<li>` block and update it to point at the new post
-
-### Add a new service page
-
-1. Copy `services/pensions-retirement.html` (fullest example) and rename it
-2. Update the `<title>`, banner content, intro paragraphs and the "How we help" list
-3. Add a card to `individuals.html` linking to the new page
-
-### Update navigation, header or footer
-
-The header and footer are duplicated across pages (kept simple, no Jekyll/build step required). Each is wrapped in `<!-- SHARED: site-header -->` / `<!-- SHARED: site-footer -->` comments.
-
-If you change the nav links, contact details, or footer copy, search across all `.html` files for `SHARED:` and update each one.
-
-### Wire up the contact form
-
-The contact form in `contact.html` posts to `#`. Replace the `action=` attribute with one of:
-
-- **Formspree**: e.g. `action="https://formspree.io/f/your-form-id"` — same approach used for the ITW diagnostic
-- **Netlify Forms**: requires Netlify hosting (not GitHub Pages)
-- **GoHighLevel** form embed (since the existing Aetas sites use leadconnector)
-
----
-
-## Voice and content style
-
-Content has been written in line with house style:
-
-- UK English throughout
-- Formal but warm advisory tone
-- Approximately Grade 9 reading level
-- No em dashes (commas or full stops instead)
-- No "Hope you're well" style openers
-- No sales-driven language; no jargon
-- Measured, senior-adviser voice
-
-Service pages currently contain placeholder body copy in the same voice. Replace where deeper content is needed.
-
----
-
-## Compliance
-
-Each page that gives any kind of guidance on regulated matters carries a footer disclaimer noting:
-
-- Aetas Wealth is a trading style of Insight Financial Associates Ltd
-- FCA registration 458421
-- The FCA does not regulate Wills, Trusts or Tax advice
-- Standard "value can go down as well as up" wording
-
-The Insights template carries an additional article-level disclaimer.
-
-Before publishing, please review compliance copy with your Insight FA contact to confirm it remains accurate for the firm's current regulatory position.
-
----
-
-## Browser support
-
-Modern evergreen browsers (Chrome, Edge, Safari, Firefox) on desktop and mobile. The site uses CSS custom properties, CSS grid, `backdrop-filter` and `IntersectionObserver` — all widely supported. There's a `prefers-reduced-motion` fallback for the scroll-reveal effect.
-
----
-
-## Next steps suggested
-
-1. Replace placeholder copy on the seven shorter service pages with full content
-2. Add real headshots and team bios (`our-people.html` page is a natural addition)
-3. Wire up the contact form to your preferred handler
-4. Add proper Privacy Policy, Terms of Use and Cookies Policy pages and update the footer links
-5. Add real OG/Twitter share images per page
-6. Configure GitHub Actions if you want a build/lint step in future
-
----
-
-© Aetas Wealth. Built as a static-site framework, ready for GitHub Pages.
+The footer-link patch is idempotent: it checks for an existing
+"Professional Introducers" link in the footer Site column before adding,
+and won't double-up if the file already has it.
