@@ -364,6 +364,13 @@
       box-shadow: var(--shadow-md);
     }
 
+    .form-wrapper-embed {
+      padding: 1rem clamp(1rem, 3vw, 1.5rem);
+    }
+    .form-wrapper-embed iframe {
+      background: var(--white);
+    }
+
     .form-wrapper h3 {
       text-align: center;
       margin-bottom: 0.5rem;
@@ -580,50 +587,27 @@
         <p>Share a few details and we will be in touch to arrange a time that suits you.</p>
       </div>
 
-      <div class="form-wrapper">
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-
-          <input type="hidden" name="_subject" value="New introduction request from Gympanzees landing page">
-          <input type="hidden" name="referral_partner" value="Gympanzees">
-          <input type="hidden" name="page_url" value="https://aetas-wealth.com/aetas-gympanzees">
-
-          <div class="field">
-            <label for="name">Full name<span class="required">*</span></label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-          </div>
-
-          <div class="field">
-            <label for="email">Email address<span class="required">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone number<span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-          </div>
-
-          <div class="field">
-            <label for="help-with">I would like help to</label>
-            <select id="help-with" name="help_with">
-              <option value="">Please choose...</option>
-              <option value="Ensure my money is working as hard as possible for me">Ensure my money is working as hard as possible for me</option>
-              <option value="Ensure my retirement plans will give me the lifestyle I want">Ensure my retirement plans will give me the lifestyle I want</option>
-              <option value="Ensure my family's financial future is fully protected">Ensure my family's financial future is fully protected</option>
-              <option value="Other, I will explain below">Other, I will explain below</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Please add any relevant information (optional)</label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Request my introduction</button>
-
-          <p class="privacy-note">
-            Your information is held securely and used only to arrange this introduction. By submitting this form, you agree that we may process your information in line with our <a href="https://aetas-partners.com/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.
-          </p>
-        </form>
+      <div class="form-wrapper form-wrapper-embed">
+        <iframe
+            src="https://link.aetas-wealth.com/widget/form/crliDIuvbDeEd1W5YQkw?referral_partner=Gympanzees"
+            style="width:100%;min-height:755px;border:none;border-radius:3px;display:block;"
+            id="inline-crliDIuvbDeEd1W5YQkw"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website General Enquiry Form -AW"
+            data-height="755"
+            data-layout-iframe-id="inline-crliDIuvbDeEd1W5YQkw"
+            data-form-id="crliDIuvbDeEd1W5YQkw"
+            title="Website General Enquiry Form -AW">
+        </iframe>
+        <p class="privacy-note">
+          Your information is held securely and used only to arrange this introduction. By submitting this form, you agree that we may process your information in line with our <a href="https://aetas-partners.com/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.
+        </p>
       </div>
     </div>
   </section>
@@ -660,6 +644,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://link.aetas-wealth.com/js/form_embed.js"></script>
 
 </body>
 </html>
