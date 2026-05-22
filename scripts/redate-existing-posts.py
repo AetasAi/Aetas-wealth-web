@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
 """
-Re-date existing Aetas Wealth Insights articles.
+Re-date Aetas Wealth Insights articles in bulk.
 
-This script updates the published date in articles that already exist on the
-site, without changing any content. It looks for two patterns and updates them:
+Reads the DATE_CHANGES dict below — filename -> target ISO date. For each file:
+1. Reads the current date (from JSON-LD if present, otherwise from the byline)
+2. Compares to the target
+3. If different, updates BOTH the JSON-LD datePublished (if present) and the
+   byline "Published DD Month YYYY" text
 
-1. JSON-LD `datePublished` (if present)
-2. Human-readable byline: "Published 11 May 2026 · By X · 5 minute read"
-
-Run from the repo root:
-    python3 scripts/redate-existing-posts.py
-
-The DATE_CHANGES dict below maps filename → new date.
-Edit it and re-run any time you want to bulk-adjust dates.
+Run from repo root:
+    py scripts\\redate-existing-posts.py
 """
 
 import re
@@ -21,67 +18,135 @@ from datetime import date
 from pathlib import Path
 
 
-# Map of filename → new date (ISO format, will be reformatted for display)
-# Add or edit entries here. Files not listed will be left untouched.
+# ============================================================
+# DATE TARGETS - edit this dict to bulk re-date articles
+# ============================================================
 DATE_CHANGES = {
-    # Cluster fixes — Wednesday cadence going back from 22 May 2026
-    "pension-schemes-act-2026.html":                  "2026-04-29",  # Real Royal Assent date
-    "inheritance-tax-rising.html":                    "2026-04-15",  # was 20 April — move out of cluster
-    "pension-changes-ahead.html":                     "2026-04-08",  # was 20 April — move out of cluster
-    "isa-investment-strategy-2026.html":              "2026-03-11",  # was 15 May — move
-    "how-to-start-investing-uk.html":                 "2026-03-04",  # was 15 May — move
-    "uk-property-wealth-inheritance-tax.html":        "2026-01-21",  # was 15 May — move
-    "should-i-pay-my-childs-university-fees.html":    "2025-12-17",  # was 15 May — move
-    "financial-wellbeing-business-issue-for-smes.html": "2026-01-07", # was 15 May — move (new year workplace)
-    "why-your-pension-needs-regular-reviews.html":    "2025-11-19",  # was 15 May — move
-    "family-wealth-transfer-2027.html":               "2026-02-04",  # spread back
-    "how-pensions-are-taxed-after-death.html":        "2025-12-10",  # spread back
+    # === Original 11 (most/all were already at these dates locally) ===
+    "pension-schemes-act-2026.html":                    "2026-04-29",
+    "inheritance-tax-rising.html":                      "2026-04-15",
+    "pension-changes-ahead.html":                       "2026-04-08",
+    "isa-investment-strategy-2026.html":                "2026-03-11",
+    "how-to-start-investing-uk.html":                   "2026-03-04",
+    "uk-property-wealth-inheritance-tax.html":          "2026-01-21",
+    "should-i-pay-my-childs-university-fees.html":      "2025-12-17",
+    "financial-wellbeing-business-issue-for-smes.html": "2026-01-07",
+    "why-your-pension-needs-regular-reviews.html":      "2025-11-19",
+    "family-wealth-transfer-2027.html":                 "2026-02-04",
+    "how-pensions-are-taxed-after-death.html":          "2025-12-10",
 
-    # Fixed dates — uncomment if you want the script to confirm/touch them
-    # "finance-act-2026.html":                        "2026-05-22",  # KEEP
-    # "business-owners-pensions-and-the-2027-changes.html": "2026-05-19",  # KEEP
-    # "bank-of-england-holds-rates-may-2026.html":    "2026-05-11",  # KEEP
-    # "market-commentary-may-2026.html":              "2026-05-12",  # KEEP (was 11 May, move 1 day)
-    # "market-commentary-april-2026.html":            "2026-04-20",  # KEEP
+    # === Fix the new 19 May 2026 cluster (was 4 articles on same date) ===
+    "business-owners-pensions-estate-planning.html":    "2026-05-19",  # KEEP - anchor for series
+    "pensions-iht-spousal-exemption.html":              "2026-05-21",  # Thu, day before Finance Act
+    "pensions-iht-2027-what-is-changing.html":          "2026-05-14",  # Thu mid-May
+    "drawing-your-pension-differently-after-2027.html": "2026-04-30",  # Thu late April
+
+    # === The renamed Finance Act article ===
+    "finance-act-2026.html":                            "2026-05-22",  # Real legislative date
 }
+
+# Files to hide from the index without changing their dates.
+# Add filenames here if you ever want to keep an article on disk but not list it.
+OPT_OUT_FILES = []
 
 
 POSTS_DIR = Path("insights/posts")
 
 
-def format_display_date(iso_str):
+# ============================================================
+# Internal helpers
+# ============================================================
+
+def format_display(iso_str):
     """Convert '2026-04-15' to '15 April 2026' (no leading zero)."""
     d = date.fromisoformat(iso_str)
     return f"{d.day} {d.strftime('%B')} {d.year}"
 
 
-def update_file(path, new_iso):
-    """Update both JSON-LD datePublished and the byline text in one file."""
+def find_current_date(html):
+    """Find date in file. Returns (display_string, source) or (None, None)."""
+    # JSON-LD first (most reliable)
+    m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
+    if m:
+        iso_str = m.group(1)[:10]
+        try:
+            return format_display(iso_str), "JSON-LD"
+        except ValueError:
+            pass
+
+    # Byline
+    m = re.search(r'Published\s+(\d{1,2}\s+[A-Z][a-z]+\s+\d{4})', html)
+    if m:
+        return m.group(1), "byline"
+
+    return None, None
+
+
+def update_dates_in_file(path, target_iso):
+    """Returns (status, list_of_messages). Status is 'updated', 'unchanged', or 'no_dates_found'."""
     html = path.read_text(encoding="utf-8")
     original = html
-    new_display = format_display_date(new_iso)
+    target_display = format_display(target_iso)
+    target_full = f"{target_iso}T08:00:00+00:00"
+    messages = []
 
-    changes = []
-
-    # 1) Update JSON-LD datePublished. Matches "datePublished": "2025-11-20" or full ISO.
+    # 1) Update JSON-LD datePublished (if present)
     json_pat = re.compile(r'("datePublished"\s*:\s*")([^"]+)(")')
-    def json_repl(m):
-        changes.append(f"  JSON-LD datePublished: {m.group(2)[:10]} → {new_iso}")
-        return f'{m.group(1)}{new_iso}T08:00:00+00:00{m.group(3)}'
-    html = json_pat.sub(json_repl, html, count=1)
+    json_match = json_pat.search(html)
+    if json_match:
+        old_iso = json_match.group(2)[:10]
+        if old_iso != target_iso:
+            html = json_pat.sub(f'\\g<1>{target_full}\\g<3>', html, count=1)
+            messages.append(f"    JSON-LD datePublished: {old_iso} -> {target_iso}")
+        else:
+            messages.append(f"    JSON-LD datePublished: already {target_iso}")
 
-    # 2) Update the byline "Published DD Month YYYY"
+    # 2) Update dateModified to today
+    today_full = date.today().isoformat() + "T08:00:00+00:00"
+    mod_pat = re.compile(r'("dateModified"\s*:\s*")([^"]+)(")')
+    if mod_pat.search(html):
+        html = mod_pat.sub(f'\\g<1>{today_full}\\g<3>', html, count=1)
+
+    # 3) Update byline "Published DD Month YYYY"
     byline_pat = re.compile(r'(Published\s+)(\d{1,2}\s+[A-Z][a-z]+\s+\d{4})')
-    def byline_repl(m):
-        changes.append(f"  Byline date: {m.group(2)} → {new_display}")
-        return f'{m.group(1)}{new_display}'
-    html = byline_pat.sub(byline_repl, html, count=1)
+    byline_match = byline_pat.search(html)
+    if byline_match:
+        old_display = byline_match.group(2)
+        if old_display != target_display:
+            html = byline_pat.sub(f'\\g<1>{target_display}', html, count=1)
+            messages.append(f"    Byline: {old_display} -> {target_display}")
+        else:
+            messages.append(f"    Byline: already {target_display}")
+
+    if not json_match and not byline_match:
+        return "no_dates_found", ["    ! No JSON-LD or byline date found in this file"]
 
     if html == original:
-        return False, ["No date patterns matched — file unchanged"]
-    path.write_text(html, encoding="utf-8")
-    return True, changes
+        return "unchanged", messages
 
+    path.write_text(html, encoding="utf-8")
+    return "updated", messages
+
+
+def add_optout_meta(path):
+    """Add <meta name='aw-listed' content='false'> to a file's <head>."""
+    html = path.read_text(encoding="utf-8")
+    if 'name="aw-listed"' in html:
+        return "already_opted_out"
+    if "</head>" not in html:
+        return "no_head_tag"
+    new_html = html.replace(
+        "</head>",
+        '  <meta name="aw-listed" content="false">\n</head>',
+        1,
+    )
+    path.write_text(new_html, encoding="utf-8")
+    return "opted_out"
+
+
+# ============================================================
+# Entry point
+# ============================================================
 
 def main():
     repo_root = Path(__file__).resolve().parent.parent
@@ -92,32 +157,60 @@ def main():
         return 1
 
     print(f"Re-dating articles in {posts_dir}\n")
+    print("=" * 80)
 
-    updated = 0
-    skipped = 0
-    missing = 0
+    counts = {"updated": 0, "unchanged": 0, "no_dates_found": 0, "not_found": 0}
 
-    for filename, new_iso in DATE_CHANGES.items():
+    for filename, target_iso in DATE_CHANGES.items():
         path = posts_dir / filename
         if not path.exists():
-            print(f"  ⚠ {filename} — NOT FOUND")
-            missing += 1
+            print(f"  [MISS]    {filename}  NOT FOUND")
+            counts["not_found"] += 1
             continue
 
-        changed, notes = update_file(path, new_iso)
-        if changed:
-            new_display = format_display_date(new_iso)
-            print(f"  ✓ {filename} → {new_display}")
-            for note in notes:
-                print(note)
-            updated += 1
-        else:
-            print(f"  · {filename} — no changes needed")
-            for note in notes:
-                print(note)
-            skipped += 1
+        target_display = format_display(target_iso)
+        current_display, source = find_current_date(path.read_text(encoding="utf-8"))
+        current = f"{current_display} ({source})" if current_display else "(no date)"
 
-    print(f"\nSummary: {updated} updated, {skipped} skipped, {missing} not found")
+        status, messages = update_dates_in_file(path, target_iso)
+
+        if status == "updated":
+            print(f"  [UPDATED] {filename}")
+            print(f"    Was: {current}")
+            print(f"    Now: {target_display}")
+            for msg in messages:
+                print(msg)
+            counts["updated"] += 1
+        elif status == "unchanged":
+            print(f"  [OK]      {filename} - already at {target_display}")
+            counts["unchanged"] += 1
+        else:
+            print(f"  [WARN]    {filename} - could not find any date to update")
+            for msg in messages:
+                print(msg)
+            counts["no_dates_found"] += 1
+
+    if OPT_OUT_FILES:
+        print("\n" + "=" * 80)
+        print("Hiding files from index (aw-listed=false):")
+        for filename in OPT_OUT_FILES:
+            path = posts_dir / filename
+            if not path.exists():
+                print(f"  [SKIP]   {filename} - not present (no action needed)")
+                continue
+            result = add_optout_meta(path)
+            if result == "opted_out":
+                print(f"  [HIDDEN] {filename} - opted out of index")
+            elif result == "already_opted_out":
+                print(f"  [OK]     {filename} - already opted out")
+            else:
+                print(f"  [WARN]   {filename} - could not add meta tag ({result})")
+
+    print("\n" + "=" * 80)
+    print(f"Summary: {counts['updated']} updated, "
+          f"{counts['unchanged']} already correct, "
+          f"{counts['no_dates_found']} no date pattern, "
+          f"{counts['not_found']} not found")
     return 0
 
 
