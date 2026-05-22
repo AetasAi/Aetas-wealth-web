@@ -1,0 +1,48 @@
+name: Update Insights Index
+
+# Runs whenever an article is added/changed/removed in insights/posts/
+# or when the indexer script itself changes. Updates insights/index.html
+# and commits the change back to the branch.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'insights/posts/**'
+      - 'scripts/build-insights-index.py'
+      - '.github/workflows/update-insights-index.yml'
+  workflow_dispatch:  # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Use a fetch-depth that allows a normal commit/push
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run insights indexer
+        run: python scripts/build-insights-index.py
+
+      - name: Commit and push updated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain insights/index.html)" ]; then
+            git add insights/index.html
+            git commit -m "chore: auto-update insights index"
+            git push
+            echo "✓ Index updated and pushed"
+          else
+            echo "· No change to insights/index.html"
+          fi
