@@ -1,0 +1,47 @@
+name: Scheduled Article Publishing
+
+# Runs daily at 07:00 UK time (06:00 UTC during BST summer, 07:00 UTC during GMT winter)
+# to release any articles whose datePublished has arrived.
+#
+# Note: GitHub Actions cron uses UTC. We use 06:30 UTC which is:
+#   - 07:30 UK summer time (BST)
+#   - 06:30 UK winter time (GMT)
+# Slight time variation across the year, but always before 8am UK — fine for our purpose.
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # 06:30 UTC daily
+  workflow_dispatch:  # also allow manual triggering from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  release-scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run insights indexer (releases any articles dated today or earlier)
+        run: python scripts/build-insights-index.py
+
+      - name: Commit and push if index changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain insights/index.html)" ]; then
+            git add insights/index.html
+            git commit -m "chore: release scheduled articles (daily run)"
+            git push
+            echo "✓ Released scheduled articles"
+          else
+            echo "· No scheduled articles to release today"
+          fi

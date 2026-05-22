@@ -9,14 +9,19 @@ rewrites the article list in `insights/index.html` between the markers:
     ...content here will be replaced...
     <!-- AUTO-INSIGHTS-END -->
 
+NEW: Articles with a `datePublished` in the future are EXCLUDED from the index.
+This lets you batch-upload future-dated articles and have them appear
+automatically on their scheduled date (via the daily scheduled GitHub Action).
+
 Run locally:
     python scripts/build-insights-index.py
 
 Run via GitHub Actions:
-    Triggered automatically on push to insights/posts/** (see workflow file).
+    - Triggered automatically on push to insights/posts/** (see update-insights-index.yml)
+    - Also triggered daily at 07:00 UK time by the scheduled-publish.yml workflow
 
 Per-article controls (optional, added to article <head>):
-    <meta name="aw-listed" content="false">      → hide from the index
+    <meta name="aw-listed" content="false">      → hide from the index entirely
     <meta name="aw-categories" content="iht pensions">
                                                   → override filter categories
     <meta name="aw-display-category" content="Inheritance tax">
@@ -39,7 +44,6 @@ from pathlib import Path
 
 # ---------- Configuration ----------
 
-# Where the script expects things, relative to the repo root.
 POSTS_DIR = Path("insights/posts")
 INDEX_FILE = Path("insights/index.html")
 
@@ -49,16 +53,17 @@ END_MARKER = "<!-- AUTO-INSIGHTS-END -->"
 # Eyebrow text → (display category, filter categories).
 # Order matters: longer/more-specific keys checked first.
 CATEGORY_MAP = [
-    # Exact eyebrow → display + filter
     ("inheritance tax & pensions",   ("Inheritance tax", ["iht", "pensions"])),
     ("inheritance tax & giving",     ("Inheritance tax", ["iht", "planning"])),
     ("inheritance tax & iht",        ("Inheritance tax", ["iht"])),
     ("estate planning & iht",        ("Inheritance tax", ["iht", "planning"])),
+    ("uk economy & tax",             ("Inheritance tax", ["iht", "planning"])),
     ("pensions & retirement",        ("Pensions", ["pensions"])),
     ("savings & investments",        ("Investments", ["investments"])),
     ("market commentary",            ("Market commentary", ["markets"])),
     ("financial planning",           ("Financial planning", ["planning"])),
     ("estate planning",              ("Estate planning", ["iht", "planning"])),
+    ("tax planning",                 ("Tax planning", ["planning"])),
     ("inheritance tax",              ("Inheritance tax", ["iht"])),
     ("family finances",              ("Family finances", ["planning"])),
     ("pensions",                     ("Pensions", ["pensions"])),
@@ -76,8 +81,6 @@ CATEGORY_MAP = [
 ]
 
 DEFAULT_CATEGORY = ("Insights", ["all"])
-
-# Files to skip even if present in posts/
 SKIP_FILES = {"index.html", "_template.html"}
 
 
@@ -97,7 +100,6 @@ def strip_tags(s):
         return s
     s = re.sub(r"<[^>]+>", "", s)
     s = re.sub(r"\s+", " ", s).strip()
-    # Decode a few common entities we might encounter
     s = (s.replace("&amp;", "&")
            .replace("&lt;", "<")
            .replace("&gt;", ">")
@@ -137,7 +139,7 @@ def parse_jsonld_date(html):
         for c in candidates:
             if isinstance(c, dict) and c.get("@type") == "Article":
                 if "datePublished" in c:
-                    return c["datePublished"][:10]  # YYYY-MM-DD
+                    return c["datePublished"][:10]
     return None
 
 
@@ -162,7 +164,6 @@ def parse_h1(html):
 def parse_title_tag(html):
     raw = strip_tags(first_match(r"<title[^>]*>(.*?)</title>", html))
     if raw:
-        # Strip our suffix variations
         for suffix in (" · Aetas Wealth", " | Aetas Wealth"):
             if raw.endswith(suffix):
                 raw = raw[: -len(suffix)]
@@ -201,7 +202,7 @@ class Article:
         self.filename = path.name
         html = read(path)
 
-        # Skip-list opt-out
+        # Opt-out via meta tag
         listed = parse_meta(html, "aw-listed")
         self.listed = (listed or "true").lower() != "false"
 
@@ -235,8 +236,12 @@ class Article:
         else:
             self.display_category, self.filter_categories = map_category(eyebrow)
 
+    def is_future(self, as_of=None):
+        """True if this article is scheduled for a future date."""
+        as_of = as_of or date.today()
+        return self.date > as_of
+
     def date_display(self):
-        # "8 July 2025" — no leading zero on day
         return f"{self.date.day} {self.date.strftime('%B')} {self.date.year}"
 
     def render_li(self):
@@ -256,8 +261,6 @@ class Article:
 def html_escape(s):
     if not s:
         return ""
-    # Minimal escaping — < and > and & to be safe.
-    # Don't escape characters that are already valid in the index (£, em-dash, etc.).
     return (s.replace("&", "&amp;")
              .replace("<", "&lt;")
              .replace(">", "&gt;"))
@@ -265,11 +268,19 @@ def html_escape(s):
 
 # ---------- Indexer ----------
 
-def collect_articles(posts_dir):
-    articles = []
+def collect_articles(posts_dir, today=None):
+    """Returns (visible_articles, scheduled_articles).
+
+    visible: articles whose date is today or earlier, AND not opted out
+    scheduled: articles whose date is in the future (informational only)
+    """
+    today = today or date.today()
+    visible = []
+    scheduled = []
     if not posts_dir.exists():
         sys.stderr.write(f"Posts directory not found: {posts_dir}\n")
-        return articles
+        return visible, scheduled
+
     for path in sorted(posts_dir.glob("*.html")):
         if path.name in SKIP_FILES:
             continue
@@ -280,17 +291,21 @@ def collect_articles(posts_dir):
             continue
         if not article.listed:
             continue
-        articles.append(article)
-    # Newest first
-    articles.sort(key=lambda a: a.date, reverse=True)
-    return articles
+        if article.is_future(today):
+            scheduled.append(article)
+        else:
+            visible.append(article)
+
+    visible.sort(key=lambda a: a.date, reverse=True)
+    scheduled.sort(key=lambda a: a.date)  # ascending — soonest first
+    return visible, scheduled
 
 
 def render_block(articles):
     lines = []
     for a in articles:
         lines.append(a.render_li())
-        lines.append("")  # Blank line between entries
+        lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -327,24 +342,29 @@ def update_index(index_path, articles):
     return True
 
 
-# ---------- Entry point ----------
-
 def main():
-    # Allow running from any working dir — resolve relative to script location's parent.
     here = Path(__file__).resolve().parent
     repo_root = here.parent
 
     posts_dir = repo_root / POSTS_DIR
     index_path = repo_root / INDEX_FILE
+    today = date.today()
 
-    print(f"Scanning {posts_dir} ...")
-    articles = collect_articles(posts_dir)
-    print(f"  Found {len(articles)} listed articles")
-    for a in articles:
-        print(f"   - {a.date_display():25} {a.display_category:22} {a.filename}")
+    print(f"Scanning {posts_dir} (as of {today.isoformat()}) ...")
+    visible, scheduled = collect_articles(posts_dir, today)
+    print(f"  Visible (published): {len(visible)}")
+    for a in visible:
+        print(f"    - {a.date_display():25} {a.display_category:22} {a.filename}")
+
+    if scheduled:
+        print(f"\n  Scheduled for future release: {len(scheduled)}")
+        for a in scheduled:
+            print(f"    - {a.date_display():25} {a.display_category:22} {a.filename}")
+        print(f"\n  These will appear automatically when their date arrives,")
+        print(f"  provided the daily scheduled workflow is running.")
 
     print(f"\nUpdating {index_path} ...")
-    changed = update_index(index_path, articles)
+    changed = update_index(index_path, visible)
     if changed:
         print("  ✓ Index updated")
     else:
