@@ -97,6 +97,8 @@ RULES: list[tuple] = [
     (lambda r: r.parent == Path("team"),                         0.8, None),
     # Service pages
     (lambda r: r.parent == Path("services"),                     0.7, "monthly"),
+    # Partner / co-branded sub-site pages (anything under aetas-*/)
+    (lambda r: r.parts[0].startswith("aetas-"),                  0.7, None),
     # Top-level marketing pages (high priority)
     (_is_top_level_marketing,                                    0.9, "monthly"),
     # Important subpages
