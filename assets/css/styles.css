@@ -740,4 +740,20 @@ article.post blockquote {
 }
 @media (max-width: 600px) {
   .filter-pill { font-size: 0.78rem; padding: 0.38rem 0.8rem; }
+}/* Footer: 4 equal columns (post brand-block removal) */
+.footer-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
