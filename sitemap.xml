@@ -166,7 +166,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aetas-wealth.com/case-studies/index.html</loc>
+    <loc>https://aetas-wealth.com/case-studies/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -183,7 +183,7 @@
   </url>
   <!-- insights -->
   <url>
-    <loc>https://aetas-wealth.com/insights/index.html</loc>
+    <loc>https://aetas-wealth.com/insights/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

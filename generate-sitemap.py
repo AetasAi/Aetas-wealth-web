@@ -124,9 +124,21 @@ def classify(rel: Path) -> tuple[float, str | None]:
 
 def build_url_entry(rel: Path, repo_root: Path) -> str:
     """Build the <url>...</url> block for a single page."""
-    # Homepage: use trailing slash, not /index.html
-    if rel == Path("index.html"):
-        loc = BASE_URL + "/"
+    # Hub index pages: use trailing-slash form, not /index.html.
+    # The homepage and the two section hubs (insights, case-studies) all
+    # canonicalise to the trailing-slash form to match what users actually
+    # see in their browser and what GitHub Pages serves at the directory URL.
+    TRAILING_SLASH_INDEXES = {
+        Path("index.html"),
+        Path("insights/index.html"),
+        Path("case-studies/index.html"),
+    }
+    if rel in TRAILING_SLASH_INDEXES:
+        parent = rel.parent.as_posix()
+        if parent == ".":
+            loc = BASE_URL + "/"
+        else:
+            loc = f"{BASE_URL}/{parent}/"
     else:
         loc = f"{BASE_URL}/{rel.as_posix()}"
 
