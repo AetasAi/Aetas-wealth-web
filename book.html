@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://aetas-wealth.com/assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="https://aetas-wealth.com/assets/images/favicon-512.png">
+  <title>Book an Appointment · Aetas Wealth</title>
+  <meta name="description" content="Book time with a Chartered Financial Planner at Aetas Wealth. Arrange a pension review or an introductory financial planning conversation at a time that suits you.">
+  <link rel="canonical" href="https://aetas-wealth.com/book.html">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aetas Wealth">
+  <meta property="og:title" content="Book an Appointment · Aetas Wealth">
+  <meta property="og:description" content="Book time with a Chartered Financial Planner at Aetas Wealth.">
+  <meta property="og:image" content="https://aetas-wealth.com/assets/images/aetas-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
+  <style>
+/* ============================================================
+   Aetas Wealth — Main stylesheet
+   Brand: Deep Blue #00205B, Turquoise #009CA6, Gold #9A7B3A
+   Typeface: Open Sans
+   ============================================================ */
+
+/* ---------- 1. Design tokens ---------- */
+:root {
+  /* Brand palette */
+  --aetas-blue: #00205B;
+  --aetas-blue-dark: #001640;
+  --aetas-blue-soft: #f4f6fb;
+  --aetas-turquoise: #009CA6;
+  --aetas-turquoise-dark: #007a82;
+  --aetas-gold: #9A7B3A;
+  --aetas-gold-soft: #c8a55c;
+
+  /* Neutrals */
+  --ink: #1a1f2e;
+  --ink-soft: #4a5269;
+  --ink-muted: #8089a0;
+  --paper: #ffffff;
+  --paper-warm: #fafaf7;
+  --line: #e6e8ee;
+  --line-soft: #f0f2f6;
+
+  /* Typography */
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tracking-display: -0.01em;
+  --tracking-eyebrow: 0.18em;
+
+  /* Layout */
+  --container: 1200px;
+  --container-narrow: 880px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4rem, 9vw, 7rem);
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(0, 32, 91, 0.04), 0 2px 6px rgba(0, 32, 91, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 32, 91, 0.06), 0 12px 28px rgba(0, 32, 91, 0.06);
+  --shadow-lg: 0 10px 30px rgba(0, 32, 91, 0.08), 0 24px 60px rgba(0, 32, 91, 0.08);
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---------- 2. Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--aetas-blue); text-decoration: none; transition: color 200ms var(--ease); }
+a:hover { color: var(--aetas-turquoise); }
+button { font-family: inherit; cursor: pointer; }
+
+/* ---------- 3. Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--aetas-blue);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: var(--tracking-display);
+  margin: 0 0 0.6em;
+}
+h1 { font-size: clamp(2.25rem, 5.5vw, 3.75rem); font-weight: 300; }
+h1 strong, h1 .accent { font-weight: 700; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 400; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 600; }
+h4 { font-size: 1.125rem; font-weight: 600; }
+p { margin: 0 0 1.1em; color: var(--ink-soft); }
+.lead { font-size: 1.2rem; line-height: 1.55; color: var(--ink); font-weight: 300; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--aetas-gold);
+  margin-bottom: 1rem;
+}
+.eyebrow.turquoise { color: var(--aetas-turquoise); }
+
+.rule {
+  width: 60px;
+  height: 2px;
+  background: var(--aetas-gold);
+  border: 0;
+  margin: 0 0 1.75rem;
+}
+.rule.center { margin-left: auto; margin-right: auto; }
+
+/* ---------- 4. Layout helpers ---------- */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.container-narrow { width: 100%; max-width: var(--container-narrow); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section-y); }
+.section-tight { padding-block: clamp(2.5rem, 6vw, 4rem); }
+.section-soft { background: var(--paper-warm); }
+.section-blue { background: var(--aetas-blue); color: #ffffff; }
+.section-blue h1, .section-blue h2, .section-blue h3 { color: #ffffff; }
+.section-blue p { color: rgba(255, 255, 255, 0.82); }
+
+.grid { display: grid; gap: 2rem; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.text-center { text-align: center; }
+
+/* ---------- 5. Header / nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--aetas-blue);
+}
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-text span:last-child {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--aetas-turquoise);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+  position: relative;
+  padding-block: 6px;
+}
+.nav-links a:hover, .nav-links a.is-active { color: var(--aetas-blue); }
+.nav-links a.is-active::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -2px 0;
+  height: 2px;
+  background: var(--aetas-gold);
+}
+.nav-cta {
+  background: var(--aetas-blue);
+  color: #fff !important;
+  padding: 0.65rem 1.25rem !important;
+  border-radius: 2px;
+  transition: background 200ms var(--ease);
+}
+.nav-cta:hover { background: var(--aetas-turquoise) !important; color: #fff !important; }
+.nav-cta::after { display: none !important; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.nav-toggle span {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: var(--aetas-blue);
+  transition: transform 200ms var(--ease), opacity 200ms var(--ease);
+}
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 19px; }
+.nav-toggle span:nth-child(3) { top: 25px; }
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 880px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 0 1rem;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 200ms var(--ease), opacity 200ms var(--ease);
+  }
+  .nav-links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    padding: 0.85rem var(--gutter);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-cta {
+    margin: 0.75rem var(--gutter) 0;
+    text-align: center;
+    border-radius: 2px;
+  }
+}
+
+/* ---------- 6. Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  transition: all 220ms var(--ease);
+  cursor: pointer;
+}
+.btn-primary { background: var(--aetas-blue); color: #fff; }
+.btn-primary:hover { background: var(--aetas-turquoise); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-ghost { background: transparent; color: var(--aetas-blue); border-color: var(--aetas-blue); }
+.btn-ghost:hover { background: var(--aetas-blue); color: #fff; }
+.btn-gold { background: var(--aetas-gold); color: #fff; }
+.btn-gold:hover { background: var(--aetas-blue); color: #fff; }
+.btn-arrow::after {
+  content: '→';
+  transition: transform 200ms var(--ease);
+}
+.btn:hover .btn-arrow::after, .btn-arrow:hover::after { transform: translateX(3px); }
+
+/* ---------- 7. Hero ---------- */
+.hero {
+  position: relative;
+  padding-block: clamp(5rem, 11vw, 9rem);
+  background: linear-gradient(180deg, #fafaf7 0%, #ffffff 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(0, 156, 166, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 90% 70%, rgba(154, 123, 58, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--aetas-turquoise);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--aetas-gold);
+}
+.hero h1 { margin-bottom: 1.5rem; }
+.hero p { font-size: 1.18rem; max-width: 540px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.hero-aside {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--aetas-gold);
+  position: relative;
+}
+.hero-aside h3 { color: var(--aetas-blue); }
+.hero-aside ul { list-style: none; padding: 0; margin: 1rem 0 0; }
+.hero-aside li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.hero-aside li:last-child { border-bottom: 0; }
+.hero-aside li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 6px;
+  height: 6px;
+  background: var(--aetas-turquoise);
+  border-radius: 50%;
+}
+@media (max-width: 880px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero::before { display: none; }
+}
+
+/* ---------- 8. Service / feature cards ---------- */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease), border-color 240ms var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: var(--aetas-turquoise);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 280ms var(--ease);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+.card:hover::before { transform: scaleX(1); }
+.card-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--aetas-blue-soft);
+  color: var(--aetas-blue);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+.card p { font-size: 0.95rem; margin-bottom: 1rem; }
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--aetas-turquoise);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.card-link::after { content: '→'; transition: transform 200ms var(--ease); }
+.card:hover .card-link::after { transform: translateX(3px); }
+
+/* ---------- 9. Process steps ---------- */
+.process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.process-step {
+  padding: 2.5rem 1.75rem;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+.process-step:last-child { border-right: 0; }
+.process-num {
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-eyebrow);
+  font-weight: 600;
+  color: var(--aetas-gold);
+  margin-bottom: 1rem;
+}
+.process-step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.92rem; margin: 0; }
+@media (max-width: 720px) {
+  .process-step { border-right: 0; border-bottom: 1px solid var(--line); }
+  .process-step:last-child { border-bottom: 0; }
+}
+
+/* ---------- 10. Quote / testimonial ---------- */
+.quote {
+  position: relative;
+  padding: 2.5rem;
+  background: var(--paper-warm);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--aetas-gold);
+}
+.quote-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.quote-attr { font-size: 0.85rem; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.04em; }
+
+/* ---------- 11. Section header ---------- */
+.section-head {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+.section-head.left { text-align: left; margin-inline: 0; }
+
+/* ---------- 12. Page banner (sub-pages) ---------- */
+.page-banner {
+  background: var(--aetas-blue);
+  color: #fff;
+  padding-block: clamp(3.5rem, 8vw, 5.5rem);
+  position: relative;
+  overflow: hidden;
+}
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 156, 166, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-banner::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--aetas-turquoise) 0%, var(--aetas-gold) 100%);
+}
+.page-banner h1 { color: #fff; max-width: 720px; position: relative; }
+.page-banner .lead { color: rgba(255, 255, 255, 0.85); max-width: 640px; position: relative; font-weight: 300; }
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.breadcrumbs a { color: rgba(255, 255, 255, 0.85); }
+.breadcrumbs a:hover { color: #fff; }
+.breadcrumbs .sep { margin-inline: 0.5rem; opacity: 0.5; }
+
+/* ---------- 13. Insights / blog ---------- */
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding-left 200ms var(--ease);
+}
+.post-card:hover { padding-left: 0.75rem; }
+.post-meta {
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--aetas-gold);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.post-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--aetas-blue); }
+.post-card p { font-size: 1rem; margin-bottom: 0.75rem; }
+
+article.post .post-body { max-width: 720px; margin: 0 auto; }
+article.post h2 { margin-top: 2.5rem; }
+article.post h3 { margin-top: 2rem; }
+article.post p { font-size: 1.05rem; line-height: 1.75; }
+article.post blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.75rem;
+  border-left: 3px solid var(--aetas-gold);
+  background: var(--paper-warm);
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ---------- 14. Forms ---------- */
+.form-grid { display: grid; gap: 1.25rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.form-field { display: flex; flex-direction: column; }
+.form-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--aetas-blue);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.45rem;
+}
+.form-field input, .form-field select, .form-field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink);
+  transition: border-color 180ms var(--ease), box-shadow 180ms var(--ease);
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  outline: 0;
+  border-color: var(--aetas-turquoise);
+  box-shadow: 0 0 0 3px rgba(0, 156, 166, 0.12);
+}
+
+/* ---------- 15. Contact details strip ---------- */
+.contact-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem;
+  background: var(--paper-warm);
+  border-radius: var(--radius);
+}
+.contact-strip h4 {
+  color: var(--aetas-blue);
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.contact-strip p { font-size: 0.95rem; margin: 0; }
+
+/* ---------- 16. Footer ---------- */
+.site-footer {
+  background: var(--aetas-blue-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding-block: 4rem 2rem;
+  position: relative;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+.footer-grid h4 {
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 0.55rem; }
+.footer-grid a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  transition: color 180ms var(--ease);
+}
+.footer-grid a:hover { color: #fff; }
+.footer-brand p { font-size: 0.92rem; line-height: 1.6; margin-top: 1rem; }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+.footer-bottom p { margin: 0 0 0.5rem; color: inherit; }
+.footer-bottom a { color: rgba(255, 255, 255, 0.7); }
+
+/* ---------- 17. Stats / pull-out ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+}
+.stat {
+  padding: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+.stat:last-child { border-right: 0; }
+.stat-num {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat-num strong { color: var(--aetas-gold-soft); font-weight: 600; }
+.stat-label {
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- 18. Misc ---------- */
+.checklist { list-style: none; padding: 0; margin: 1.5rem 0; }
+.checklist li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+}
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--aetas-turquoise);
+  border-bottom: 2px solid var(--aetas-turquoise);
+  transform: rotate(-45deg);
+}
+
+.disclaimer {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  padding: 1.5rem;
+  background: var(--paper-warm);
+  border-left: 2px solid var(--aetas-gold);
+  border-radius: 2px;
+}
+
+/* ---------- 19. Reveal-on-scroll (light touch) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms var(--ease), transform 600ms var(--ease);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- 20. Print ---------- */
+@media print {
+  .site-header, .site-footer, .nav-toggle, .hero-actions, .btn { display: none !important; }
+  body { color: #000; background: #fff; }
+}
+
+/* ============================================================
+   FILTER PILLS (Insights category filter)
+   ============================================================ */
+.filter-pill {
+  display: inline-block;
+  padding: 0.42rem 0.95rem;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.filter-pill:hover {
+  background: #fff;
+  border-color: var(--aetas-gold);
+  color: var(--aetas-navy);
+}
+.filter-pill.is-active {
+  background: var(--aetas-gold);
+  color: #fff;
+  border-color: var(--aetas-gold);
+}
+.filter-pill.is-active:hover {
+  background: var(--aetas-gold);
+  color: #fff;
+  border-color: var(--aetas-gold);
+}
+@media (max-width: 600px) {
+  .filter-pill { font-size: 0.78rem; padding: 0.38rem 0.8rem; }
+}/* Footer: 4 equal columns (post brand-block removal) */
+.footer-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Booking page additions ---------- */
+.book-card { display: flex; flex-direction: column; }
+.book-card .checklist { margin-top: 0.25rem; margin-bottom: 1.5rem; }
+.book-card .btn { margin-top: auto; align-self: flex-start; }
+.book-card .card-icon svg { width: 22px; height: 22px; }
+
+.cal-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+@media (max-width: 760px) { .cal-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+.cal-head { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1rem; }
+.cal-head h3 { margin: 0; font-size: 1.15rem; }
+.cal-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.cal-dot.gold { background: var(--aetas-gold); }
+.cal-dot.turq { background: var(--aetas-turquoise); }
+
+.cal-frame {
+  position: relative;
+  min-height: 640px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper-warm);
+  box-shadow: var(--shadow-sm);
+}
+.cal-frame iframe {
+  position: relative; z-index: 2;
+  width: 100%; min-height: 640px; border: 0; display: block; background: transparent;
+}
+.cal-loading {
+  position: absolute; inset: 0; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1rem; padding: 2rem; text-align: center;
+  color: var(--ink-muted); font-size: 0.9rem; letter-spacing: 0.02em;
+}
+.cal-loading .spinner {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 3px solid var(--line); border-top-color: var(--aetas-turquoise);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.cal-fallback { display: inline-block; margin-top: 0.85rem; font-size: 0.85rem; font-weight: 600; color: var(--aetas-turquoise); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="https://aetas-wealth.com/" class="brand" aria-label="Aetas Wealth home">
+      <span class="brand-mark"><img src="https://aetas-wealth.com/assets/images/aetas-mark.png" alt="Aetas Wealth"></span>
+      <span class="brand-text">
+        <span>Aetas Wealth</span>
+        <span>Lifetime to Legacy</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="https://aetas-wealth.com/our-approach.html">Our Approach</a></li>
+      <li><a href="https://aetas-wealth.com/our-people.html">Our People</a></li>
+      <li><a href="https://aetas-wealth.com/individuals.html">Individuals</a></li>
+      <li><a href="https://aetas-wealth.com/businesses.html">Businesses</a></li>
+      <li><a href="https://aetas-wealth.com/fees.html">Fees</a></li>
+      <li><a href="https://aetas-wealth.com/insights/">Insights</a></li>
+      <li><a href="https://aetas-wealth.com/contact.html">Contact</a></li>
+      <li><a href="#book" class="nav-cta">Book a meeting</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="page-banner">
+  <div class="container">
+    <p class="eyebrow turquoise">Book an appointment</p>
+    <h1>Speak with a <span class="accent" style="color:var(--aetas-turquoise)">Chartered</span> Financial Planner</h1>
+    <p class="lead">Choose the conversation that suits you, then pick a time that works around your day. There is no cost and no obligation.</p>
+  </div>
+</section>
+
+<!-- Two options -->
+<section class="section section-soft" id="book">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Two ways to start</p>
+      <h2>Choose the right conversation</h2>
+      <p>Whether you want a focused look at your pension or a broader financial planning conversation, you will speak with a qualified, regulated planner.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <!-- Pension Review -->
+      <div class="card book-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 16h5M9 12h4.5M11 16v-4.8a2 2 0 0 1 2-2 1.9 1.9 0 0 1 1.6.9"/></svg>
+        </div>
+        <p class="eyebrow">Pensions &amp; Retirement</p>
+        <h3>Book a Pension Review</h3>
+        <p>A focused look at your pensions and retirement plans with a Chartered Financial Planner.</p>
+        <ul class="checklist">
+          <li>Around 30 minutes, by phone or video</li>
+          <li>A review of your existing pensions and options</li>
+          <li>Clear, no-obligation next steps</li>
+        </ul>
+        <a class="btn btn-primary btn-arrow" href="https://link.aetas-wealth.com/widget/booking/65kC9dm2WgkoxziAWlFE" target="_blank" rel="noopener">Book a Pension Review</a>
+      </div>
+
+      <!-- Speak with a Planner -->
+      <div class="card book-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-5.4A8 8 0 1 1 21 11.5z"/></svg>
+        </div>
+        <p class="eyebrow">General Enquiry</p>
+        <h3>Speak with a Financial Planner</h3>
+        <p>An introductory conversation about pensions, investments, protection and your wider financial plan.</p>
+        <ul class="checklist">
+          <li>A relaxed, no-obligation first chat</li>
+          <li>Talk through your goals and circumstances</li>
+          <li>Find out how we can help and what it costs</li>
+        </ul>
+        <a class="btn btn-gold btn-arrow" href="https://link.aetas-wealth.com/widget/booking/LlxFl4DIfn023BvfaFO7" target="_blank" rel="noopener">Speak with a Planner</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Embedded calendars -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow turquoise">Pick a time</p>
+      <h2>Or choose a slot right here</h2>
+      <p>Select a time below and you will receive a confirmation by email. Prefer to talk it through first? Use the buttons above.</p>
+    </div>
+
+    <div class="grid cal-grid">
+      <div>
+        <div class="cal-head"><span class="cal-dot gold"></span><h3>Pension Review</h3></div>
+        <div class="cal-frame">
+          <div class="cal-loading"><div class="spinner"></div><span>Loading available times&hellip;</span></div>
+          <iframe src="https://link.aetas-wealth.com/widget/booking/65kC9dm2WgkoxziAWlFE" scrolling="no" id="65kC9dm2WgkoxziAWlFE" title="Book a Pension Review" onload="this.previousElementSibling.style.display='none'"></iframe>
+        </div>
+        <a class="cal-fallback" href="https://link.aetas-wealth.com/widget/booking/65kC9dm2WgkoxziAWlFE" target="_blank" rel="noopener">Calendar not loading? Open the booking page &#8599;</a>
+      </div>
+      <div>
+        <div class="cal-head"><span class="cal-dot turq"></span><h3>Speak with a Planner</h3></div>
+        <div class="cal-frame">
+          <div class="cal-loading"><div class="spinner"></div><span>Loading available times&hellip;</span></div>
+          <iframe src="https://link.aetas-wealth.com/widget/booking/LlxFl4DIfn023BvfaFO7" scrolling="no" id="LlxFl4DIfn023BvfaFO7" title="Speak with a Financial Planner" onload="this.previousElementSibling.style.display='none'"></iframe>
+        </div>
+        <a class="cal-fallback" href="https://link.aetas-wealth.com/widget/booking/LlxFl4DIfn023BvfaFO7" target="_blank" rel="noopener">Calendar not loading? Open the booking page &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What to expect</p>
+      <h2>How your first meeting works</h2>
+    </div>
+    <div class="process">
+      <div class="process-step">
+        <div class="process-num">STEP 01</div>
+        <h3>Initial conversation</h3>
+        <p>Around 30 minutes by phone, video or in person. Your planner listens to your goals, your circumstances and what matters most to you.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 02</div>
+        <h3>A clear financial plan</h3>
+        <p>If it makes sense to go further, your planner brings pensions, investments, protection and tax planning into a single, joined-up plan.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">STEP 03</div>
+        <h3>Ongoing advice</h3>
+        <p>Regular reviews keep your plan aligned with your life as your circumstances change. You are supported at each stage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Credibility -->
+<section class="section-blue section-tight">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><div class="stat-num"><strong>£4bn</strong></div><div class="stat-label">Assets advised</div></div>
+      <div class="stat"><div class="stat-num"><strong>55+</strong></div><div class="stat-label">Independent advisers</div></div>
+      <div class="stat"><div class="stat-num">FCA</div><div class="stat-label">Authorised &amp; regulated</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reassurance / disclaimer -->
+<section class="section-tight">
+  <div class="container-narrow">
+    <p class="disclaimer">Your details are held securely and used only to arrange your appointment, in line with our <a href="https://aetas-wealth.com/privacy.html">privacy policy</a>. The value of investments can go down as well as up, so you could get back less than you invested. The guidance on this page is subject to the UK regulatory regime and is primarily targeted at consumers based in the UK.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="https://aetas-wealth.com/">Home</a></li>
+          <li><a href="https://aetas-wealth.com/our-approach.html">Our Approach</a></li>
+          <li><a href="https://aetas-wealth.com/our-people.html">Our People</a></li>
+          <li><a href="https://aetas-wealth.com/individuals.html">Individuals</a></li>
+          <li><a href="https://aetas-wealth.com/businesses.html">Businesses</a></li>
+          <li><a href="https://aetas-wealth.com/fees.html">Fees</a></li>
+          <li><a href="https://aetas-wealth.com/insights/">Insights</a></li>
+          <li><a href="https://aetas-wealth.com/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://aetas-wealth.com/services/pensions-retirement.html">Pensions &amp; Retirement</a></li>
+          <li><a href="https://aetas-wealth.com/services/investment-management.html">Investment Management</a></li>
+          <li><a href="https://aetas-wealth.com/services/inheritance-tax.html">Inheritance Tax Planning</a></li>
+          <li><a href="https://aetas-wealth.com/services/financial-planning.html">Financial Planning</a></li>
+          <li><a href="https://aetas-wealth.com/services/protection-planning.html">Protection Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Useful</h4>
+        <ul>
+          <li><a href="https://aetas-wealth.com/working-with-us.html">Working with Us</a></li>
+          <li><a href="https://aetas-wealth.com/lifetime-to-legacy.html">Lifetime to Legacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Offices</h4>
+        <p style="margin:0 0 0.4rem 0;font-weight:600;color:#fff;">London</p>
+        <ul style="margin-bottom:1.25rem;">
+          <li>13 Hanover Square</li>
+          <li>Mayfair, London</li>
+          <li>W1S 1HN</li>
+        </ul>
+        <p style="margin:0 0 0.4rem 0;font-weight:600;color:#fff;">Norwich</p>
+        <ul>
+          <li>Insight House</li>
+          <li>7a Alkmaar Way</li>
+          <li>Norwich NR6 6BF</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><strong>Aetas Wealth</strong> is a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Insight Financial Associates Limited is a company incorporated in England and Wales with company number 05054886. Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.</p>
+      <p>&copy; <span data-year>2026</span> Aetas Wealth. All rights reserved. <a href="https://aetas-wealth.com/privacy.html">Privacy &amp; Cookies</a> · <a href="https://aetas-wealth.com/terms.html">Terms of Use</a> · <a href="https://aetas-wealth.com/complaints.html">Complaints</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var t = document.querySelector('.nav-toggle'), l = document.querySelector('.nav-links');
+  if (t && l) t.addEventListener('click', function(){
+    var open = l.classList.toggle('is-open'); t.classList.toggle('is-open', open);
+    t.setAttribute('aria-expanded', open);
+  });
+  // Current year
+  document.querySelectorAll('[data-year]').forEach(function(e){ e.textContent = new Date().getFullYear(); });
+</script>
+<script src="https://link.aetas-wealth.com/js/form_embed.js" type="text/javascript"></script>
+</body>
+</html>
