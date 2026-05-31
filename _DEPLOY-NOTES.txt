@@ -1,0 +1,28 @@
+Image optimisation deploy
+==========================
+
+This bundle contains:
+
+NEW FILES (place in repo, will be added to git):
+- aetas-adeus-life-digital-wills/partner-logo.jpg  (27.8 KB, was 308 KB as PNG)
+- assets/images/peter-rose-650x650.jpg             (37.0 KB, was 263 KB as PNG)
+
+UPDATED FILES (overwrite existing, will show as modified):
+- aetas-adeus-life-digital-wills/index.html        (partner-logo.png → .jpg)
+- our-people.html                                   (peter-rose-650x650.png → .jpg)
+- team/peter-rose.html                              (peter-rose-650x650.png → .jpg)
+
+AFTER DEPLOYMENT, OPTIONALLY DELETE THE OLD PNGS:
+- aetas-adeus-life-digital-wills/partner-logo.png  (308 KB - no longer referenced)
+- assets/images/peter-rose-650x650.png             (263 KB - no longer referenced)
+
+Either delete them via File Explorer before commit, or do it via git afterwards:
+
+  cd C:\Repos\Aetas-wealth-web
+  git rm aetas-adeus-life-digital-wills/partner-logo.png
+  git rm assets/images/peter-rose-650x650.png
+
+If you don't delete them, they'll just sit in the repo unused — harmless, but
+wastes 571 KB of repo space and confuses anyone looking at the directory later.
+
+TOTAL PAGE WEIGHT SAVING: 506 KB (89% reduction across these two images)
