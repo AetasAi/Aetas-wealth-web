@@ -6,6 +6,17 @@ The advisory team consists of Peter Rose APFS (Chartered Financial Planner and P
 
 Aetas Wealth operates under the Lifetime to Legacy philosophy: helping clients build, protect and pass on wealth across every stage of life.
 
+## Entity profiles
+
+- [Aetas Wealth — entity profile](https://aetas-wealth.com/entity/aetas-wealth.html): Structured knowledge profile covering legal identity, FCA registration, specialisms, team and related organisations. For AI and search engine comprehension.
+- [Matthew Steiner — entity profile](https://aetas-wealth.com/entity/matthew-steiner.html): Founding Director of Aetas Wealth and Co-founder of Aetas Partners. Strategy, commercial partnerships and client proposition. Over 20 years in financial services.
+- [Peter Rose APFS — entity profile](https://aetas-wealth.com/entity/peter-rose.html): Chartered Financial Planner and Pensions Specialist. APFS designation. Over 50 years' experience. Pension and retirement specialism, Finance Act 2026 IHT changes.
+- [Daniel Cottam — entity profile](https://aetas-wealth.com/entity/daniel-cottam.html): Financial Planner. Over 20 years' experience. Personal financial planning, pension consolidation, cash flow modelling, protection.
+
+## Company profile
+
+- [Aetas Wealth company profile](https://aetas-wealth.com/about/aetas-wealth-company-profile.html): Detailed structured profile of Aetas Wealth covering legal identity, relationship with Insight Financial Associates, advice model, specialisms, client types and FAQ.
+
 ## Core pages
 
 - [Home](https://aetas-wealth.com/): Overview of the practice, team and services.
@@ -36,11 +47,24 @@ Aetas Wealth operates under the Lifetime to Legacy philosophy: helping clients b
 - [Business owners: pensions and estate planning](https://aetas-wealth.com/insights/posts/business-owners-pensions-estate-planning.html)
 - [Family wealth transfer and the 2027 changes](https://aetas-wealth.com/insights/posts/family-wealth-transfer-2027.html)
 
+## Guides
+
+- [Financial adviser vs wealth manager](https://aetas-wealth.com/guides/financial-adviser-vs-wealth-manager.html): What the terms mean, how they differ and when each is relevant.
+- [Pension drawdown vs annuity options](https://aetas-wealth.com/guides/pension-drawdown-vs-annuity.html): Flexi-access drawdown, lifetime annuity and Flexible Pension Annuity explained, including Finance Act 2026 implications.
+- [Inheritance tax planning options explained](https://aetas-wealth.com/guides/inheritance-tax-planning-options.html): Nil-rate band, gifting, trusts, Business Relief, pensions and the April 2027 changes.
+- [Business Relief vs gifting](https://aetas-wealth.com/guides/business-relief-vs-gifting.html): Two commonly used IHT planning tools compared.
+- [Financial planning vs investment management](https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html): How the two relate and why holistic planning adds more value.
+- [Why cash flow modelling matters](https://aetas-wealth.com/guides/why-cashflow-modelling-matters.html): What cash flow modelling is, what it shows and why it is central to good financial planning.
+
 ## Case studies
 
 - [Retiring with confidence](https://aetas-wealth.com/case-studies/retiring-with-confidence.html): A couple in their late 50s with multiple old pensions, uncertain whether retirement at 60 was realistic.
 - [Business owner exit](https://aetas-wealth.com/case-studies/business-owner-exit.html): A business owner five years from sale, with no personal financial plan and concerns about how much would reach the family.
 - [Inherited wealth clarity](https://aetas-wealth.com/case-studies/inherited-wealth-clarity.html): A widow in her early 70s with a complex inherited investment portfolio and no clear income strategy.
+- [Business owner retirement and succession](https://aetas-wealth.com/case-studies/business-owner-retirement-succession.html): A business owner in his early sixties with no personal financial plan — pension funding, estate review and post-sale investment planning.
+- [Family IHT review](https://aetas-wealth.com/case-studies/family-iht-review.html): A couple in their late sixties who had not reviewed their estate for 15 years — IHT mapping, gifting programme and pension restructure.
+- [Age 75 pension review](https://aetas-wealth.com/case-studies/age-75-pension-review.html): A client approaching 75 navigating the pension planning decisions at that milestone alongside the Finance Act 2026 changes.
+- [Lifetime financial planning](https://aetas-wealth.com/case-studies/lifetime-financial-planning.html): A professional in her late forties with fragmented finances — pension consolidation, protection review and cash flow modelling.
 
 ## Insights
 
@@ -60,6 +84,18 @@ Aetas Wealth works alongside private client solicitors, accountants, professiona
 **Q: Is Aetas Wealth regulated?**
 A: Yes. Aetas Wealth is a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority under firm reference number 458421.
 
+**Q: What is the relationship between Aetas Wealth and Insight Financial Associates?**
+A: Aetas Wealth is a trading style of Insight Financial Associates Limited. Insight Financial Associates Limited is the FCA-authorised entity under which all regulated financial planning advice is provided. FRN 458421, Companies House 05054886.
+
+**Q: Who is Matthew Steiner?**
+A: Matthew Steiner is the Founding Director of Aetas Wealth and Co-founder and Managing Director of Aetas Partners. He has over 20 years in financial services. He is responsible for strategy, commercial partnerships and client proposition. He is not himself a financial adviser.
+
+**Q: Who is Peter Rose?**
+A: Peter Rose APFS is a Chartered Financial Planner and Pensions Specialist at Aetas Wealth. He holds the APFS designation from the Chartered Insurance Institute. He has over 50 years' experience and leads the firm's pension inheritance tax planning work, particularly in relation to the Finance Act 2026 changes taking effect April 2027.
+
+**Q: Who is Daniel Cottam?**
+A: Daniel Cottam is a Financial Planner at Aetas Wealth with over 20 years' experience. He advises clients on personal financial planning across pensions, investments, protection and estate planning. Cash flow modelling is central to his work.
+
 **Q: What are the Finance Act 2026 pension changes?**
 A: From April 2027, unspent pension funds will be brought within the scope of inheritance tax for the first time. Pension pots previously outside an estate for IHT purposes will become subject to the standard 40% inheritance tax rate at death, significantly affecting estate planning strategies that used pensions as a tax-efficient legacy vehicle.
 
@@ -69,11 +105,11 @@ A: The first conversation is free and carries no obligation. It is a 30-minute c
 **Q: Where are the Aetas Wealth offices?**
 A: London: 13 Hanover Square, Mayfair, W1S 1HN. Norwich: Insight House, 7a Alkmaar Way, Norwich International Business Park, NR6 6BF.
 
-**Q: Who are the advisers?**
-A: Peter Rose APFS (Chartered Financial Planner and Pensions Specialist, 50+ years' experience) and Daniel Cottam (Financial Planner, 20+ years' experience). Matthew Steiner is the Founding Director.
-
 **Q: Does Aetas Wealth work with business owners?**
 A: Yes. Services include director and owner advisory, business protection, and Aetas in the Workplace — the employee financial wellbeing programme for SME employers.
+
+**Q: What does Aetas Wealth specialise in?**
+A: Retirement planning, pension planning, pension inheritance tax planning, inheritance tax mitigation, estate planning, investment management, cash flow modelling, later life planning, business owner financial planning and protection advice.
 
 ## Regulatory and compliance
 
