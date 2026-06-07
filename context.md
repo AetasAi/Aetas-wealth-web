@@ -99,3 +99,50 @@ Book: https://aetas-wealth.com/book.html
 ## Regulatory disclaimer
 
 The FCA does not regulate Wills, Trusts or Tax advice. The value of investments can fall as well as rise. Guidance is targeted at UK consumers.
+
+## E-E-A-T improvements (June 2026)
+
+### Author attribution
+All 46 insight articles now carry correct visible bylines matching schema attribution:
+- Peter Rose APFS: 30 pension, retirement, IHT and estate planning articles
+- Daniel Cottam: 12 personal financial planning articles
+- Matthew Steiner: 1 commercial/workplace article
+- Aetas Wealth: 3 market commentaries
+
+### FAQ schema
+FAQPage schema added to all 9 service pages (3–4 questions each):
+- /services/pensions-retirement.html — 4 questions
+- /services/inheritance-tax.html — 4 questions
+- /services/investment-management.html — 3 questions
+- /services/financial-planning.html — 4 questions
+- /services/cash-flow-planning.html — 3 questions
+- /services/protection-planning.html — 3 questions
+- /services/later-life-planning.html — 4 questions
+- /services/director-owner-advisory.html — 4 questions
+- /services/pension-inheritance-tax-planning.html — existing
+
+### Speakable schema
+SpeakableSpecification added to priority pages for AI/voice answer extraction:
+- /pensions-iht-2027.html
+- /services/pensions-retirement.html
+- /services/inheritance-tax.html
+- /services/financial-planning.html
+- /services/later-life-planning.html
+
+### Authoritative citations
+Outbound links to gov.uk, legislation.gov.uk and FCA register added to 5 articles previously missing them:
+- defined-benefit-pension-iht-2027.html
+- should-i-take-tax-free-lump-sum-before-2027.html
+- what-happens-to-my-pension-before-after-2027.html
+- pension-iht-spousal-exemption-after-2027.html
+- business-owner-pension-iht-planning-2027.html
+
+### FCA register deep-links
+Direct link to FCA register entry (FRN 458421) added to:
+- /team/peter-rose.html
+- /team/daniel-cottam.html
+- /team/matthew-steiner.html
+- /entity/peter-rose.html
+- /about/aetas-wealth-company-profile.html
+
+FCA register URL: https://register.fca.org.uk/s/firm?id=0010X00004H5RRlQAN
