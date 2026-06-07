@@ -436,4 +436,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- phase 3 articles -->
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/what-happens-to-my-pension-before-after-2027.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/pension-iht-spousal-exemption-after-2027.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/should-i-take-tax-free-lump-sum-before-2027.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/defined-benefit-pension-iht-2027.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/business-owner-pension-iht-planning-2027.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
