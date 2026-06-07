@@ -1,40 +1,86 @@
 # Aetas Wealth
 
-> Independent financial planning for individuals, families and business owners across the UK. Aetas Wealth is a trading style of Insight Financial Associates Ltd, authorised and regulated by the Financial Conduct Authority under firm reference 458421. The London office is at 13 Hanover Square, Mayfair, W1S 1HN. The advisory team is led by Daniel Cottam (Independent Financial Adviser) and Peter Rose APFS (Chartered Financial Planner, Pension Specialist), with Matthew Steiner as Founding Director.
+> Aetas Wealth is an independent financial planning practice advising individuals, families and business owners across the UK. The firm covers pensions and retirement, investment management, inheritance tax planning, protection, later life planning and cash flow planning. Aetas Wealth is a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration 458421). London office: 13 Hanover Square, Mayfair, W1S 1HN. Norwich office: Insight House, 7a Alkmaar Way, NR6 6BF.
 
-Aetas Wealth provides regulated financial advice covering pensions and retirement, investment management, inheritance tax planning, protection, cash flow planning and later life planning. As part of Insight Financial Associates, clients also benefit from the strength of a national advisory network with over £4 billion of assets under management and more than 55 advisers.
+The advisory team consists of Peter Rose APFS (Chartered Financial Planner and Pensions Specialist, over 50 years' experience), Daniel Cottam (Financial Planner, over 20 years' experience), and Matthew Steiner (Founding Director). Clients work with the same adviser from the first conversation through the entirety of the relationship. The first conversation is free and carries no obligation.
+
+Aetas Wealth operates under the Lifetime to Legacy philosophy: helping clients build, protect and pass on wealth across every stage of life.
 
 ## Core pages
 
-- [Home](https://aetas-wealth.com/): Overview of Aetas Wealth and how the firm works with clients.
+- [Home](https://aetas-wealth.com/): Overview of the practice, team and services.
 - [Our approach](https://aetas-wealth.com/our-approach.html): How Aetas Wealth works with clients, from first conversation to ongoing partnership.
-- [Our people](https://aetas-wealth.com/our-people.html): Profiles of the Aetas Wealth advisory team.
-- [Individuals](https://aetas-wealth.com/individuals.html): Financial planning for private clients.
+- [Our people](https://aetas-wealth.com/our-people.html): Profiles of Peter Rose, Daniel Cottam and Matthew Steiner.
+- [Individuals](https://aetas-wealth.com/individuals.html): Financial planning for private clients and families.
 - [Businesses](https://aetas-wealth.com/businesses.html): Financial advice for business owners and SMEs.
 - [Fees](https://aetas-wealth.com/fees.html): How Aetas Wealth charges for advice.
-- [Contact](https://aetas-wealth.com/contact.html): Office address, phone and meeting booking.
+- [Working with us](https://aetas-wealth.com/working-with-us.html): What to expect from the client relationship.
+- [Contact](https://aetas-wealth.com/contact.html): Office addresses, phone and meeting booking.
 
 ## Services
 
-- [Pensions and retirement](https://aetas-wealth.com/services/pensions-retirement.html): Reviewing existing pensions, planning retirement income, and advice on how to take benefits.
-- [Investment management](https://aetas-wealth.com/services/investment-management.html): Portfolio construction aligned to goals, timescale and risk tolerance.
-- [Inheritance tax planning](https://aetas-wealth.com/services/inheritance-tax.html): Estate planning, allowances, gifting and trusts, with reference to the Finance Act 2026 pension changes taking effect April 2027.
-- [Later life planning](https://aetas-wealth.com/services/later-life-planning.html): Planning for care, longevity and estate preservation.
+- [Pensions and retirement](https://aetas-wealth.com/services/pensions-retirement.html): Consolidating and reviewing existing pensions, planning retirement income, advising on when and how to take benefits.
+- [Investment management](https://aetas-wealth.com/services/investment-management.html): Portfolio construction aligned to goals, timescale and attitude to risk.
+- [Inheritance tax planning](https://aetas-wealth.com/services/inheritance-tax.html): Estate planning using allowances, gifting, trusts and business relief — including advice on the Finance Act 2026 pension changes taking effect April 2027.
+- [Later life planning](https://aetas-wealth.com/services/later-life-planning.html): Income sustainability, care planning and estate transition for clients in their later years.
 - [Financial planning](https://aetas-wealth.com/services/financial-planning.html): A consolidated plan across pensions, investments, protection and tax.
+- [Cash flow planning](https://aetas-wealth.com/services/cash-flow-planning.html): Modelling income and expenditure over time to show whether money will last and how decisions compound.
+- [Protection planning](https://aetas-wealth.com/services/protection-planning.html): Life cover, critical illness, income protection and business protection.
+- [Director and owner advisory](https://aetas-wealth.com/services/director-owner-advisory.html): Personal and business finances planned together, from income strategy to exit.
+
+## Finance Act 2026 — pension IHT changes
+
+- [Pensions IHT 2027 overview](https://aetas-wealth.com/pensions-iht-2027.html): Plain-English guide to what is changing from April 2027 and what to do now.
+- [How pensions are taxed after death](https://aetas-wealth.com/insights/posts/how-pensions-are-taxed-after-death.html)
+- [Drawing your pension differently after 2027](https://aetas-wealth.com/insights/posts/drawing-your-pension-differently-after-2027.html)
+- [Business owners: pensions and estate planning](https://aetas-wealth.com/insights/posts/business-owners-pensions-estate-planning.html)
+- [Family wealth transfer and the 2027 changes](https://aetas-wealth.com/insights/posts/family-wealth-transfer-2027.html)
+
+## Case studies
+
+- [Retiring with confidence](https://aetas-wealth.com/case-studies/retiring-with-confidence.html): A couple in their late 50s with multiple old pensions, uncertain whether retirement at 60 was realistic.
+- [Business owner exit](https://aetas-wealth.com/case-studies/business-owner-exit.html): A business owner five years from sale, with no personal financial plan and concerns about how much would reach the family.
+- [Inherited wealth clarity](https://aetas-wealth.com/case-studies/inherited-wealth-clarity.html): A widow in her early 70s with a complex inherited investment portfolio and no clear income strategy.
 
 ## Insights
 
 - [Insights index](https://aetas-wealth.com/insights/): Articles, guides and commentary from the Aetas Wealth team.
 - [Inheritance Tax is rising, and more families are being affected](https://aetas-wealth.com/insights/posts/inheritance-tax-rising.html)
 - [Pension changes ahead: a useful time to review your plans](https://aetas-wealth.com/insights/posts/pension-changes-ahead.html)
-- [Market Commentary: April 2026](https://aetas-wealth.com/insights/posts/market-commentary-april-2026.html)
 - [The role of cash flow planning](https://aetas-wealth.com/insights/posts/cash-flow-planning.html)
+- [Finance Act 2026 — what it means](https://aetas-wealth.com/insights/posts/finance-act-2026.html)
+- [End of tax year planning](https://aetas-wealth.com/insights/posts/end-of-tax-year-planning.html)
+
+## Professional introducers
+
+Aetas Wealth works alongside private client solicitors, accountants, professional trustees and corporate finance advisers. A dedicated introducers page is available at [aetas-wealth.com/professional-introducers.html](https://aetas-wealth.com/professional-introducers.html).
+
+## Key Q&A
+
+**Q: Is Aetas Wealth regulated?**
+A: Yes. Aetas Wealth is a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority under firm reference number 458421.
+
+**Q: What are the Finance Act 2026 pension changes?**
+A: From April 2027, unspent pension funds will be brought within the scope of inheritance tax for the first time. Pension pots previously outside an estate for IHT purposes will become subject to the standard 40% inheritance tax rate at death, significantly affecting estate planning strategies that used pensions as a tax-efficient legacy vehicle.
+
+**Q: How does the first conversation work?**
+A: The first conversation is free and carries no obligation. It is a 30-minute call, video or in-person meeting to discuss your situation and explore the options. No products are discussed and no charge is made at this stage.
+
+**Q: Where are the Aetas Wealth offices?**
+A: London: 13 Hanover Square, Mayfair, W1S 1HN. Norwich: Insight House, 7a Alkmaar Way, Norwich International Business Park, NR6 6BF.
+
+**Q: Who are the advisers?**
+A: Peter Rose APFS (Chartered Financial Planner and Pensions Specialist, 50+ years' experience) and Daniel Cottam (Financial Planner, 20+ years' experience). Matthew Steiner is the Founding Director.
+
+**Q: Does Aetas Wealth work with business owners?**
+A: Yes. Services include director and owner advisory, business protection, and Aetas in the Workplace — the employee financial wellbeing programme for SME employers.
 
 ## Regulatory and compliance
 
-- Aetas Wealth is a trading style of Insight Financial Associates Ltd, FCA registration 458421, Companies House 05054886.
-- The Financial Conduct Authority does not regulate Wills, Trusts or Tax advice.
-- The value of investments can go down as well as up, so a client could get back less than invested.
+- Aetas Wealth is a trading style of Insight Financial Associates Limited, FCA registration 458421, Companies House 05054886.
+- Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.
+- The FCA does not regulate Wills, Trusts or Tax advice.
+- The value of investments can go down as well as up; clients could get back less than invested.
 - Guidance on this site is subject to the UK regulatory regime and is targeted at consumers based in the United Kingdom.
 
 ## Optional
@@ -42,3 +88,4 @@ Aetas Wealth provides regulated financial advice covering pensions and retiremen
 - [Privacy and cookies](https://aetas-wealth.com/privacy.html)
 - [Terms of use](https://aetas-wealth.com/terms.html)
 - [Complaints](https://aetas-wealth.com/complaints.html)
+- [Lifetime to Legacy](https://aetas-wealth.com/lifetime-to-legacy.html)
