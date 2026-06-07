@@ -538,4 +538,15 @@
     <lastmod>2026-06-07</lastmod>
     <priority>0.7</priority>
   </url>
+  <!-- glossary and about — June 2026 -->
+  <url>
+    <loc>https://aetas-wealth.com/glossary/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/about/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
