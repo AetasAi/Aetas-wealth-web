@@ -1,4 +1,66 @@
+# Aetas Wealth — robots.txt
+# https://aetas-wealth.com
+
+# ─────────────────────────────────────────────
+# Standard search engine bots
+# ─────────────────────────────────────────────
+
 User-agent: *
 Allow: /
 
+# ─────────────────────────────────────────────
+# AI agent crawlers — explicitly permitted
+# ─────────────────────────────────────────────
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# OpenAI (ChatGPT browsing, SearchGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (used by many AI training datasets)
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Brave Search
+User-agent: BraveBot
+Allow: /
+
+# ─────────────────────────────────────────────
+# Sitemaps and structured content
+# ─────────────────────────────────────────────
+
 Sitemap: https://aetas-wealth.com/sitemap.xml
+
+# ─────────────────────────────────────────────
+# AI agent discovery files
+# ─────────────────────────────────────────────
+
+# llms.txt is at: https://aetas-wealth.com/llms.txt
+# llms-full.txt is at: https://aetas-wealth.com/llms-full.txt
+# context.md is at: https://aetas-wealth.com/context.md
