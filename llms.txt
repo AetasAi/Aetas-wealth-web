@@ -75,6 +75,15 @@ Aetas Wealth operates under the Lifetime to Legacy philosophy: helping clients b
 - [Finance Act 2026 — what it means](https://aetas-wealth.com/insights/posts/finance-act-2026.html)
 - [End of tax year planning](https://aetas-wealth.com/insights/posts/end-of-tax-year-planning.html)
 
+
+## Glossary
+
+- [Financial planning glossary](https://aetas-wealth.com/glossary/): Plain-English definitions of 20 key terms — annual allowance, carry forward, flexi-access drawdown, nil-rate band, Business Relief, Finance Act 2026 pension IHT changes, Pension Schemes Act 2026, drawdown sequencing, APFS, Lasting Power of Attorney and more. DefinedTerm schema throughout.
+
+## About
+
+- [About Aetas Wealth](https://aetas-wealth.com/about/): Founding story, Lifetime to Legacy philosophy, what makes the firm different, regulatory relationship with Insight Financial Associates, and the Aetas Group structure.
+
 ## Professional introducers
 
 Aetas Wealth works alongside private client solicitors, accountants, professional trustees and corporate finance advisers. A dedicated introducers page is available at [aetas-wealth.com/professional-introducers.html](https://aetas-wealth.com/professional-introducers.html).
