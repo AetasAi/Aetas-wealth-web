@@ -2,6 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <meta name="ai-agent-summary" content="Aetas Wealth is an FCA-regulated independent financial planning practice (FCA 458421) advising UK individuals, families and business owners on pensions, investments, inheritance tax and protection. London office: 13 Hanover Square, Mayfair. First conversation free.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
@@ -44,25 +45,33 @@
         "width": 512,
         "height": 512
       },
-      "description": "Aetas Wealth is an independent financial planning practice with offices in Mayfair and Norwich, working with individuals, families and business owners across the UK on pensions, investments, inheritance tax and protection. Aetas Wealth is a trading style of Insight Financial Associates Limited, which is authorised and regulated by the Financial Conduct Authority.",
-      "parentOrganization": {
-        "@id": "https://aetas-wealth.com/#parent-organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
+      "description": "Aetas Wealth is an independent financial planning practice with offices in Mayfair and Norwich, working with individuals, families and business owners across the UK on pensions, investments, inheritance tax and protection. Aetas Wealth is a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority.",
+      "parentOrganization": { "@id": "https://aetas-wealth.com/#parent-organization" },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "knowsAbout": [
         "Financial planning",
         "Pensions and retirement planning",
         "Investment management",
         "Inheritance tax planning",
         "Estate planning",
+        "Later life planning",
         "Protection planning",
         "Cash flow planning",
-        "Wealth management"
+        "Wealth management",
+        "Finance Act 2026 pension changes",
+        "IHT and pension planning from April 2027",
+        "Director and business owner financial planning"
       ],
-      "slogan": "Lifetime to Legacy"
+      "sameAs": [
+        "https://www.linkedin.com/company/aetas-wealth",
+        "https://register.fca.org.uk/s/firm?id=001b000000MfNWNAA3"
+      ],
+      "slogan": "Lifetime to Legacy",
+      "member": [
+        { "@id": "https://aetas-wealth.com/#person-peter-rose" },
+        { "@id": "https://aetas-wealth.com/#person-daniel-cottam" },
+        { "@id": "https://aetas-wealth.com/#person-matthew-steiner" }
+      ]
     },
     {
       "@type": "Organization",
@@ -95,10 +104,30 @@
       "@id": "https://aetas-wealth.com/#website",
       "url": "https://aetas-wealth.com/",
       "name": "Aetas Wealth",
-      "publisher": {
-        "@id": "https://aetas-wealth.com/#organization"
-      },
-      "inLanguage": "en-GB"
+      "publisher": { "@id": "https://aetas-wealth.com/#organization" },
+      "inLanguage": "en-GB",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://aetas-wealth.com/insights/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aetas-wealth.com/#webpage",
+      "url": "https://aetas-wealth.com/",
+      "name": "Aetas Wealth · Independent Financial Planning UK",
+      "description": "Independent financial advice for individuals, families and business owners across the UK. Pensions, investments, inheritance tax and protection.",
+      "isPartOf": { "@id": "https://aetas-wealth.com/#website" },
+      "about": { "@id": "https://aetas-wealth.com/#organization" },
+      "inLanguage": "en-GB",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero-tagline", ".intro-text"]
+      }
     },
     {
       "@type": "FinancialService",
@@ -106,9 +135,7 @@
       "name": "Aetas Wealth · London",
       "image": "https://aetas-wealth.com/assets/images/aetas-mark.png",
       "url": "https://aetas-wealth.com/contact.html",
-      "parentOrganization": {
-        "@id": "https://aetas-wealth.com/#organization"
-      },
+      "parentOrganization": { "@id": "https://aetas-wealth.com/#organization" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "13 Hanover Square, Mayfair",
@@ -124,21 +151,12 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
           "opens": "08:30",
           "closes": "18:30"
         }
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "priceRange": "£££"
     },
     {
@@ -147,9 +165,7 @@
       "name": "Aetas Wealth · Norwich",
       "image": "https://aetas-wealth.com/assets/images/aetas-mark.png",
       "url": "https://aetas-wealth.com/contact.html",
-      "parentOrganization": {
-        "@id": "https://aetas-wealth.com/#organization"
-      },
+      "parentOrganization": { "@id": "https://aetas-wealth.com/#organization" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Insight House, 7a Alkmaar Way, Norwich International Business Park",
@@ -165,25 +181,166 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
           "opens": "08:30",
           "closes": "18:30"
         }
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "priceRange": "£££"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aetas-wealth.com/#person-peter-rose",
+      "name": "Peter Rose",
+      "jobTitle": "Chartered Financial Planner & Pensions Specialist",
+      "honorificSuffix": "APFS",
+      "description": "Over 50 years' experience advising private clients, families and business owners. Peter specialises in retirement planning, pension transitions, and the Finance Act 2026 pension inheritance tax changes taking effect April 2027.",
+      "url": "https://aetas-wealth.com/team/peter-rose.html",
+      "worksFor": { "@id": "https://aetas-wealth.com/#organization" },
+      "knowsAbout": [
+        "Pensions and retirement planning",
+        "Pension inheritance tax",
+        "Finance Act 2026",
+        "Defined benefit pension transfers",
+        "Annuity planning",
+        "Estate planning"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/peter-rose-aetas"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aetas-wealth.com/#person-daniel-cottam",
+      "name": "Daniel Cottam",
+      "jobTitle": "Financial Planner",
+      "description": "Over 20 years' experience. Daniel specialises in wealth management, cash flow modelling, and intergenerational estate planning for individuals, families and business owners.",
+      "url": "https://aetas-wealth.com/team/daniel-cottam.html",
+      "worksFor": { "@id": "https://aetas-wealth.com/#organization" },
+      "knowsAbout": [
+        "Wealth management",
+        "Cash flow planning",
+        "Investment management",
+        "Intergenerational estate planning",
+        "Inheritance tax planning",
+        "Financial planning for business owners"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aetas-wealth.com/#person-matthew-steiner",
+      "name": "Matthew Steiner",
+      "jobTitle": "Founding Director",
+      "description": "Founder and Managing Director of Aetas Wealth and Aetas Partners. Matthew leads the firm and the development of Aetas in the Workplace, the financial wellbeing proposition for SME employers.",
+      "url": "https://aetas-wealth.com/team/matthew-steiner.html",
+      "worksFor": { "@id": "https://aetas-wealth.com/#organization" },
+      "knowsAbout": [
+        "Financial wellbeing in the workplace",
+        "Employee benefits strategy",
+        "SME financial advisory",
+        "Relationship capital",
+        "Financial planning practice management"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/matthewsteiner"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aetas-wealth.com/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Aetas Wealth do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aetas Wealth is an independent financial planning practice advising individuals, families and business owners across the UK on pensions, investments, inheritance tax, protection and cash flow planning. The firm operates as a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration 458421)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Aetas Wealth regulated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Aetas Wealth is a trading style of Insight Financial Associates Limited, which is authorised and regulated by the Financial Conduct Authority under firm reference number 458421. The firm is incorporated in England and Wales (Companies House number 05054886)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the Finance Act 2026 pension changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From April 2027, unspent pension funds will be brought within the scope of inheritance tax for the first time under the Finance Act 2026. Pension pots that were previously outside an estate for IHT purposes will become subject to the standard 40% inheritance tax rate when passed on at death, significantly affecting estate planning strategies that relied on pensions as a tax-efficient legacy vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are Aetas Wealth's offices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aetas Wealth has two offices: London at 13 Hanover Square, Mayfair, W1S 1HN; and Norwich at Insight House, 7a Alkmaar Way, Norwich International Business Park, NR6 6BF. Initial conversations are available by video or phone for clients across the UK."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the first conversation work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first conversation with Aetas Wealth is free and carries no obligation. It is a 30-minute call, video or in-person meeting to discuss your situation, explore the options open to you, and decide whether to proceed. No products are discussed and no charge is made at this stage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who are the advisers at Aetas Wealth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The advisory team at Aetas Wealth consists of Peter Rose APFS, a Chartered Financial Planner and Pensions Specialist with over 50 years of experience, and Daniel Cottam, a Financial Planner specialising in wealth management, cash flow modelling and estate planning. Matthew Steiner is the Founding Director and leads the firm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Aetas Wealth work with professional introducers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Aetas Wealth works alongside private client solicitors, accountants, professional trustees and corporate finance advisers across the UK on matters requiring coordinated tax, legal and financial input. A dedicated professional introducers service is available at aetas-wealth.com/professional-introducers.html."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://aetas-wealth.com/#term-lifetime-to-legacy",
+      "name": "Lifetime to Legacy",
+      "description": "The Aetas Wealth philosophy and service framework: helping clients build, protect and pass on wealth across every stage of life, from early accumulation through retirement and into estate transition.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Aetas Wealth terminology"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://aetas-wealth.com/#term-pension-iht-2027",
+      "name": "Pension IHT 2027",
+      "description": "Shorthand for the Finance Act 2026 pension inheritance tax changes. From April 2027, unspent pension funds will be subject to inheritance tax for the first time, ending their status as an IHT-exempt legacy vehicle and requiring significant changes to estate planning strategies.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Aetas Wealth terminology"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://aetas-wealth.com/#term-cash-flow-planning",
+      "name": "Cash flow planning",
+      "description": "A financial planning discipline that models income, expenditure, assets and liabilities over time to show whether a client's money will last and how today's decisions affect long-term financial outcomes. Central to retirement planning and estate transition work at Aetas Wealth.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Aetas Wealth terminology"
+      }
     }
   ]
 }
+
   </script>
 </head>
 <body>
