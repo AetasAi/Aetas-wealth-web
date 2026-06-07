@@ -174,3 +174,119 @@ Some clients have used pension death benefits in conjunction with trust structur
 - Pension IHT and the spousal exemption: https://aetas-wealth.com/insights/posts/pensions-iht-spousal-exemption.html
 - Business owners, pensions and estate planning: https://aetas-wealth.com/insights/posts/business-owners-pensions-estate-planning.html
 - Family wealth transfer and the 2027 changes: https://aetas-wealth.com/insights/posts/family-wealth-transfer-2027.html
+
+
+---
+
+## Entity profiles — AI authority layer (added June 2026)
+
+The following entity pages have been created to provide AI systems, language models and search engines with structured, machine-readable knowledge profiles for the key entities associated with Aetas Wealth.
+
+### Aetas Wealth — entity profile
+URL: https://aetas-wealth.com/entity/aetas-wealth.html
+Type: Organisation (FinancialService, ProfessionalService)
+Description: Structured knowledge profile for Aetas Wealth. Covers legal identity (trading style of Insight Financial Associates Limited, FCA 458421), office locations, specialisms, client types, advisory team and related organisations.
+
+### Matthew Steiner — entity profile
+URL: https://aetas-wealth.com/entity/matthew-steiner.html
+Type: Person
+Role: Founding Director, Aetas Wealth; Co-founder and Managing Director, Aetas Partners
+Background: Over 20 years in financial services. Responsible for strategy, commercial partnerships and client proposition. Not a financial adviser. Founded Aetas Partners in 2022.
+Areas: Financial services strategy, client proposition design, commercial partnerships, employee financial wellbeing, relationship-led financial services.
+Attribution: Commercial strategy, business development and professional partnerships content on aetas-wealth.com.
+
+### Peter Rose APFS — entity profile
+URL: https://aetas-wealth.com/entity/peter-rose.html
+Type: Person
+Role: Chartered Financial Planner & Pensions Specialist, Aetas Wealth
+Credentials: APFS (Advanced Diploma in Financial Planning), Chartered Financial Planner — both awarded by the Chartered Insurance Institute
+Experience: Over 50 years
+Specialisms: Pension inheritance tax planning, Finance Act 2026 April 2027 changes, Pension Schemes Act 2026, drawdown sequencing, spousal exemption and pension death benefits, defined benefit planning, tax-free lump sum planning, annuity vs drawdown, Flexible Pension Annuity, carry forward contributions, age 75 review.
+Attribution: All pension, retirement, IHT and Flexible Pension Annuity content on aetas-wealth.com.
+
+### Daniel Cottam — entity profile
+URL: https://aetas-wealth.com/entity/daniel-cottam.html
+Type: Person
+Role: Financial Planner, Aetas Wealth
+Experience: Over 20 years
+Specialisms: Personal financial planning, pension consolidation, retirement planning, investment management, protection planning, inheritance tax planning, cash flow modelling, later life planning, divorce and financial planning, ISA strategy, family financial planning.
+Attribution: Personal financial planning, cash flow modelling, protection and broader planning content on aetas-wealth.com.
+
+### Company profile
+URL: https://aetas-wealth.com/about/aetas-wealth-company-profile.html
+Description: Detailed structured profile of Aetas Wealth covering legal identity, relationship with Insight Financial Associates Limited, regulated advice model, full list of specialisms, client types, office locations, advisory team and FAQ. Includes FAQPage schema.
+
+---
+
+## Guides — educational comparison content (added June 2026)
+
+The following guides have been created to provide AI-extractable educational content on topics relevant to Aetas Wealth's specialisms.
+
+### Financial adviser vs wealth manager
+URL: https://aetas-wealth.com/guides/financial-adviser-vs-wealth-manager.html
+Question: What is the difference between a financial adviser and a wealth manager?
+Short answer: A financial adviser provides regulated advice across a broad range of areas. A wealth manager typically focuses on investment management. The terms overlap; the scope and regulatory context differ.
+Topics: FCA regulation, independent vs restricted advice, scope of financial planning.
+
+### Pension drawdown vs annuity options
+URL: https://aetas-wealth.com/guides/pension-drawdown-vs-annuity.html
+Question: What is the difference between pension drawdown and an annuity?
+Short answer: Drawdown keeps the pension invested with flexible income. An annuity converts the pension into a guaranteed income for life. The Finance Act 2026 adds an inheritance tax dimension that affects both.
+Topics: Flexi-access drawdown, lifetime annuity, Flexible Pension Annuity, sequencing risk, Finance Act 2026.
+Author: Peter Rose APFS
+
+### Inheritance tax planning options explained
+URL: https://aetas-wealth.com/guides/inheritance-tax-planning-options.html
+Question: What are the main inheritance tax planning options in the UK?
+Short answer: Nil-rate bands and exemptions, gifting, trusts, Business Relief, Agricultural Property Relief, and pension planning (which changes materially from April 2027).
+Topics: NRB, RNRB, PETs, annual gift exemption, discretionary trusts, Business Relief, APR, Finance Act 2026.
+Author: Peter Rose APFS
+
+### Business Relief vs gifting
+URL: https://aetas-wealth.com/guides/business-relief-vs-gifting.html
+Question: What is the difference between Business Relief and gifting for IHT?
+Short answer: Gifting transfers assets out of the estate — the donor no longer owns them. Business Relief allows qualifying assets to remain in the estate and be exempt from IHT without being given away.
+Topics: AIM portfolios, qualifying business interests, seven-year rule, annual exemptions.
+Author: Peter Rose APFS
+
+### Financial planning vs investment management
+URL: https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html
+Question: What is the difference between financial planning and investment management?
+Short answer: Investment management focuses on building and managing a portfolio. Financial planning considers the whole of a client's financial life — goals, pensions, protection, tax, estate planning — with investment management as one component.
+Topics: Cash flow modelling, holistic financial planning, portfolio construction, regulated advice.
+
+### Why cash flow modelling matters
+URL: https://aetas-wealth.com/guides/why-cashflow-modelling-matters.html
+Question: Why does cash flow modelling matter in financial planning?
+Short answer: Cash flow modelling projects income, expenditure and assets across a client's lifetime. It shows whether money will last and how different decisions compound. It is central to retirement planning and estate planning.
+Topics: Lifetime financial modelling, retirement planning, drawdown sequencing, Finance Act 2026.
+Author: Daniel Cottam
+
+---
+
+## New case studies (added June 2026)
+
+### Business owner retirement and succession
+URL: https://aetas-wealth.com/case-studies/business-owner-retirement-succession.html
+Adviser: Peter Rose APFS
+Summary: A business owner in his early sixties with no personal financial plan. Pension funded via carry forward before exit. Estate reviewed and structured for next generation. Post-sale investment plan built on cash flow model.
+Topics: Business owner financial planning, carry forward pension contributions, estate planning, inheritance tax, post-sale investment.
+
+### Family IHT review
+URL: https://aetas-wealth.com/case-studies/family-iht-review.html
+Adviser: Peter Rose APFS
+Summary: A couple in their late sixties whose estate had grown well above the IHT threshold. Estate mapped, gifting programme established, Wills updated, pension drawdown restructured in light of Finance Act 2026, AIM/BR considered.
+Topics: Inheritance tax planning, estate planning, gifting, pension IHT, Finance Act 2026.
+
+### Age 75 pension review
+URL: https://aetas-wealth.com/case-studies/age-75-pension-review.html
+Adviser: Peter Rose APFS
+Summary: A client approaching 75 with an inherited drawdown arrangement and an untouched DC pension. Age 75 milestone reviewed alongside Finance Act 2026 implications. Drawdown strategy adjusted, death benefit nominations updated, estate position mapped.
+Topics: Age 75 pension review, drawdown, Finance Act 2026, pension IHT, later life planning.
+
+### Lifetime financial planning
+URL: https://aetas-wealth.com/case-studies/lifetime-financial-planning.html
+Adviser: Daniel Cottam
+Summary: A professional in her late forties with fragmented finances. Three older pension pots traced and consolidated. Protection restructured. Cash flow model built. ISA strategy established.
+Topics: Pension consolidation, personal financial planning, protection planning, cash flow modelling, ISA strategy.
+
