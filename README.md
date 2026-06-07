@@ -207,7 +207,7 @@ A few items that have caused real problems in the past:
 ## Related sites
 
 - **aetas-partners.com** — group parent site (separate WordPress)
-- **itw.aetaspartners.com** — Aetas in the Workplace site (separate GitHub repo, `AetasInTheWorkplace`)
+- **itw.aetas-wealth.com** — Aetas in the Workplace site (separate GitHub repo, `AetasInTheWorkplace`)
 - **fpa.aetaspartners.com** — Flexible Pension Annuity site (separate GitHub repo)
 
 These sites are independent but share brand conventions. If you're updating something cross-cutting (e.g. office address), it may need updating in multiple places.
