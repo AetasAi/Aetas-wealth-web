@@ -2,376 +2,159 @@
 """
 Aetas Wealth — Insights index auto-builder.
 
-Scans `insights/posts/*.html`, extracts metadata from each article, and
-rewrites the article list in `insights/index.html` between the markers:
+Scans insights/posts/*.html, extracts metadata, and rebuilds the insights
+list in insights/index.html between markers:
 
     <!-- AUTO-INSIGHTS-START -->
-    ...content here will be replaced...
+    ...replaced automatically...
     <!-- AUTO-INSIGHTS-END -->
 
-NEW: Articles with a `datePublished` in the future are EXCLUDED from the index.
-This lets you batch-upload future-dated articles and have them appear
-automatically on their scheduled date (via the daily scheduled GitHub Action).
+Articles with a datePublished in the FUTURE are excluded from the index.
+Upload future-dated articles and they appear automatically on their
+scheduled date via the daily GitHub Action.
 
-Run locally:
-    python scripts/build-insights-index.py
+Run locally from repo root:
+    py scripts\\build-insights-index.py
 
-Run via GitHub Actions:
-    - Triggered automatically on push to insights/posts/** (see update-insights-index.yml)
-    - Also triggered daily at 07:00 UK time by the scheduled-publish.yml workflow
-
-Per-article controls (optional, added to article <head>):
-    <meta name="aw-listed" content="false">      → hide from the index entirely
-    <meta name="aw-categories" content="iht pensions">
-                                                  → override filter categories
-    <meta name="aw-display-category" content="Inheritance tax">
-                                                  → override displayed label
-
-If no overrides are given, the script infers from the existing template:
-    - Date: JSON-LD datePublished → "Published X" byline → file mtime
-    - Title: <h1> → <title> (with "· Aetas Wealth" stripped)
-    - Description: <p class="lead"> → <meta name="description">
-    - Category: <span class="eyebrow"> → "Insights" default
+Per-article controls (optional, add to <head>):
+    <meta name="aw-listed"      content="false">         hide from index
+    <meta name="aw-categories"  content="iht pensions">  filter pills
+    <meta name="aw-label"       content="Inheritance Tax"> card label
 """
 
 import json
 import os
 import re
 import sys
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
-
-# ---------- Configuration ----------
-
-POSTS_DIR = Path("insights/posts")
-INDEX_FILE = Path("insights/index.html")
+POSTS_DIR   = Path("insights/posts")
+INDEX_FILE  = Path("insights/index.html")
 
 START_MARKER = "<!-- AUTO-INSIGHTS-START -->"
-END_MARKER = "<!-- AUTO-INSIGHTS-END -->"
-
-# Eyebrow text → (display category, filter categories).
-# Order matters: longer/more-specific keys checked first.
-CATEGORY_MAP = [
-    ("inheritance tax & pensions",   ("Inheritance tax", ["iht", "pensions"])),
-    ("inheritance tax & giving",     ("Inheritance tax", ["iht", "planning"])),
-    ("inheritance tax & iht",        ("Inheritance tax", ["iht"])),
-    ("estate planning & iht",        ("Inheritance tax", ["iht", "planning"])),
-    ("uk economy & tax",             ("Inheritance tax", ["iht", "planning"])),
-    ("pensions & retirement",        ("Pensions", ["pensions"])),
-    ("savings & investments",        ("Investments", ["investments"])),
-    ("market commentary",            ("Market commentary", ["markets"])),
-    ("financial planning",           ("Financial planning", ["planning"])),
-    ("estate planning",              ("Estate planning", ["iht", "planning"])),
-    ("tax planning",                 ("Tax planning", ["planning"])),
-    ("inheritance tax",              ("Inheritance tax", ["iht"])),
-    ("family finances",              ("Family finances", ["planning"])),
-    ("pensions",                     ("Pensions", ["pensions"])),
-    ("pension",                      ("Pensions", ["pensions"])),
-    ("retirement",                   ("Pensions", ["pensions"])),
-    ("isas",                         ("ISAs", ["investments"])),
-    ("isa",                          ("ISAs", ["investments"])),
-    ("investments",                  ("Investments", ["investments"])),
-    ("investment",                   ("Investments", ["investments"])),
-    ("markets",                      ("Markets", ["markets"])),
-    ("workplace",                    ("Workplace", ["workplace"])),
-    ("smes",                         ("Workplace", ["workplace"])),
-    ("sme",                          ("Workplace", ["workplace"])),
-    ("planning",                     ("Financial planning", ["planning"])),
-]
-
-DEFAULT_CATEGORY = ("Insights", ["all"])
-SKIP_FILES = {"index.html", "_template.html"}
+END_MARKER   = "<!-- AUTO-INSIGHTS-END -->"
 
 
-# ---------- HTML extraction helpers ----------
-
-def read(path):
-    return path.read_text(encoding="utf-8", errors="replace")
-
-
-def first_match(pattern, text, group=1, flags=re.DOTALL | re.IGNORECASE):
-    m = re.search(pattern, text, flags)
-    return m.group(group).strip() if m else None
-
-
-def strip_tags(s):
-    if not s:
-        return s
-    s = re.sub(r"<[^>]+>", "", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    s = (s.replace("&amp;", "&")
-           .replace("&lt;", "<")
-           .replace("&gt;", ">")
-           .replace("&quot;", '"')
-           .replace("&#39;", "'")
-           .replace("&pound;", "£")
-           .replace("&nbsp;", " ")
-           .replace("&mdash;", "—")
-           .replace("&ndash;", "–")
-           .replace("&rsquo;", "'")
-           .replace("&lsquo;", "'")
-           .replace("&ldquo;", '"')
-           .replace("&rdquo;", '"'))
-    return s
-
-
-def parse_meta(html, name):
-    """Read <meta name='X' content='Y'> case-insensitively, single or double quotes."""
-    m = re.search(
-        rf'<meta\s+name=["\']{re.escape(name)}["\']\s+content=["\']([^"\']*)["\']',
-        html, re.IGNORECASE,
-    )
+def extract_meta(html, name):
+    m = re.search(rf'<meta\s+name="{re.escape(name)}"\s+content="([^"]*)"', html)
     return m.group(1).strip() if m else None
 
+def extract_og(html, prop):
+    m = re.search(rf'<meta\s+property="{re.escape(prop)}"\s+content="([^"]*)"', html)
+    return m.group(1).strip() if m else None
 
-def parse_jsonld_date(html):
-    """Pull datePublished out of any Article JSON-LD block."""
-    for block in re.findall(
-        r'<script type="application/ld\+json">(.*?)</script>',
-        html, re.DOTALL,
-    ):
-        try:
-            data = json.loads(block)
-        except json.JSONDecodeError:
-            continue
-        candidates = data if isinstance(data, list) else [data]
-        for c in candidates:
-            if isinstance(c, dict) and c.get("@type") == "Article":
-                if "datePublished" in c:
-                    return c["datePublished"][:10]
-    return None
+def extract_json_ld_date(html):
+    m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
+    return m.group(1)[:10] if m else None
 
+def extract_h1(html):
+    m = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.DOTALL)
+    return re.sub(r'<[^>]+>', '', m.group(1)).strip() if m else None
 
-def parse_published_text(html):
-    """Fallback: read 'Published 8 July 2025' from the byline."""
-    m = re.search(
-        r"Published\s+(\d{1,2}\s+[A-Z][a-z]+\s+\d{4})",
-        html,
-    )
-    if not m:
-        return None
-    try:
-        return datetime.strptime(m.group(1), "%d %B %Y").date().isoformat()
-    except ValueError:
-        return None
+def format_display_date(iso_str):
+    d = date.fromisoformat(iso_str)
+    return f"{d.day} {d.strftime('%B')} {d.year}"
 
-
-def parse_h1(html):
-    return strip_tags(first_match(r"<h1[^>]*>(.*?)</h1>", html))
-
-
-def parse_title_tag(html):
-    raw = strip_tags(first_match(r"<title[^>]*>(.*?)</title>", html))
-    if raw:
-        for suffix in (" · Aetas Wealth", " | Aetas Wealth"):
-            if raw.endswith(suffix):
-                raw = raw[: -len(suffix)]
-    return raw
-
-
-def parse_lead(html):
-    return strip_tags(first_match(r'<p class="lead"[^>]*>(.*?)</p>', html))
-
-
-def parse_meta_description(html):
-    return parse_meta(html, "description")
-
-
-def parse_eyebrow(html):
-    return strip_tags(first_match(r'<span class="eyebrow"[^>]*>(.*?)</span>', html))
-
-
-# ---------- Category mapping ----------
-
-def map_category(eyebrow):
-    if not eyebrow:
-        return DEFAULT_CATEGORY
-    key = eyebrow.lower()
-    for needle, value in CATEGORY_MAP:
-        if needle in key:
-            return value
-    return DEFAULT_CATEGORY
-
-
-# ---------- Article model ----------
-
-class Article:
-    def __init__(self, path):
-        self.path = path
-        self.filename = path.name
-        html = read(path)
-
-        # Opt-out via meta tag
-        listed = parse_meta(html, "aw-listed")
-        self.listed = (listed or "true").lower() != "false"
-
-        # Date
-        iso = (parse_jsonld_date(html)
-               or parse_published_text(html)
-               or datetime.fromtimestamp(path.stat().st_mtime).date().isoformat())
-        try:
-            self.date = date.fromisoformat(iso)
-        except ValueError:
-            self.date = date.today()
-
-        # Title / description
-        self.title = parse_h1(html) or parse_title_tag(html) or self.filename
-        self.description = (parse_lead(html)
-                            or parse_meta_description(html)
-                            or "")
-
-        # Categories
-        eyebrow = parse_eyebrow(html)
-        override_display = parse_meta(html, "aw-display-category")
-        override_filters = parse_meta(html, "aw-categories")
-
-        if override_display or override_filters:
-            mapped_display, mapped_filters = map_category(eyebrow)
-            self.display_category = override_display or mapped_display
-            if override_filters:
-                self.filter_categories = override_filters.split()
-            else:
-                self.filter_categories = mapped_filters
-        else:
-            self.display_category, self.filter_categories = map_category(eyebrow)
-
-    def is_future(self, as_of=None):
-        """True if this article is scheduled for a future date."""
-        as_of = as_of or date.today()
-        return self.date > as_of
-
-    def date_display(self):
-        return f"{self.date.day} {self.date.strftime('%B')} {self.date.year}"
-
-    def render_li(self):
-        cats = " ".join(self.filter_categories) if self.filter_categories else "all"
-        return (
-            f'      <li data-categories="{cats}">\n'
-            f'        <a href="posts/{self.filename}" class="post-card" style="display: block;">\n'
-            f'          <div class="post-meta">{self.date_display()} · {self.display_category}</div>\n'
-            f'          <h3>{html_escape(self.title)}</h3>\n'
-            f'          <p>{html_escape(self.description)}</p>\n'
-            f'          <span class="card-link">Read article</span>\n'
-            f'        </a>\n'
-            f'      </li>'
-        )
-
-
-def html_escape(s):
-    if not s:
-        return ""
-    return (s.replace("&", "&amp;")
-             .replace("<", "&lt;")
-             .replace(">", "&gt;"))
-
-
-# ---------- Indexer ----------
-
-def collect_articles(posts_dir, today=None):
-    """Returns (visible_articles, scheduled_articles).
-
-    visible: articles whose date is today or earlier, AND not opted out
-    scheduled: articles whose date is in the future (informational only)
-    """
-    today = today or date.today()
-    visible = []
-    scheduled = []
-    if not posts_dir.exists():
-        sys.stderr.write(f"Posts directory not found: {posts_dir}\n")
-        return visible, scheduled
-
-    for path in sorted(posts_dir.glob("*.html")):
-        if path.name in SKIP_FILES:
-            continue
-        try:
-            article = Article(path)
-        except Exception as e:
-            sys.stderr.write(f"  ! Failed to parse {path.name}: {e}\n")
-            continue
-        if not article.listed:
-            continue
-        if article.is_future(today):
-            scheduled.append(article)
-        else:
-            visible.append(article)
-
-    visible.sort(key=lambda a: a.date, reverse=True)
-    scheduled.sort(key=lambda a: a.date)  # ascending — soonest first
-    return visible, scheduled
-
-
-def render_block(articles):
-    lines = []
-    for a in articles:
-        lines.append(a.render_li())
-        lines.append("")
-    return "\n".join(lines).rstrip() + "\n"
-
-
-def update_index(index_path, articles):
-    if not index_path.exists():
-        sys.stderr.write(f"Index file not found: {index_path}\n")
-        return False
-
-    html = read(index_path)
-
-    if START_MARKER not in html or END_MARKER not in html:
-        sys.stderr.write(
-            f"Markers not found in {index_path}. Add this block where the article cards should sit:\n\n"
-            f"    {START_MARKER}\n"
-            f"    {END_MARKER}\n\n"
-        )
-        return False
-
-    new_block = render_block(articles)
-
-    pattern = re.compile(
-        re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER),
-        re.DOTALL,
-    )
-    new_html = pattern.sub(
-        f"{START_MARKER}\n{new_block}    {END_MARKER}",
-        html,
-    )
-
-    if new_html == html:
-        return False
-
-    index_path.write_text(new_html, encoding="utf-8")
-    return True
-
-
-def main():
-    here = Path(__file__).resolve().parent
-    repo_root = here.parent
-
-    posts_dir = repo_root / POSTS_DIR
-    index_path = repo_root / INDEX_FILE
+def parse_articles(posts_dir):
+    articles = []
     today = date.today()
 
-    print(f"Scanning {posts_dir} (as of {today.isoformat()}) ...")
-    visible, scheduled = collect_articles(posts_dir, today)
-    print(f"  Visible (published): {len(visible)}")
-    for a in visible:
-        print(f"    - {a.date_display():25} {a.display_category:22} {a.filename}")
+    for path in sorted(posts_dir.glob("*.html")):
+        if path.name == "index.html":
+            continue
+        html = path.read_text(encoding="utf-8")
 
-    if scheduled:
-        print(f"\n  Scheduled for future release: {len(scheduled)}")
-        for a in scheduled:
-            print(f"    - {a.date_display():25} {a.display_category:22} {a.filename}")
-        print(f"\n  These will appear automatically when their date arrives,")
-        print(f"  provided the daily scheduled workflow is running.")
+        # Hidden override
+        listed = extract_meta(html, "aw-listed")
+        if listed and listed.lower() == "false":
+            continue
 
-    print(f"\nUpdating {index_path} ...")
-    changed = update_index(index_path, visible)
-    if changed:
-        print("  ✓ Index updated")
-    else:
-        print("  · No change needed (already up to date)")
+        # Date gating
+        pub_iso = extract_json_ld_date(html)
+        if pub_iso:
+            pub_date = date.fromisoformat(pub_iso)
+            if pub_date > today:
+                print(f"  Skipping (future): {path.name} — scheduled {pub_iso}")
+                continue
+        else:
+            pub_iso  = today.isoformat()
+            pub_date = today
 
+        title      = extract_h1(html) or extract_og(html, "og:title") or path.stem
+        desc       = extract_meta(html, "description") or extract_og(html, "og:description") or ""
+        label      = extract_meta(html, "aw-label") or "Insights"
+        categories = extract_meta(html, "aw-categories") or ""
+
+        articles.append({
+            "slug":       path.name,
+            "title":      title,
+            "desc":       desc,
+            "label":      label,
+            "categories": categories,
+            "pub_date":   pub_date,
+            "pub_display": format_display_date(pub_iso),
+        })
+
+    articles.sort(key=lambda a: a["pub_date"], reverse=True)
+    return articles
+
+def build_list_items(articles):
+    if not articles:
+        return '      <li><p style="font-size:14px;color:var(--text-muted);padding:32px 0;">No articles published yet.</p></li>'
+
+    items = []
+    for a in articles:
+        cat_attr = f' data-categories="{a["categories"]}"' if a["categories"] else ""
+        item = f'''      <li{cat_attr}>
+        <a href="posts/{a["slug"]}" class="post-card" style="display: block;">
+          <div class="post-meta">{a["pub_display"]} · {a["label"]}</div>
+          <h3>{a["title"]}</h3>
+          <p>{a["desc"]}</p>
+          <span class="card-link">Read article</span>
+        </a>
+      </li>'''
+        items.append(item)
+    return "\n\n".join(items)
+
+def main():
+    repo_root  = Path(__file__).resolve().parent.parent
+    posts_dir  = repo_root / POSTS_DIR
+    index_path = repo_root / INDEX_FILE
+
+    if not posts_dir.exists():
+        sys.stderr.write(f"Posts directory not found: {posts_dir}\n")
+        return 1
+    if not index_path.exists():
+        sys.stderr.write(f"Index not found: {index_path}\n")
+        return 1
+
+    print("Aetas Wealth — Insights Index Builder")
+    print(f"Scanning: {posts_dir}")
+    print()
+
+    articles = parse_articles(posts_dir)
+    print(f"Found {len(articles)} published article(s)")
+    for a in articles:
+        print(f"  + {a['slug']} — {a['pub_display']}")
+
+    items_html = build_list_items(articles)
+
+    index_html = index_path.read_text(encoding="utf-8")
+    if START_MARKER not in index_html or END_MARKER not in index_html:
+        sys.stderr.write(f"Markers not found in {INDEX_FILE}.\n")
+        sys.stderr.write(f"Add these inside the <ul> tag:\n")
+        sys.stderr.write(f"  {START_MARKER}\n  {END_MARKER}\n")
+        return 1
+
+    before = index_html[:index_html.index(START_MARKER) + len(START_MARKER)]
+    after  = index_html[index_html.index(END_MARKER):]
+    new_index = before + "\n" + items_html + "\n\n    " + after
+
+    index_path.write_text(new_index, encoding="utf-8")
+    print()
+    print(f"✓ {INDEX_FILE} updated with {len(articles)} article(s).")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
