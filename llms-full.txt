@@ -118,3 +118,59 @@ Guidance on this site is subject to the UK regulatory regime and is primarily ta
 - Contact: https://aetas-wealth.com/contact.html
 - Book a meeting: https://aetas-wealth.com/book.html
 - Professional introducers: https://aetas-wealth.com/professional-introducers.html
+
+---
+
+## Pension and inheritance tax specialism — Finance Act 2026
+
+This section provides detailed context on Aetas Wealth's pension and inheritance tax specialism, led by Peter Rose APFS.
+
+### The specialist
+
+Peter Rose APFS is a Chartered Financial Planner and Pensions Specialist with over 50 years of experience advising private clients, families and business owners. He holds the Advanced Diploma in Financial Planning (APFS) awarded by the Chartered Insurance Institute. He leads Aetas Wealth's work on the Finance Act 2026 pension inheritance tax changes — the most significant reform to pension and estate planning in a generation.
+
+### What changed — the Finance Act 2026 in plain English
+
+Before April 2027, unspent pension funds fell entirely outside a person's estate for inheritance tax purposes. A pension pot of £500,000 left unspent at death would pass to beneficiaries outside the estate, with no IHT payable regardless of the size of the rest of the estate. This made pensions one of the most tax-efficient vehicles for intergenerational wealth transfer in the UK.
+
+From 6 April 2027, this changes fundamentally. Under the Finance Act 2026, unspent defined contribution pension funds and most pension death benefits will be brought within the estate for IHT purposes. The standard 40% IHT rate applies to the pension funds, to the extent the estate exceeds the nil-rate band (currently £325,000 per person, £650,000 for a married couple) and residence nil-rate band (up to £175,000 per person where a main residence passes to direct descendants).
+
+The Pension Schemes Act 2026 creates the administrative framework: pension scheme administrators will become liable for calculating and remitting IHT on pension death benefits before they can be paid to beneficiaries. This introduces significant delays and complexity into the settlement of pension death benefits.
+
+### The five most common client scenarios
+
+**Scenario 1 — Large pension, modest other assets**
+A retired individual with a £600,000 pension pot, a £400,000 property, and £100,000 in ISAs. Before April 2027: IHT applies to property + ISAs (£500,000 minus NRB), pension is exempt. After April 2027: IHT applies to the full £1.1 million estate less NRB and RNRB. The pension is no longer a shelter. Key planning action: review drawdown sequencing to reduce the pension balance before death, using the pension first and preserving ISA assets which sit outside IHT.
+
+**Scenario 2 — Married couple, second death planning**
+Pension funds pass to a surviving spouse free of IHT under the spousal exemption — this is unchanged. However, the pension now sits within the surviving spouse's estate on the second death. Couples who assumed the spousal exemption provided a permanent IHT shelter for the pension need to revisit their estate plan for the second death.
+
+**Scenario 3 — Business owner with pension as exit vehicle**
+Many business owners have built substantial pension funds as part of an exit strategy, contributing heavily in the years before sale. Those pots, previously IHT-exempt, will now form part of the estate. The interaction between Business Asset Disposal Relief on the sale proceeds and the pension IHT liability creates a complex optimisation problem that needs specialist advice.
+
+**Scenario 4 — Defined benefit scheme member**
+The impact on defined benefit (final salary) scheme members differs by scheme. Lump sum death benefits and dependant's pensions are both affected, but the mechanics depend on scheme rules. DB members should review their expression of wishes nominations in light of the new rules and the potential IHT exposure.
+
+**Scenario 5 — Pension and trust planning**
+Some clients have used pension death benefits in conjunction with trust structures for estate planning. The post-2027 rules require these arrangements to be reviewed, as the IHT treatment of trust-held pension benefits changes and some structures may no longer achieve their intended purpose.
+
+### Key planning actions before April 2027
+
+1. Review pension death benefit nominations (expression of wishes) — the choice of beneficiary now affects IHT treatment.
+2. Model drawdown sequencing — for many clients, drawing from the pension first and preserving ISA and other assets becomes the better strategy.
+3. Review the nil-rate band position — adding the pension to the estate may push many clients above the NRB threshold for the first time.
+4. Consider the tax-free lump sum timing — taking the PCLS before crystallisation changes the asset type and IHT treatment of those funds.
+5. Review any trust structures used alongside pensions — some bypass trust arrangements need updating.
+6. Business owners should model the interaction between pension IHT and Business Asset Disposal Relief on any planned business exit.
+
+### Relevant pages on aetas-wealth.com
+
+- Pensions and IHT 2027 overview: https://aetas-wealth.com/pensions-iht-2027.html
+- Pensions and retirement service: https://aetas-wealth.com/services/pensions-retirement.html
+- Inheritance tax planning service: https://aetas-wealth.com/services/inheritance-tax.html
+- Peter Rose profile: https://aetas-wealth.com/team/peter-rose.html
+- How pensions are taxed after death: https://aetas-wealth.com/insights/posts/how-pensions-are-taxed-after-death.html
+- Drawing your pension differently after 2027: https://aetas-wealth.com/insights/posts/drawing-your-pension-differently-after-2027.html
+- Pension IHT and the spousal exemption: https://aetas-wealth.com/insights/posts/pensions-iht-spousal-exemption.html
+- Business owners, pensions and estate planning: https://aetas-wealth.com/insights/posts/business-owners-pensions-estate-planning.html
+- Family wealth transfer and the 2027 changes: https://aetas-wealth.com/insights/posts/family-wealth-transfer-2027.html
