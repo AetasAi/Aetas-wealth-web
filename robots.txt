@@ -8,6 +8,12 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
 # ─────────────────────────────────────────────
 # AI agent crawlers — explicitly permitted
 # ─────────────────────────────────────────────
@@ -32,7 +38,11 @@ User-agent: Google-Extended
 Allow: /
 
 # Meta AI
-User-agent: FacebookBot
+User-agent: meta-externalagent
+Allow: /
+
+# Bing / Microsoft Copilot
+User-agent: BingPreview
 Allow: /
 
 # Common Crawl (used by many AI training datasets)
