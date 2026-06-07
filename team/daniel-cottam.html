@@ -71,6 +71,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .profile-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+    .profile-sidebar { position: sticky; top: 90px; }
+    @media (max-width: 880px) {
+      .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .profile-sidebar { position: static; }
+    }
+  </style>
 </head>
 <body>
 
@@ -116,10 +124,10 @@
 <!-- PROFILE -->
 <section class="section">
   <div class="container">
-    <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
+    <div class="profile-grid">
 
       <!-- LEFT: photo + contact card -->
-      <aside style="position: sticky; top: 90px;">
+      <aside class="profile-sidebar">
         <img src="../assets/images/daniel-cottam-650x650.webp" alt="Daniel Cottam"
              style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md); margin-bottom: 1.5rem;"
              loading="lazy">
