@@ -108,7 +108,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .section { padding-block: var(--section-y); }
 .section-tight { padding-block: clamp(2.5rem, 6vw, 4rem); }
 .section-soft { background: var(--paper-warm); }
-.section-blue { background: var(--aetas-blue); color: #ffffff; }
+.section-blue { background-color: #00205B; background: var(--aetas-blue); color: #ffffff; }
 .section-blue h1, .section-blue h2, .section-blue h3 { color: #ffffff; }
 .section-blue p { color: #cdd5e0; }
 
@@ -465,6 +465,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 
 /* ---------- 12. Page banner (sub-pages) ---------- */
 .page-banner {
+  background-color: #00205B;
   background: var(--aetas-blue);
   color: #fff;
   padding-block: clamp(3.5rem, 8vw, 5.5rem);
@@ -582,6 +583,7 @@ article.post blockquote {
 
 /* ---------- 16. Footer ---------- */
 .site-footer {
+  background-color: #001640;
   background: var(--aetas-blue-dark);
   color: #b8c4d2;
   padding-block: 4rem 2rem;
@@ -606,7 +608,7 @@ article.post blockquote {
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
-.footer-grid h4 {
+.footer-grid h3, .footer-grid h4 {
   color: #fff;
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
