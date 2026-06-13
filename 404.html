@@ -72,6 +72,24 @@
         window.location.replace('/');
         return;
       }
+
+      /* Old service page → nearest equivalent */
+      if (p === '/services/mortgages.html') {
+        window.location.replace('/services/financial-planning.html');
+        return;
+      }
+
+      /* Old blog path → insights */
+      if (p === '/blogs' || p === '/blogs/') {
+        window.location.replace('/insights/');
+        return;
+      }
+
+      /* Old privacy URL variant */
+      if (p === '/aetaswealthprivacy' || p === '/aetaswealthprivacy/') {
+        window.location.replace('/privacy.html');
+        return;
+      }
     })();
   </script>
 </head>
