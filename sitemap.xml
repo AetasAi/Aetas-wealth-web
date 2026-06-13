@@ -624,5 +624,13 @@
     <lastmod>2026-06-13</lastmod>
     <priority>0.6</priority>
   </url>
+
+  <!-- guides library index - added June 2026 -->
+  <url>
+    <loc>https://aetas-wealth.com/guides/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 

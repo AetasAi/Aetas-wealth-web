@@ -1,0 +1,515 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="ai-agent-summary" content="The Aetas Wealth guides library. Plain-English guides on pensions, inheritance tax, investments, financial planning and related topics from FCA-regulated advisers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+  <link rel="apple-touch-icon" href="../assets/images/favicon-512.png">
+  <title>Guides &middot; Aetas Wealth</title>
+  <meta name="description" content="Plain-English guides on pensions, inheritance tax, investments and financial planning from the team at Aetas Wealth. FCA-regulated advice, clearly explained.">
+  <link rel="canonical" href="https://aetas-wealth.com/guides/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aetas Wealth">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://aetas-wealth.com/guides/">
+  <meta property="og:title" content="Guides &middot; Aetas Wealth">
+  <meta property="og:description" content="Plain-English guides on pensions, inheritance tax, investments and financial planning from the team at Aetas Wealth.">
+  <meta property="og:image" content="https://aetas-wealth.com/assets/images/aetas-mark.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Guides &middot; Aetas Wealth">
+  <meta name="twitter:description" content="Plain-English guides on pensions, inheritance tax, investments and financial planning.">
+  <meta name="twitter:image" content="https://aetas-wealth.com/assets/images/aetas-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Guides â€” Aetas Wealth",
+    "description": "Plain-English guides on pensions, inheritance tax, investments and financial planning from FCA-regulated advisers at Aetas Wealth.",
+    "url": "https://aetas-wealth.com/guides/",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://aetas-wealth.com/#organization",
+      "name": "Aetas Wealth"
+    },
+    "hasPart": [
+      {
+        "@type": "Article",
+        "name": "Pension drawdown vs annuity options explained",
+        "url": "https://aetas-wealth.com/guides/pension-drawdown-vs-annuity.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Inheritance tax planning options explained",
+        "url": "https://aetas-wealth.com/guides/inheritance-tax-planning-options.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Financial adviser vs wealth manager, what is the difference?",
+        "url": "https://aetas-wealth.com/guides/financial-adviser-vs-wealth-manager.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Why cash flow modelling matters in financial planning",
+        "url": "https://aetas-wealth.com/guides/why-cashflow-modelling-matters.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Business Relief vs gifting for inheritance tax",
+        "url": "https://aetas-wealth.com/guides/business-relief-vs-gifting.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Financial planning vs investment management",
+        "url": "https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html"
+      },
+      {
+        "@type": "Article",
+        "name": "Financial planning in your 30s and 40s: what the apps do not tell you",
+        "url": "https://aetas-wealth.com/guides/financial-planning-in-your-30s-and-40s.html"
+      }
+    ],
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aetas-wealth.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://aetas-wealth.com/guides/"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    .library-banner {
+      background: var(--aetas-blue, #00205B);
+      padding: 4rem 0 3.5rem;
+      color: #fff;
+    }
+    .library-banner h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+    }
+    .library-banner p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 580px;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .library-banner .breadcrumbs {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .library-banner .breadcrumbs a {
+      color: rgba(255,255,255,0.7);
+    }
+    .filter-bar {
+      background: var(--paper-warm, #fafaf7);
+      border-bottom: 1px solid #e6e8ee;
+      padding: 1rem 0;
+    }
+    .filter-inner {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      background: #fff;
+      border: 1px solid #e0ddd8;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--aetas-blue, #00205B);
+      border-color: var(--aetas-blue, #00205B);
+      color: #fff;
+    }
+    .library-section {
+      padding: 3.5rem 0 5rem;
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .guide-card {
+      background: #fff;
+      border: 1px solid #e0ddd8;
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .guide-card:hover {
+      box-shadow: 0 4px 18px rgba(0,32,91,0.09);
+      border-color: var(--aetas-turquoise, #009CA6);
+      color: inherit;
+    }
+    .guide-card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--aetas-turquoise, #009CA6);
+      margin-bottom: 0.75rem;
+    }
+    .guide-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--aetas-blue, #00205B);
+      line-height: 1.35;
+      margin: 0 0 0.65rem;
+    }
+    .guide-card p {
+      font-size: 0.93rem;
+      color: #555;
+      line-height: 1.65;
+      margin: 0;
+      flex: 1;
+    }
+    .guide-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #f0ede8;
+    }
+    .guide-read-time {
+      font-size: 0.82rem;
+      color: #999;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .guide-read-more {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--aetas-turquoise, #009CA6);
+    }
+    .guide-card:hover .guide-read-more {
+      text-decoration: underline;
+    }
+    .library-cta {
+      background: var(--paper-warm, #fafaf7);
+      border-top: 1px solid #e6e8ee;
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+    .library-cta h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--aetas-blue, #00205B);
+      margin: 0 0 0.65rem;
+    }
+    .library-cta p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 auto 1.75rem;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+    .library-cta .btn-primary {
+      background: var(--aetas-turquoise, #009CA6);
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .library-cta .btn-primary:hover {
+      background: #007f88;
+      color: #fff;
+    }
+    /* Filter JS hide/show */
+    .guide-card[data-category] { display: flex; }
+    @media (max-width: 640px) {
+      .guide-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="../" class="brand" aria-label="Aetas Wealth home">
+      <span class="brand-mark"><img src="../assets/images/aetas-mark.webp" alt="Aetas Wealth"></span>
+      <span class="brand-text">
+        <span>Aetas Wealth</span>
+        <span>Lifetime to Legacy</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../our-approach.html">Our Approach</a></li>
+      <li><a href="../our-people.html">Our People</a></li>
+      <li><a href="../individuals.html">Individuals</a></li>
+      <li><a href="../businesses.html">Businesses</a></li>
+      <li><a href="../fees.html">Fees</a></li>
+      <li><a href="../insights/">Insights</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="https://aetas-wealth.com/book.html" class="nav-cta" target="_blank" rel="noopener">Book a meeting</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="library-banner">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../">Home</a> <span class="sep">/</span> Guides
+      </div>
+      <h1>Guides</h1>
+      <p>Plain-English guides on pensions, inheritance tax, investments and financial planning. Written by our advisers, for people who want to understand their options before they make decisions.</p>
+    </div>
+  </section>
+
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-filter="all">All guides</button>
+        <button class="filter-btn" data-filter="pensions">Pensions</button>
+        <button class="filter-btn" data-filter="tax">Inheritance Tax</button>
+        <button class="filter-btn" data-filter="investments">Investments</button>
+        <button class="filter-btn" data-filter="planning">Financial Planning</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="library-section">
+    <div class="container">
+      <div class="guide-grid" id="guide-grid">
+
+        <a class="guide-card" href="financial-planning-in-your-30s-and-40s.html" data-category="planning">
+          <span class="guide-card-tag">Financial Planning</span>
+          <h3>Financial planning in your 30s and 40s: what the apps do not tell you</h3>
+          <p>What self-directed tools miss, what actually matters at this life stage, and when regulated advice starts to earn its place.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              11 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="inheritance-tax-planning-options.html" data-category="tax">
+          <span class="guide-card-tag">Inheritance Tax</span>
+          <h3>Inheritance tax planning options explained</h3>
+          <p>Nil-rate band, gifting, trusts, Business Relief and Agricultural Relief â€” the main tools for reducing inheritance tax exposure, in plain English.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              6 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="pension-drawdown-vs-annuity.html" data-category="pensions">
+          <span class="guide-card-tag">Pensions</span>
+          <h3>Pension drawdown vs annuity options explained</h3>
+          <p>The main retirement income options compared â€” flexi-access drawdown, lifetime annuity and Flexible Pension Annuity â€” including the Finance Act 2026 dimension.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              6 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="business-relief-vs-gifting.html" data-category="tax">
+          <span class="guide-card-tag">Inheritance Tax</span>
+          <h3>Business Relief vs gifting for inheritance tax</h3>
+          <p>Two of the main tools for reducing inheritance tax exposure compared â€” how each works, the key risks and which situations each is suited to.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="why-cashflow-modelling-matters.html" data-category="planning">
+          <span class="guide-card-tag">Financial Planning</span>
+          <h3>Why cash flow modelling matters in financial planning</h3>
+          <p>What cash flow modelling is, how it works in practice, and why it sits at the centre of a well-constructed financial plan.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="financial-adviser-vs-wealth-manager.html" data-category="planning">
+          <span class="guide-card-tag">Financial Planning</span>
+          <h3>Financial adviser vs wealth manager: what is the difference?</h3>
+          <p>The distinction between a financial adviser and a wealth manager â€” what each does, how they are regulated, and which is more likely to suit your situation.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+        <a class="guide-card" href="financial-planning-vs-investment-management.html" data-category="investments">
+          <span class="guide-card-tag">Investments</span>
+          <h3>Financial planning vs investment management: what is the difference?</h3>
+          <p>How financial planning and investment management differ, where they overlap, and why the distinction matters when choosing who to work with.</p>
+          <div class="guide-card-footer">
+            <span class="guide-read-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              4 min read
+            </span>
+            <span class="guide-read-more">Read guide &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="library-cta">
+    <div class="container">
+      <h2>A question not covered here?</h2>
+      <p>Our guides cover the most common areas. For anything specific to your situation, the most useful next step is a conversation.</p>
+      <a href="https://aetas-wealth.com/book.html" class="btn-primary" target="_blank" rel="noopener">Book a free consultation</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../our-approach.html">Our Approach</a></li>
+          <li><a href="../our-people.html">Our People</a></li>
+          <li><a href="../entity/aetas-wealth.html">Company Profile</a></li>
+          <li><a href="../individuals.html">Individuals</a></li>
+          <li><a href="../businesses.html">Businesses</a></li>
+          <li><a href="../fees.html">Fees</a></li>
+          <li><a href="../insights/">Insights</a></li>
+          <li><a href="../case-studies/">Case Studies</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services/pensions-retirement.html">Pensions &amp; Retirement</a></li>
+          <li><a href="../services/investment-management.html">Investment Management</a></li>
+          <li><a href="../services/inheritance-tax.html">Inheritance Tax Planning</a></li>
+          <li><a href="../services/later-life-planning.html">Later Life Planning</a></li>
+          <li><a href="../services/financial-planning.html">Financial Planning</a></li>
+          <li><a href="../services/cash-flow-planning.html">Cash Flow Planning</a></li>
+          <li><a href="../services/protection-planning.html">Protection Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Useful</h4>
+        <ul>
+          <li><a href="../working-with-us.html">Working with Us</a></li>
+          <li><a href="../glossary/">Glossary</a></li>
+          <li><a href="../professional-introducers.html">Professional Introducers</a></li>
+          <li><a href="../lifetime-to-legacy.html">Lifetime to Legacy</a></li>
+          <li><a href="../about/aetas-wealth-company-profile.html">Company Profile</a></li>
+        </ul>
+        <p style="margin: 1rem 0 0.4rem 0; font-weight: 600; color: #fff;">Guides</p>
+        <ul>
+          <li><a href="./">All Guides</a></li>
+          <li><a href="./"><strong>All Guides</strong></a></li>
+          <li><a href="pension-drawdown-vs-annuity.html">Pension Drawdown vs Annuity</a></li>
+          <li><a href="inheritance-tax-planning-options.html">IHT Planning Options</a></li>
+          <li><a href="financial-adviser-vs-wealth-manager.html">Adviser vs Wealth Manager</a></li>
+          <li><a href="why-cashflow-modelling-matters.html">Why Cashflow Modelling Matters</a></li>
+          <li><a href="business-relief-vs-gifting.html">Business Relief vs Gifting</a></li>
+          <li><a href="financial-planning-vs-investment-management.html">Planning vs Investment Management</a></li>
+          <li><a href="financial-planning-in-your-30s-and-40s.html">Planning in Your 30s and 40s</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Offices</h4>
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">London</p>
+        <ul style="margin-bottom: 1.25rem;">
+          <li>13 Hanover Square</li>
+          <li>Mayfair, London</li>
+          <li>W1S 1HN</li>
+        </ul>
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">Norwich</p>
+        <ul>
+          <li>Insight House</li>
+          <li>7a Alkmaar Way</li>
+          <li>Norwich International Business Park</li>
+          <li>NR6 6BF</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>Aetas Wealth</strong> is a trading style of Insight Financial Associates Limited, which is authorised and regulated by the Financial Conduct Authority (FCA) under registration number 458421. Insight Financial Associates Limited is a company incorporated in England and Wales with company number 05054886. Registered office: Insight House, 7a Alkmaar Way, Norwich International Business Park, Norwich, NR6 6BF.</p>
+      <p>The Financial Conduct Authority does not regulate Wills, Trusts or Tax advice. The value of your investments can go down as well as up, so you could get back less than you invested. The guidance contained on this website is subject to the UK regulatory regime and is therefore primarily targeted at consumers based in the UK.</p>
+      <p>&copy; <span id="yr"></span> Aetas Wealth. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Category filter
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.guide-card[data-category]');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filter = this.getAttribute('data-filter');
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      cards.forEach(function(card) {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
