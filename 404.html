@@ -12,6 +12,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    /* Ghost URL redirect map — inserted June 2026 to clear GSC "Discovered not indexed" queue */
+    (function() {
+      var p = window.location.pathname;
+
+      /* Subdirectory ghost patterns → /insights/ */
+      var ghostDirs = [
+        '/insights/posts/master/',
+        '/insights/posts/team/',
+        '/insights/posts/panel-engagement/',
+        '/insights/posts/panels/',
+        '/insights/posts/personal/',
+        '/insights/posts/journal-engagement/',
+        '/insights/posts/isa/',
+        '/insights/posts/understanding/',
+        '/insights/posts/your/',
+      ];
+      for (var i = 0; i < ghostDirs.length; i++) {
+        if (p.indexOf(ghostDirs[i]) === 0) {
+          window.location.replace('/insights/');
+          return;
+        }
+      }
+
+      /* Standalone ghost posts → /insights/ */
+      var ghostPosts = [
+        '/insights/posts/portfolio-bonds-isa-alternative.html',
+        '/insights/posts/family-iht-planning-strategies-2026.html',
+        '/insights/posts/how-there-are-management-only-may-2026.html',
+        '/insights/posts/investment-strategy-report-2026.html',
+        '/insights/posts/market-commentary-may-march-2026.html',
+        '/insights/posts/market-commentary-march-may-2026.html',
+        '/insights/posts/just-who-loses-money.html',
+        '/insights/posts/why-just-pension-investment-strategy.html',
+        '/insights/posts/investment-strategy-may-march-2026.html',
+      ];
+      for (var j = 0; j < ghostPosts.length; j++) {
+        if (p === ghostPosts[j]) {
+          window.location.replace('/insights/');
+          return;
+        }
+      }
+
+      /* Ghost team variant → /our-people.html */
+      if (p === '/team/matthew-steiner-adviser.html') {
+        window.location.replace('/our-people.html');
+        return;
+      }
+
+      /* Ghost insights team page */
+      if (p === '/insights/team/financial-plan.html') {
+        window.location.replace('/insights/');
+        return;
+      }
+
+      /* Ghost industry page → root */
+      if (p.indexOf('/industry/') === 0) {
+        window.location.replace('/');
+        return;
+      }
+    })();
+  </script>
 </head>
 <body>
 
