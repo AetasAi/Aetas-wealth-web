@@ -10,9 +10,9 @@
   --aetas-blue: #00205B;
   --aetas-blue-dark: #001640;
   --aetas-blue-soft: #f4f6fb;
-  --aetas-turquoise: #009CA6;
+  --aetas-turquoise: #00828C;
   --aetas-turquoise-dark: #007a82;
-  --aetas-gold: #9A7B3A;
+  --aetas-gold: #896C2E;
   --aetas-gold-soft: #c8a55c;
 
   /* Neutrals */
@@ -108,9 +108,9 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .section { padding-block: var(--section-y); }
 .section-tight { padding-block: clamp(2.5rem, 6vw, 4rem); }
 .section-soft { background: var(--paper-warm); }
-.section-blue { background: var(--aetas-blue); color: #ffffff; }
+.section-blue { background-color: #00205B; background: var(--aetas-blue); color: #ffffff; }
 .section-blue h1, .section-blue h2, .section-blue h3 { color: #ffffff; }
-.section-blue p { color: rgba(255, 255, 255, 0.82); }
+.section-blue p { color: #cdd5e0; }
 
 .grid { display: grid; gap: 2rem; }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -465,6 +465,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 
 /* ---------- 12. Page banner (sub-pages) ---------- */
 .page-banner {
+  background-color: #00205B;
   background: var(--aetas-blue);
   color: #fff;
   padding-block: clamp(3.5rem, 8vw, 5.5rem);
@@ -489,14 +490,14 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   background: linear-gradient(90deg, var(--aetas-turquoise) 0%, var(--aetas-gold) 100%);
 }
 .page-banner h1 { color: #fff; max-width: 720px; position: relative; }
-.page-banner .lead { color: rgba(255, 255, 255, 0.85); max-width: 640px; position: relative; font-weight: 300; }
+.page-banner .lead { color: #d4dbe5; max-width: 640px; position: relative; font-weight: 300; }
 .breadcrumbs {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: #a8b5c4;
   margin-bottom: 1.25rem;
   position: relative;
 }
-.breadcrumbs a { color: rgba(255, 255, 255, 0.85); }
+.breadcrumbs a { color: #d4dbe5; }
 .breadcrumbs a:hover { color: #fff; }
 .breadcrumbs .sep { margin-inline: 0.5rem; opacity: 0.5; }
 
@@ -582,8 +583,9 @@ article.post blockquote {
 
 /* ---------- 16. Footer ---------- */
 .site-footer {
+  background-color: #001640;
   background: var(--aetas-blue-dark);
-  color: rgba(255, 255, 255, 0.7);
+  color: #b8c4d2;
   padding-block: 4rem 2rem;
   position: relative;
 }
@@ -606,7 +608,7 @@ article.post blockquote {
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
-.footer-grid h4 {
+.footer-grid h3, .footer-grid h4 {
   color: #fff;
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
@@ -616,7 +618,7 @@ article.post blockquote {
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { margin-bottom: 0.55rem; }
 .footer-grid a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #b8c4d2;
   font-size: 0.92rem;
   transition: color 180ms var(--ease);
 }
@@ -626,11 +628,11 @@ article.post blockquote {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: #9dafc0;
   line-height: 1.7;
 }
 .footer-bottom p { margin: 0 0 0.5rem; color: inherit; }
-.footer-bottom a { color: rgba(255, 255, 255, 0.7); }
+.footer-bottom a { color: #b8c4d2; }
 
 /* ---------- 17. Stats / pull-out ---------- */
 .stats {
@@ -656,7 +658,7 @@ article.post blockquote {
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: #b8c4d2;
 }
 
 /* ---------- 18. Misc ---------- */

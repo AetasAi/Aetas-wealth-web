@@ -559,8 +559,70 @@
   </url>
   <url>
     <loc>https://aetas-wealth.com/guides/financial-planning-in-your-30s-and-40s.html</loc>
+  <!-- insights posts — added June 2026 -->
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/britain-retirement-savings-shortfall.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/later-life-care-planning-guide.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/market-commentary-june-2026.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/new-mansion-tax-heirs-deferred-property-bill.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/next-gen-investor-behaviour.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/next-gen-investor-portfolios.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/next-gen-investors-adviser.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/posts/wealth-transfer-uk-families.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- insights team profiles — added June 2026 -->
+  <url>
+    <loc>https://aetas-wealth.com/insights/team/daniel-cottam.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/team/matthew-steiner.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/insights/team/peter-rose.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
+
