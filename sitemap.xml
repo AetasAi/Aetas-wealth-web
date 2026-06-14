@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://aetas-wealth.com/case-studies/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -632,7 +632,7 @@
   <!-- guides library index - added June 2026 -->
   <url>
     <loc>https://aetas-wealth.com/guides/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -702,5 +702,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- hub pages - added June 2026 -->
+  <url>
+    <loc>https://aetas-wealth.com/life-stage/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
 
