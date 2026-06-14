@@ -1,5 +1,5 @@
-/* ============================================================
-   Aetas Wealth — Site interactions
+﻿/* ============================================================
+   Aetas Wealth €” Site interactions
    Mobile nav toggle, active link, scroll reveal
    ============================================================ */
 
@@ -53,7 +53,7 @@
 
 
 /* =====================================================================
-   Aetas Wealth — Analytics & Cookie Consent
+   Aetas Wealth €” Analytics & Cookie Consent
    --------------------------------------------------------------------
    Loads Cookiebot first (shows consent banner). Only loads GA4 and
    Microsoft Clarity AFTER the visitor accepts the "statistics" category.
@@ -124,3 +124,4 @@
   // Fires when the user clicks Accept on the banner
   window.addEventListener('CookiebotOnAccept', maybeLoadTrackers);
 })();
+

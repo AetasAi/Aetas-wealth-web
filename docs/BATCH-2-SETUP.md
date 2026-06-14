@@ -1,4 +1,4 @@
-# Aetas Wealth Batch 2 — Date cleanup + 6 new articles
+﻿# Aetas Wealth Batch 2 €” Date cleanup + 6 new articles
 
 Delivered 22 May 2026. This batch:
 
@@ -14,12 +14,12 @@ After deployment, your Insights index will show a clean weekly publishing cadenc
 
 ```
 aetas-batch2/
-├── insights/
-│   └── posts/                              ← 14 article HTML files
-│       ├── (8 re-dated existing articles, just dates changed)
-│       └── (6 brand new articles)
-└── scripts/
-    └── redate-existing-posts.py            ← bulk-redates the OTHER articles
+”œ”€”€ insights/
+”‚   ”””€”€ posts/                              † 14 article HTML files
+”‚       ”œ”€”€ (8 re-dated existing articles, just dates changed)
+”‚       ”””€”€ (6 brand new articles)
+”””€”€ scripts/
+    ”””€”€ redate-existing-posts.py            † bulk-redates the OTHER articles
 ```
 
 ---
@@ -37,22 +37,22 @@ You'll be overwriting 8 files (the batch 1 articles, now with new dates) and add
 The 14 files:
 
 **Re-dated batch 1 articles:**
-- `cash-flow-planning.html` → now dated 12 November 2025
-- `how-to-prepare-for-retirement.html` → now dated 26 November 2025
-- `pension-tax-free-lump-sum.html` → now dated 3 December 2025
-- `tax-efficient-giving.html` → now dated 28 January 2026
-- `estate-planning-for-everyone.html` → now dated 18 February 2026
-- `cash-isa-changes-2027.html` → now dated 22 April 2026
-- `salary-sacrifice-cap.html` → now dated 6 May 2026
-- `pension-iht-2027.html` → now dated 13 May 2026
+- `cash-flow-planning.html` †’ now dated 12 November 2025
+- `how-to-prepare-for-retirement.html` †’ now dated 26 November 2025
+- `pension-tax-free-lump-sum.html` †’ now dated 3 December 2025
+- `tax-efficient-giving.html` †’ now dated 28 January 2026
+- `estate-planning-for-everyone.html` †’ now dated 18 February 2026
+- `cash-isa-changes-2027.html` †’ now dated 22 April 2026
+- `salary-sacrifice-cap.html` †’ now dated 6 May 2026
+- `pension-iht-2027.html` †’ now dated 13 May 2026
 
 **Brand-new articles:**
-- `director-pension-contributions-sme.html` → 14 January 2026
-- `power-of-attorney-guide.html` → 11 February 2026
-- `aim-portfolios-business-relief-iht.html` → 25 February 2026
-- `carry-forward-pension-contributions.html` → 18 March 2026
-- `uk-cgt-planning-2026.html` → 25 March 2026
-- `end-of-tax-year-planning.html` → 1 April 2026
+- `director-pension-contributions-sme.html` †’ 14 January 2026
+- `power-of-attorney-guide.html` †’ 11 February 2026
+- `aim-portfolios-business-relief-iht.html` †’ 25 February 2026
+- `carry-forward-pension-contributions.html` †’ 18 March 2026
+- `uk-cgt-planning-2026.html` †’ 25 March 2026
+- `end-of-tax-year-planning.html` †’ 1 April 2026
 
 ---
 
@@ -70,15 +70,15 @@ python3 scripts/redate-existing-posts.py
 You'll see output like:
 
 ```
-✓ pension-schemes-act-2026.html → 29 April 2026
-✓ inheritance-tax-rising.html → 15 April 2026
-✓ pension-changes-ahead.html → 8 April 2026
-✓ isa-investment-strategy-2026.html → 11 March 2026
+œ“ pension-schemes-act-2026.html †’ 29 April 2026
+œ“ inheritance-tax-rising.html †’ 15 April 2026
+œ“ pension-changes-ahead.html †’ 8 April 2026
+œ“ isa-investment-strategy-2026.html †’ 11 March 2026
 ...
 Summary: 11 updated, 0 skipped, 0 not found
 ```
 
-If any show "NOT FOUND", check whether the filename in your `posts/` folder differs slightly — edit the `DATE_CHANGES` dict at the top of the script and re-run.
+If any show "NOT FOUND", check whether the filename in your `posts/` folder differs slightly €” edit the `DATE_CHANGES` dict at the top of the script and re-run.
 
 ---
 
@@ -104,8 +104,8 @@ Push to main.
 ## Step 4: Watch the auto-indexer fire
 
 The auto-indexer from batch 1 will detect:
-- New date metadata on the 19 re-dated articles → re-sorts the index
-- 6 new article files → adds them as cards
+- New date metadata on the 19 re-dated articles †’ re-sorts the index
+- 6 new article files †’ adds them as cards
 
 Within ~30 seconds of pushing you'll see a `chore: auto-update insights index` commit from the bot. Then visit `https://aetas-wealth.com/insights/` to see the result.
 
@@ -184,14 +184,15 @@ All 6 follow the same agentic-optimised structure as batch 1:
 - Update the `DATE_CHANGES` dict in the script with the exact names and re-run
 
 **Markets/news articles I deliberately didn't re-date:**
-- `finance-act-2026.html` (22 May — real legislative date)
-- `business-owners-pensions-and-the-2027-changes.html` (19 May — leave alone)
-- `bank-of-england-holds-rates-may-2026.html` (11 May — real BoE decision date)
+- `finance-act-2026.html` (22 May €” real legislative date)
+- `business-owners-pensions-and-the-2027-changes.html` (19 May €” leave alone)
+- `bank-of-england-holds-rates-may-2026.html` (11 May €” real BoE decision date)
 - `market-commentary-may-2026.html` (was 11 May; if you want, change to 12 May to separate from BoE)
-- `market-commentary-april-2026.html` (20 April — keep)
+- `market-commentary-april-2026.html` (20 April €” keep)
 
 If you want to re-date any of these too, uncomment them in the script's `DATE_CHANGES` dict.
 
 ---
 
 *Batch 2 prepared 22 May 2026.*
+

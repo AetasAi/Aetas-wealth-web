@@ -1,6 +1,6 @@
-# Aetas Wealth — Scheduled Publishing System
+﻿# Aetas Wealth €” Scheduled Publishing System
 
-You can now batch-upload articles to your repo with **future dates**, and they'll appear on the Insights index automatically when their date arrives — Tuesday and Thursday cadence built in.
+You can now batch-upload articles to your repo with **future dates**, and they'll appear on the Insights index automatically when their date arrives €” Tuesday and Thursday cadence built in.
 
 LinkedIn teasers (via GHL) can be generated automatically with matching dates, so each article and its LinkedIn teaser fire the same day.
 
@@ -10,9 +10,9 @@ LinkedIn teasers (via GHL) can be generated automatically with matching dates, s
 
 | File | Goes to | Purpose |
 |---|---|---|
-| `build-insights-index.py` | `scripts/` (overwrites existing) | Updated indexer — hides future-dated articles |
-| `scheduled-publish.yml` | `.github/workflows/` (new) | Daily 7am UK action — releases articles when dates arrive |
-| `schedule-articles.py` | `scripts/` (new) | Helper — sets Tue/Thu dates on a batch of articles |
+| `build-insights-index.py` | `scripts/` (overwrites existing) | Updated indexer €” hides future-dated articles |
+| `scheduled-publish.yml` | `.github/workflows/` (new) | Daily 7am UK action €” releases articles when dates arrive |
+| `schedule-articles.py` | `scripts/` (new) | Helper €” sets Tue/Thu dates on a batch of articles |
 | `generate-linkedin-csv.py` | `scripts/` (new) | Generates a GHL CSV matched to article dates |
 
 ---
@@ -23,7 +23,7 @@ LinkedIn teasers (via GHL) can be generated automatically with matching dates, s
 
 You'll have **two workflows** running in your repo after this is deployed:
 
-**1. `update-insights-index.yml`** *(existing — no changes)*
+**1. `update-insights-index.yml`** *(existing €” no changes)*
 
 - Fires when you push changes to `insights/posts/**`
 - Runs the indexer immediately
@@ -42,13 +42,13 @@ The indexer now ignores any article with a `datePublished` later than today's da
 
 ```
 posts/
-├── article-1.html     (datePublished: 2026-05-15)   ← published, visible
-├── article-2.html     (datePublished: 2026-05-22)   ← published today, visible
-├── article-3.html     (datePublished: 2026-05-26)   ← FUTURE, hidden
-└── article-4.html     (datePublished: 2026-06-15)   ← FUTURE, hidden
+”œ”€”€ article-1.html     (datePublished: 2026-05-15)   † published, visible
+”œ”€”€ article-2.html     (datePublished: 2026-05-22)   † published today, visible
+”œ”€”€ article-3.html     (datePublished: 2026-05-26)   † FUTURE, hidden
+”””€”€ article-4.html     (datePublished: 2026-06-15)   † FUTURE, hidden
 ```
 
-The article URLs **still work directly** — `https://aetas-wealth.com/insights/posts/article-3.html` will load fine. They just don't appear on the Insights index page until their date arrives.
+The article URLs **still work directly** €” `https://aetas-wealth.com/insights/posts/article-3.html` will load fine. They just don't appear on the Insights index page until their date arrives.
 
 This means you can:
 - Submit hidden URLs to Google Search Console early to get pre-indexed
@@ -62,13 +62,13 @@ This means you can:
 ### Step 1: Replace the existing indexer
 
 In your repo:
-- File Explorer → `C:\Repos\Aetas-wealth-web\scripts\`
+- File Explorer †’ `C:\Repos\Aetas-wealth-web\scripts\`
 - Overwrite `build-insights-index.py` with the new version from this package
 - Don't delete it, just replace
 
 ### Step 2: Add the new GitHub Action
 
-- File Explorer → `C:\Repos\Aetas-wealth-web\.github\workflows\`
+- File Explorer †’ `C:\Repos\Aetas-wealth-web\.github\workflows\`
 - Drop `scheduled-publish.yml` into this folder (alongside your existing `update-insights-index.yml`)
 
 ### Step 3: Add the helper scripts
@@ -129,7 +129,7 @@ That's it. Articles will appear on the Insights index automatically on their sch
 
 Sometimes you'll want to publish an article RIGHT NOW (e.g. responding to a news event). Just set its `datePublished` to today's date and push. The existing `update-insights-index.yml` action fires on the push and adds it immediately.
 
-Both workflows coexist happily — the manual-push workflow handles "publish now", the daily scheduled workflow handles "publish on schedule".
+Both workflows coexist happily €” the manual-push workflow handles "publish now", the daily scheduled workflow handles "publish on schedule".
 
 ---
 
@@ -137,7 +137,7 @@ Both workflows coexist happily — the manual-push workflow handles "publish now
 
 Future-dated article needs to slip a week? Just open the file in Notepad, find the JSON-LD `datePublished` and the byline date, change them. Push the change. The system will respect the new date on the next daily run.
 
-Or, more easily — re-run `schedule-articles.py` with an updated `ARTICLE_ORDER` to re-shuffle the dates.
+Or, more easily €” re-run `schedule-articles.py` with an updated `ARTICLE_ORDER` to re-shuffle the dates.
 
 ---
 
@@ -148,25 +148,25 @@ Here's what happens when you set up a batch correctly:
 ```
 Day 0 (today):  Run schedule-articles.py + generate-linkedin-csv.py
                 Commit and push.
-                → 10 articles sit in posts/ with future dates
-                → 10 LinkedIn teaser rows sit in ghl-linkedin-teasers.csv
-                → You upload the CSV to GHL Social Planner
+                †’ 10 articles sit in posts/ with future dates
+                †’ 10 LinkedIn teaser rows sit in ghl-linkedin-teasers.csv
+                †’ You upload the CSV to GHL Social Planner
 
 Day 0:          Tuesday 2 June 2026 at 06:30 UTC:
-                → Daily workflow fires
-                → Sees article-1.html dated 2026-06-02 is now today
-                → Adds it to the index
-                → Auto-commits index.html change
-                → Site rebuilds in 30 seconds
+                †’ Daily workflow fires
+                †’ Sees article-1.html dated 2026-06-02 is now today
+                †’ Adds it to the index
+                †’ Auto-commits index.html change
+                †’ Site rebuilds in 30 seconds
 
 Day 0 (later):  GHL Social Planner posts LinkedIn teaser at 8:00 UK
-                → Article and LinkedIn post fire same day
+                †’ Article and LinkedIn post fire same day
 
 Day 2:          Thursday 4 June 2026 at 06:30 UTC:
-                → Daily workflow fires again
-                → Sees article-2.html dated 2026-06-04 is now today
-                → Same flow
-                → ... and so on for the next 5 weeks
+                †’ Daily workflow fires again
+                †’ Sees article-2.html dated 2026-06-04 is now today
+                †’ Same flow
+                †’ ... and so on for the next 5 weeks
 ```
 
 Zero manual intervention required between the initial push and the final article going live 5 weeks later.
@@ -177,11 +177,11 @@ Zero manual intervention required between the initial push and the final article
 
 ### "The daily workflow ran but didn't do anything"
 
-This is normal on days when no articles are scheduled to release. The workflow runs every day, but only commits a change if there's something new to add to the index. Check the Actions log if curious — you'll see "· No scheduled articles to release today".
+This is normal on days when no articles are scheduled to release. The workflow runs every day, but only commits a change if there's something new to add to the index. Check the Actions log if curious €” you'll see "· No scheduled articles to release today".
 
 ### "My article was supposed to release at 7am but didn't appear until 9am"
 
-GitHub Actions schedules can run with a delay during peak hours. The cron isn't a hard guarantee — articles can release any time between 06:30 and 09:00 UK time. Usually closer to 7am.
+GitHub Actions schedules can run with a delay during peak hours. The cron isn't a hard guarantee €” articles can release any time between 06:30 and 09:00 UK time. Usually closer to 7am.
 
 If you need precise timing for a specific article (e.g. a market commentary tied to a Budget speech), publish it manually that day by pushing it with today's date.
 
@@ -218,7 +218,7 @@ GitHub keeps full history. You can either:
 
 ## What about Christmas / holidays?
 
-The system runs every day regardless. If you've scheduled articles for Christmas Day, they'll publish on Christmas Day. If that's not what you want, just leave gaps in your `ARTICLE_ORDER` schedule — easier to plan around holidays than to pause the system.
+The system runs every day regardless. If you've scheduled articles for Christmas Day, they'll publish on Christmas Day. If that's not what you want, just leave gaps in your `ARTICLE_ORDER` schedule €” easier to plan around holidays than to pause the system.
 
 The `schedule-articles.py` script can also be configured to skip specific dates by adding them to a blacklist (let me know if this would help and I can add the feature).
 
@@ -226,7 +226,7 @@ The `schedule-articles.py` script can also be configured to skip specific dates 
 
 ## A note on the Tuesday / Thursday cadence
 
-You picked Tue+Thu twice-weekly. The system will respect this — Tuesday is the strongest LinkedIn engagement day per Sprout Social's annual analytics, and Thursday is the next best. Avoiding Mondays (catch-up emails) and Fridays (lower attention spans) is a deliberate algorithm play.
+You picked Tue+Thu twice-weekly. The system will respect this €” Tuesday is the strongest LinkedIn engagement day per Sprout Social's annual analytics, and Thursday is the next best. Avoiding Mondays (catch-up emails) and Fridays (lower attention spans) is a deliberate algorithm play.
 
 If you ever want to change the cadence, edit `PUBLISH_DAYS` in `schedule-articles.py`:
 ```python
@@ -236,3 +236,4 @@ PUBLISH_DAYS = [1, 3]  # 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri
 ---
 
 *Prepared 22 May 2026.*
+
