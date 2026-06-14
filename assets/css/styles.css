@@ -761,3 +761,210 @@ article.post blockquote {
     grid-template-columns: 1fr;
   }
 }
+/* ============================================================
+   AETAS WEALTH — CSS FIX PATCH
+   Generated: 14 June 2026
+   Apply this block to the END of assets/css/styles.css
+   (or merge into the existing rules shown below)
+   ============================================================ */
+
+
+/* ── FIX 1: Footer anchoring (sticky footer)
+   ISSUE: body has no flex/min-height — footer floats up on
+   short-content pages (e.g. case-studies, about/index).
+   ---------------------------------------------------------- */
+html {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
+
+/* ── FIX 2: Skip-to-content link — must show on keyboard focus
+   ISSUE: Current rule only hides it; no :focus rule to reveal.
+   ---------------------------------------------------------- */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 0.75rem 1.25rem;
+  background: var(--aetas-blue);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 2px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+
+/* ── FIX 3: Global :focus-visible for keyboard navigation
+   ISSUE: Only form fields have a focus ring; links, buttons,
+   and nav items have no keyboard focus indicator.
+   ---------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--aetas-turquoise);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* Remove focus ring on mouse click (preserves keyboard ring) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ── FIX 4: Button base class — .btn-primary without .btn
+   ISSUE: 13 instances across 7 pages use class="btn-primary"
+   without the base .btn class, losing padding/display rules.
+   Add this rule so .btn-primary works standalone too.
+   ---------------------------------------------------------- */
+.btn-primary:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 200ms ease, color 200ms ease, transform 150ms ease, box-shadow 150ms ease;
+  background: var(--aetas-blue);
+  color: #fff;
+}
+
+.btn-primary:not(.btn):hover {
+  background: var(--aetas-turquoise);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,32,91,0.18);
+}
+
+
+/* ── FIX 5: Footer heading hierarchy
+   ISSUE: Footer uses <h4> inside a page where the last
+   main-content heading is <h2>/<h3>, causing H2 -> H4 skips.
+   These footer section labels have no semantic heading value.
+   Solution: override footer h4 to look identical but use
+   aria-hidden or change to <p class="footer-heading"> in HTML.
+   CSS-side patch: ensure footer h4 stays visually consistent.
+   ---------------------------------------------------------- */
+.site-footer h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin: 0 0 0.85rem 0;
+}
+
+
+/* ── FIX 6: Mobile navigation improvements
+   ISSUE: nav-toggle button visible at all sizes; nav-links
+   not clearly hidden/shown on mobile with smooth transition.
+   ---------------------------------------------------------- */
+@media (max-width: 880px) {
+  .nav-links {
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  /* Ensure nav-toggle has a sufficient tap target (44x44px) */
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+/* ── FIX 7: Image max-width safeguard
+   ISSUE: No global image constraint — images can exceed
+   their containers on narrow viewports.
+   ---------------------------------------------------------- */
+img,
+picture,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ── FIX 8: Responsive typography baseline
+   ISSUE: No fluid type scaling. 17px base can feel large
+   on 390px screens with tight containers.
+   ---------------------------------------------------------- */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+/* ── FIX 9: Consistent section padding at mobile
+   ISSUE: Section padding on mobile inconsistent across
+   page templates (.section-pad, .content-section etc.)
+   ---------------------------------------------------------- */
+@media (max-width: 600px) {
+  .section-pad,
+  .content-section,
+  section {
+    padding-block: 3rem;
+  }
+}
+
+
+/* ── FIX 10: Print — preserve nav and footer visibility toggle
+   ISSUE: Current print rule hides site-footer from print,
+   which removes FCA regulatory text. Keep footer in print.
+   ---------------------------------------------------------- */
+@media print {
+  .site-header,
+  .nav-toggle,
+  .hero-actions,
+  .btn {
+    display: none !important;
+  }
+
+  /* Override: site-footer should print for regulatory compliance */
+  .site-footer {
+    display: block !important;
+    background: #fff !important;
+    color: #000 !important;
+    padding: 1rem 0 !important;
+  }
+
+  .site-footer a {
+    color: #000 !important;
+  }
+}
