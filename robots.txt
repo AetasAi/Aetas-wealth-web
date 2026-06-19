@@ -74,3 +74,14 @@ Sitemap: https://aetas-wealth.com/sitemap.xml
 # llms.txt is at: https://aetas-wealth.com/llms.txt
 # llms-full.txt is at: https://aetas-wealth.com/llms-full.txt
 # context.md is at: https://aetas-wealth.com/context.md
+
+# Utility and deploy scripts
+Disallow: /deploy-footer-fix.ps1
+Disallow: /deploy-guides-library.ps1
+Disallow: /write-life-stages.ps1
+Disallow: /generate-sitemap.py
+Disallow: /_DEPLOY-NOTES.txt
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /context.md
+
