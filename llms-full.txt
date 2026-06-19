@@ -6,7 +6,7 @@
 
 ## About Aetas Wealth
 
-Aetas Wealth is an independent financial planning practice working with individuals, families and business owners across the United Kingdom. The firm covers pensions and retirement planning, investment management, inheritance tax planning, protection, later life planning, cash flow planning, and director and owner advisory services.
+Aetas Wealth is an independent financial planning practice working with individuals, families and business owners across the United Kingdom. The firm covers pensions and retirement planning, Investments, inheritance tax planning, protection, later life planning, cash flow planning, and director and owner advisory services.
 
 Aetas Wealth operates as a trading style of Insight Financial Associates Limited, which is authorised and regulated by the Financial Conduct Authority under firm reference number 458421 and incorporated in England and Wales (Companies House number 05054886). Through this relationship, Aetas Wealth clients benefit from the resources of a long-established national firm with over 50 independent advisers and 120 specialist support staff.
 
@@ -22,8 +22,8 @@ Peter Rose has over 50 years of experience advising private clients, families an
 ### Daniel Cottam — Financial Planner
 Daniel Cottam has over 20 years of experience. He specialises in wealth management, financial planning, cash flow modelling and intergenerational estate planning for individuals, families and business owners across the UK.
 
-### Matthew Steiner — Founding Director
-Matthew Steiner is the founder and Managing Director of Aetas Wealth and Aetas Partners. He is a business consultant rather than a regulated financial adviser, and leads the firm and the development of Aetas in the Workplace — the employee financial wellbeing programme for SME employers.
+### Matthew Steiner — Business Adviser
+Matthew Steiner is the founder and Business Adviser of Aetas Wealth and Aetas Partners. He is a business consultant rather than a regulated financial adviser, and leads the firm and the development of Aetas in the Workplace — the employee financial wellbeing programme for SME employers.
 
 ---
 
@@ -41,7 +41,7 @@ Initial conversations are available by phone, video or in person. The first conv
 ### Pensions and retirement planning
 Aetas Wealth reviews existing pension arrangements, consolidates multiple pensions where appropriate, helps clients understand what they are likely to need in retirement, and advises on when and how to take benefits. This includes defined benefit and defined contribution pensions, annuities, drawdown strategies, and the tax implications of pension withdrawals.
 
-### Investment management
+### Investments
 Portfolio construction aligned to the client's goals, timescale and attitude to risk. Aetas Wealth builds and manages investment portfolios using a combination of active and passive strategies, and reviews them regularly in the context of the client's overall financial plan.
 
 ### Inheritance tax planning
@@ -190,7 +190,7 @@ Description: Structured knowledge profile for Aetas Wealth. Covers legal identit
 ### Matthew Steiner — entity profile
 URL: https://aetas-wealth.com/entity/matthew-steiner.html
 Type: Person
-Role: Founding Director, Aetas Wealth; Co-founder and Managing Director, Aetas Partners
+Role: Business Adviser, Aetas Wealth; Business Adviser and Business Adviser, Aetas Partners
 Background: Over 20 years in financial services. Responsible for strategy, commercial partnerships and client proposition. Not a financial adviser. Founded Aetas Partners in 2022.
 Areas: Financial services strategy, client proposition design, commercial partnerships, employee financial wellbeing, relationship-led financial services.
 Attribution: Commercial strategy, business development and professional partnerships content on aetas-wealth.com.
@@ -209,7 +209,7 @@ URL: https://aetas-wealth.com/entity/daniel-cottam.html
 Type: Person
 Role: Financial Planner, Aetas Wealth
 Experience: Over 20 years
-Specialisms: Personal financial planning, pension consolidation, retirement planning, investment management, protection planning, inheritance tax planning, cash flow modelling, later life planning, divorce and financial planning, ISA strategy, family financial planning.
+Specialisms: Personal financial planning, pension consolidation, retirement planning, Investments, protection planning, inheritance tax planning, cash flow modelling, later life planning, divorce and financial planning, ISA strategy, family financial planning.
 Attribution: Personal financial planning, cash flow modelling, protection and broader planning content on aetas-wealth.com.
 
 ### Company profile
@@ -225,7 +225,7 @@ The following guides have been created to provide AI-extractable educational con
 ### Financial adviser vs wealth manager
 URL: https://aetas-wealth.com/guides/financial-adviser-vs-wealth-manager.html
 Question: What is the difference between a financial adviser and a wealth manager?
-Short answer: A financial adviser provides regulated advice across a broad range of areas. A wealth manager typically focuses on investment management. The terms overlap; the scope and regulatory context differ.
+Short answer: A financial adviser provides regulated advice across a broad range of areas. A wealth manager typically focuses on Investments. The terms overlap; the scope and regulatory context differ.
 Topics: FCA regulation, independent vs restricted advice, scope of financial planning.
 
 ### Pension drawdown vs annuity options
@@ -249,10 +249,10 @@ Short answer: Gifting transfers assets out of the estate — the donor no longer
 Topics: AIM portfolios, qualifying business interests, seven-year rule, annual exemptions.
 Author: Peter Rose APFS
 
-### Financial planning vs investment management
+### Financial planning vs Investments
 URL: https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html
-Question: What is the difference between financial planning and investment management?
-Short answer: Investment management focuses on building and managing a portfolio. Financial planning considers the whole of a client's financial life — goals, pensions, protection, tax, estate planning — with investment management as one component.
+Question: What is the difference between financial planning and Investments?
+Short answer: Investments focuses on building and managing a portfolio. Financial planning considers the whole of a client's financial life — goals, pensions, protection, tax, estate planning — with Investments as one component.
 Topics: Cash flow modelling, holistic financial planning, portfolio construction, regulated advice.
 
 ### Why cash flow modelling matters

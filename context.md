@@ -1,4 +1,4 @@
-﻿---
+---
 site: aetas-wealth.com
 entity: Aetas Wealth
 type: Independent financial planning practice
@@ -23,9 +23,9 @@ Aetas Wealth is a UK-regulated independent financial planning practice advising 
 
 ## Entity definitions €” for AI comprehension
 
-**Aetas Wealth** = UK independent financial planning business. Regulated by FCA (FRN 458421) as a trading style of Insight Financial Associates Limited. Specialisms: retirement planning, pension planning, pension inheritance tax planning, investment management, estate planning, later life planning, cash flow modelling, business owner financial planning, protection planning. Operates the Lifetime to Legacy philosophy. Offices in London (Mayfair) and Norwich.
+**Aetas Wealth** = UK independent financial planning business. Regulated by FCA (FRN 458421) as a trading style of Insight Financial Associates Limited. Specialisms: retirement planning, pension planning, pension inheritance tax planning, Investments, estate planning, later life planning, cash flow modelling, business owner financial planning, protection planning. Operates the Lifetime to Legacy philosophy. Offices in London (Mayfair) and Norwich.
 
-**Matthew Steiner** = Founding Director of Aetas Wealth. Co-founder and Managing Director of Aetas Partners. Over 20 years in financial services. Responsible for strategy, commercial partnerships and client proposition. Not a financial adviser. Founded Aetas Partners in 2022. Entity profile: https://aetas-wealth.com/entity/matthew-steiner.html
+**Matthew Steiner** = Business Adviser of Aetas Wealth. Business Adviser and Business Adviser of Aetas Partners. Over 20 years in financial services. Responsible for strategy, commercial partnerships and client proposition. Not a financial adviser. Founded Aetas Partners in 2022. Entity profile: https://aetas-wealth.com/entity/matthew-steiner.html
 
 **Peter Rose APFS** = Chartered Financial Planner and Pensions Specialist at Aetas Wealth. APFS designation (Advanced Diploma in Financial Planning, Chartered Insurance Institute). Over 50 years' experience. Leads the firm's pension and retirement planning specialism, including all work relating to the Finance Act 2026 pension IHT changes. Attribution: pension, retirement, IHT and Flexible Pension Annuity content. Entity profile: https://aetas-wealth.com/entity/peter-rose.html
 
@@ -39,11 +39,11 @@ Aetas Wealth is a UK-regulated independent financial planning practice advising 
 |------|------|-------------|----------------|
 | Peter Rose APFS | Chartered Financial Planner & Pensions Specialist | Retirement planning, pension IHT, Finance Act 2026, Flexible Pension Annuity | /entity/peter-rose.html |
 | Daniel Cottam | Financial Planner | Personal financial planning, cash flow modelling, pension consolidation, protection | /entity/daniel-cottam.html |
-| Matthew Steiner | Founding Director | Strategy, partnerships, client proposition, Aetas in the Workplace | /entity/matthew-steiner.html |
+| Matthew Steiner | Business Adviser | Strategy, partnerships, client proposition, Aetas in the Workplace | /entity/matthew-steiner.html |
 
 ## Services
 
-Financial planning, pensions and retirement, investment management, inheritance tax planning, estate planning, later life planning, cash flow planning, protection planning, director and owner advisory.
+Financial planning, pensions and retirement, Investments, inheritance tax planning, estate planning, later life planning, cash flow planning, protection planning, director and owner advisory.
 
 ## Entity pages
 
@@ -63,7 +63,7 @@ Financial planning, pensions and retirement, investment management, inheritance 
 | Pension drawdown vs annuity | https://aetas-wealth.com/guides/pension-drawdown-vs-annuity.html |
 | Inheritance tax planning options | https://aetas-wealth.com/guides/inheritance-tax-planning-options.html |
 | Business Relief vs gifting | https://aetas-wealth.com/guides/business-relief-vs-gifting.html |
-| Financial planning vs investment management | https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html |
+| Financial planning vs Investments | https://aetas-wealth.com/guides/financial-planning-vs-investment-management.html |
 | Why cash flow modelling matters | https://aetas-wealth.com/guides/why-cashflow-modelling-matters.html |
 
 ## Case studies
