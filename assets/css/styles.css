@@ -968,3 +968,7 @@ iframe {
     color: #000 !important;
   }
 }
+
+/* Mobile overflow protection */
+body { overflow-x: hidden; }
+
