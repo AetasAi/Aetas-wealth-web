@@ -12,10 +12,10 @@
   --aetas-blue: #00205B;
   --aetas-blue-dark: #001640;
   --aetas-blue-soft: #f4f6fb;
-  --aetas-turquoise: #00828C;
-  --aetas-turquoise-dark: #007a82;
+  --aetas-turquoise: #00747E; /* adjusted for WCAG AA on warm backgrounds */
+  --aetas-turquoise-dark: #006870;
   --aetas-gold: #896C2E;
-  --aetas-gold-soft: #a8882e; /* darkened from #c8a55c for WCAG AA contrast */
+  --aetas-gold-soft: #8a6e20; /* darkened further for WCAG AA normal text (4.85:1) */
 
   /* Neutrals */
   --ink: #1a1f2e;
@@ -877,7 +877,7 @@ main {
    aria-hidden or change to <p class="footer-heading"> in HTML.
    CSS-side patch: ensure footer h4 stays visually consistent.
    ---------------------------------------------------------- */
-.site-footer h4 {
+.site-footer h3, .site-footer h4 {
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
