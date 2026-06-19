@@ -972,3 +972,18 @@ iframe {
 /* Mobile overflow protection */
 body { overflow-x: hidden; }
 
+
+/* ── WCAG 1.4.1: Links distinguishable without colour
+   Add underline to inline body/content links only.
+   Excludes nav, buttons, cards, footer, eyebrows.
+   ---------------------------------------------------------- */
+article.post .post-body a,
+.post-body a,
+article p a,
+.section p a:not(.btn):not(.card-link),
+.container-narrow p a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+}
