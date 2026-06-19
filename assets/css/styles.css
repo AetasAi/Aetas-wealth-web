@@ -15,12 +15,12 @@
   --aetas-turquoise: #00828C;
   --aetas-turquoise-dark: #007a82;
   --aetas-gold: #896C2E;
-  --aetas-gold-soft: #c8a55c;
+  --aetas-gold-soft: #a8882e; /* darkened from #c8a55c for WCAG AA contrast */
 
   /* Neutrals */
   --ink: #1a1f2e;
   --ink-soft: #4a5269;
-  --ink-muted: #8089a0;
+  --ink-muted: #606882; /* darkened from #8089a0 for WCAG AA contrast */
   --paper: #ffffff;
   --paper-warm: #fafaf7;
   --line: #e6e8ee;
