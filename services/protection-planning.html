@@ -313,6 +313,54 @@
 src="https://link.aetas-wealth.com/js/external-tracking.js"
 data-tracking-id="tk_db86e3fbbdec4a14a52fb3fcfdb0a517">
 </script>
+
+<!-- Cookie notice -->
+<div id="cookie-notice" role="dialog" aria-label="Cookie notice" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#00205B;color:#fff;padding:1rem 1.5rem;font-size:0.85rem;line-height:1.6;box-shadow:0 -2px 12px rgba(0,0,0,0.2);">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+    <p style="margin:0;flex:1;min-width:200px;">This site uses Google Analytics and Microsoft Clarity to understand how it is used, with IP addresses anonymised. No personal data is collected through analytics. <a href="/privacy.html" style="color:#00c4c4;text-decoration:underline;">Privacy Policy</a></p>
+    <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+      <button id="cookie-accept" style="background:#009CA6;color:#fff;border:none;padding:0.5rem 1.25rem;border-radius:2px;cursor:pointer;font-size:0.85rem;font-weight:600;">Accept</button>
+      <button id="cookie-decline" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:0.5rem 1.25rem;border-radius:2px;cursor:pointer;font-size:0.85rem;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var notice = document.getElementById('cookie-notice');
+  if (!notice) return;
+  var consent = localStorage.getItem('aetas-cookie-consent');
+  if (!consent) {
+    notice.style.display = 'block';
+  }
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('aetas-cookie-consent', 'accepted');
+    notice.style.display = 'none';
+    // Fire analytics immediately on accept (don't wait for next interaction)
+    if (window.gtag) return;
+    var GA4_ID = 'G-MXS6JSC1LE';
+    var CLARITY_ID = 'wtmefby0kh';
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA4_ID, { anonymize_ip: true });
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,'clarity','script',CLARITY_ID);
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('aetas-cookie-consent', 'declined');
+    notice.style.display = 'none';
+  });
+})();
+</script>
+<!-- /Cookie notice -->
 </body>
 </html>
 
