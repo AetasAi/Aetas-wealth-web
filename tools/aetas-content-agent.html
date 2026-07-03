@@ -566,7 +566,7 @@ const CONFIG = {
       auditUrl: 'https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V',
       tone: 'commercial and direct — speak to MDs, FDs and business owners. Focus on measurable business outcomes, ROI, and commercial rationale. Avoid HR jargon. Every claim should have a number or a business consequence attached.',
       audience: 'Managing Directors, Finance Directors, HR Directors and business owners of UK SMEs with 10-250 employees',
-      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Want to measure the Return on Employee Investment in your organisation?</strong> The Workplace Performance Audit is the starting point — no cost, no obligation. <a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener" style="color:var(--aetas-turquoise);font-weight:600;">Book an Audit →</a> or <a href="/roei.html" style="color:var(--aetas-turquoise);">learn more about the ROEI Framework</a>.</p>',
+      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Want to measure the Return on Employee Investment in your organisation?</strong> The Workplace Performance Audit is the starting point — no cost, no obligation. <a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener" style="color:var(--aetas-turquoise);font-weight:600;">Book an Audit →</a> or <a href="/roei" style="color:var(--aetas-turquoise);">learn more about the ROEI Framework</a>.</p>',
       schemaPublisher: '{"@type":"Organization","name":"Aetas in the Workplace","url":"https://workplace.aetas-wealth.com/","logo":{"@type":"ImageObject","url":"https://workplace.aetas-wealth.com/icons/favicon-32.png"}}',
       authorId: 'https://workplace.aetas-wealth.com/#person-matthew-steiner',
       ogImage: 'https://workplace.aetas-wealth.com/og-image.png',
@@ -583,7 +583,7 @@ const CONFIG = {
       auditUrl: 'https://charities.aetas-wealth.com/book-a-meeting.html',
       tone: 'governance-led and evidence-based — speak to charity CEOs, trustees and finance directors. Frame everything around mission delivery, organisational resilience, responsible governance and trustee duty. Connect financial wellbeing to outcomes that funders and board members care about.',
       audience: 'Charity CEOs, trustees, finance directors and leadership teams of UK charities and not-for-profit organisations',
-      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Is financial pressure affecting your charity\'s mission delivery?</strong> The Charity Performance Audit identifies where — and what a proportionate response looks like. No cost, no obligation, written summary suitable for trustees. <a href="/book-a-meeting.html" style="color:var(--aetas-turquoise);font-weight:600;">Book an Audit →</a> or <a href="/roei.html" style="color:var(--aetas-turquoise);">explore the ROEI Framework for charities</a>.</p>',
+      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Is financial pressure affecting your charity\'s mission delivery?</strong> The Charity Performance Audit identifies where — and what a proportionate response looks like. No cost, no obligation, written summary suitable for trustees. <a href="/book-a-meeting" style="color:var(--aetas-turquoise);font-weight:600;">Book an Audit →</a> or <a href="/roei" style="color:var(--aetas-turquoise);">explore the ROEI Framework for charities</a>.</p>',
       schemaPublisher: '{"@type":"Organization","name":"Aetas for Charities","url":"https://charities.aetas-wealth.com/"}',
       authorId: '',
       ogImage: 'https://charities.aetas-wealth.com/og-image.png',
@@ -596,11 +596,11 @@ const CONFIG = {
       repo: 'AetasAi/Aetas-wealth-web',
       articlePath: 'insights/posts/{slug}.html',
       indexPath: 'insights/index.html',
-      roeiUrl: 'https://aetas-wealth.com/roei.html',
-      auditUrl: 'https://aetas-wealth.com/book.html',
+      roeiUrl: 'https://aetas-wealth.com/roei',
+      auditUrl: 'https://aetas-wealth.com/book',
       tone: 'personal planning focused and consultative — speak to business owners and individuals thinking about their own financial future alongside their responsibilities as employers. Connect employer investment in people to personal financial planning outcomes. Warm, senior advisory voice.',
       audience: 'Business owners, directors and senior professionals who are both employers and individuals planning their own financial future',
-      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Interested in how the ROEI Framework applies to your organisation?</strong> <a href="/roei.html" style="color:var(--aetas-turquoise);font-weight:600;">Explore the framework →</a> or <a href="/book.html" style="color:var(--aetas-turquoise);">book a conversation with Matthew Steiner</a>.</p>',
+      cta: '<p style="margin-top:2rem;padding:1.5rem;background:var(--aetas-blue-soft);border-radius:var(--radius);border-left:3px solid var(--aetas-turquoise);"><strong>Interested in how the ROEI Framework applies to your organisation?</strong> <a href="/roei" style="color:var(--aetas-turquoise);font-weight:600;">Explore the framework →</a> or <a href="/book" style="color:var(--aetas-turquoise);">book a conversation with Matthew Steiner</a>.</p>',
       schemaPublisher: '{"@type":"Organization","name":"Aetas Wealth","url":"https://aetas-wealth.com/","logo":{"@type":"ImageObject","url":"https://aetas-wealth.com/assets/images/favicon-32.png"}}',
       authorId: '',
       ogImage: 'https://aetas-wealth.com/og-image.png',
@@ -853,15 +853,15 @@ function buildArticleHtml(site, article, publishDate, dateFormatted, research) {
   // Use site-specific nav pattern
   const navHtml = {
     itw: `<nav>
-  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="Aetas in the Workplace" class="nav-mark" width="34" height="34"><span class="nav-lockup"><span class="nav-brand-text">Aetas in the Workplace</span><span class="nav-tagline">The Business Performance Solution</span></span></a>
+  <a class="nav-brand" href="/index"><img src="/aetas-mark-reverse.svg" alt="Aetas in the Workplace" class="nav-mark" width="34" height="34"><span class="nav-lockup"><span class="nav-brand-text">Aetas in the Workplace</span><span class="nav-tagline">The Business Performance Solution</span></span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/limited-companies.html">Limited companies</a></li>
-    <li><a href="/llps.html">LLPs</a></li>
-    <li><a href="/investment.html">Pricing</a></li>
-    <li><a href="/calculator.html">Calculator</a></li>
-    <li><a href="/diagnostic.html">Diagnostic</a></li>
-    <li><a href="/insights.html" class="active">Insights</a></li>
-    <li><a href="/faqs.html">FAQs</a></li>
+    <li><a href="/limited-companies">Limited companies</a></li>
+    <li><a href="/llps">LLPs</a></li>
+    <li><a href="/investment">Pricing</a></li>
+    <li><a href="/calculator">Calculator</a></li>
+    <li><a href="/diagnostic">Diagnostic</a></li>
+    <li><a href="/insights" class="active">Insights</a></li>
+    <li><a href="/faqs">FAQs</a></li>
     <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener" class="nav-cta">Book an Audit</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -874,13 +874,13 @@ function buildArticleHtml(site, article, publishDate, dateFormatted, research) {
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="/charities.html">Charities</a></li>
-      <li><a href="/pricing.html">Pricing</a></li>
-      <li><a href="/calculator.html">Calculator</a></li>
-      <li><a href="/diagnostic.html">Diagnostic</a></li>
-      <li><a href="/insights.html" class="active">Insights</a></li>
-      <li><a href="/faqs.html">FAQs</a></li>
-      <li><a href="/book-a-meeting.html" class="nav-cta">Book an Audit</a></li>
+      <li><a href="/charities">Charities</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/calculator">Calculator</a></li>
+      <li><a href="/diagnostic">Diagnostic</a></li>
+      <li><a href="/insights" class="active">Insights</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+      <li><a href="/book-a-meeting" class="nav-cta">Book an Audit</a></li>
     </ul>
   </div>
 </header>`,
@@ -892,13 +892,13 @@ function buildArticleHtml(site, article, publishDate, dateFormatted, research) {
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav aria-label="Primary navigation"><ul class="nav-links">
-      <li><a href="../../our-approach.html">Our Approach</a></li>
-      <li><a href="../../individuals.html">Individuals</a></li>
-      <li><a href="../../businesses.html">Businesses</a></li>
-      <li><a href="../../fees.html">Fees</a></li>
+      <li><a href="../../our-approach">Our Approach</a></li>
+      <li><a href="../../individuals">Individuals</a></li>
+      <li><a href="../../businesses">Businesses</a></li>
+      <li><a href="../../fees">Fees</a></li>
       <li><a href="../" class="active">Insights</a></li>
-      <li><a href="../../contact.html">Contact</a></li>
-      <li><a href="../../book.html" class="nav-cta">Book a meeting</a></li>
+      <li><a href="../../contact">Contact</a></li>
+      <li><a href="../../book" class="nav-cta">Book a meeting</a></li>
     </ul></nav>
   </div>
 </header>`
@@ -998,7 +998,7 @@ function buildIndexCard(site, article, publishDate) {
   if (isWealth) {
     return `
         <li data-categories="${article.category.toLowerCase().replace(/\s+/g, '-')}">
-          <a href="posts/${article.slug}.html" class="post-card" style="display: block;">
+          <a href="posts/${article.slug}" class="post-card" style="display: block;">
             <div class="post-meta">${new Date(publishDate).toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'})} · ${article.category}</div>
             <h3>${article.title}</h3>
             <p class="post-excerpt">${article.standfirst}</p>
