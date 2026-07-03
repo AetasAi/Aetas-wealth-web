@@ -75,6 +75,13 @@ Sitemap: https://aetas-wealth.com/sitemap.xml
 # llms-full.txt is at: https://aetas-wealth.com/llms-full.txt
 # context.md is at: https://aetas-wealth.com/context.md
 
+# ─────────────────────────────────────────────
+# Disallowed paths
+# ─────────────────────────────────────────────
+
+# Cloudflare Pages preview deployments
+Disallow: /_preview/
+
 # Utility and deploy scripts
 Disallow: /deploy-footer-fix.ps1
 Disallow: /deploy-guides-library.ps1
@@ -84,4 +91,4 @@ Disallow: /_DEPLOY-NOTES.txt
 Disallow: /scripts/
 Disallow: /docs/
 Disallow: /context.md
-
+Disallow: /tools/
