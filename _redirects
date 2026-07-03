@@ -1,0 +1,12 @@
+# Cloudflare Pages _redirects
+# Redirect .html extension URLs to clean URLs (permanent)
+# This catches any externally linked or bookmarked .html URLs
+# and ensures Google and users always land on the canonical clean URL.
+
+# Index pages
+/index.html / 301
+
+# Splat redirect: any /*.html -> /* (strips extension)
+# Note: Cloudflare Pages processes rules top-to-bottom, first match wins.
+# The splat below handles all remaining .html -> clean URL redirects.
+/*.html /:splat 301
