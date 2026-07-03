@@ -1053,7 +1053,7 @@ function renderCards() {
 // ============================================================
 // MAIN GENERATE FLOW
 // ============================================================
-async function runGenerate() {
+async async function runGenerate() {
   const brief = document.getElementById('brief').value.trim();
   if (!brief) { toast('Please enter an article brief', 'err'); return; }
 
@@ -1129,7 +1129,7 @@ async function runGenerate() {
 // ============================================================
 // WEEKLY AUTO
 // ============================================================
-function runWeekly() {
+async function runWeekly() {
   const weekNum = getISOWeek(new Date());
   const entry = WEEKLY[(weekNum - 1) % WEEKLY.length];
   document.getElementById('brief').value = entry.angle;
