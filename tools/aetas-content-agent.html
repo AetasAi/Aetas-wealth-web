@@ -394,6 +394,7 @@ textarea{resize:vertical;line-height:1.5;}
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
+
 // ============================================================
 // CONFIG
 // ============================================================
@@ -694,7 +695,7 @@ function buildITWPage(meta, body, publishDate) {
   return `<!doctype html>
 <html lang="en-GB">
 <head>
-<script defer src="/assets/js/analytics.js"></script>
+<scr'+'ipt defer src="/assets/js/analytics.js"></scr\'+\'ipt>
 <meta charset="UTF-8">
 <meta name="ai-agent-summary" content="${meta.ai_agent_summary}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -723,9 +724,9 @@ function buildITWPage(meta, body, publishDate) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..700&display=swap">
-<script type="application/ld+json">
+<scr'+'ipt type="application/ld+json">
 ${schema}
-</script>
+</scr\'+\'ipt>
 __ITW_STYLE__
 </head>
 <body>
@@ -806,15 +807,15 @@ function buildCharitiesPage(meta, body, publishDate) {
 <meta name="twitter:image" content="${cfg.ogImage}">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#1e3d2f">
-<script type="application/ld+json">${schema}</script>
-<script type="application/ld+json">${JSON.stringify({
+<scr'+'ipt type="application/ld+json">${schema}</scr\'+\'ipt>
+<scr'+'ipt type="application/ld+json">${JSON.stringify({
   "@context":"https://schema.org","@type":"BreadcrumbList",
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":`${cfg.url}/`},
     {"@type":"ListItem","position":2,"name":"Insights","item":`${cfg.url}/insights`},
     {"@type":"ListItem","position":3,"name":meta.title,"item":`${cfg.url}/insights/${slug}`}
   ]
-})}</script>
+})}</scr\'+\'ipt>
 __CHAR_STYLE__
 </head>
 <body>
@@ -879,17 +880,17 @@ function buildWealthPage(meta, body, publishDate) {
 <meta property="og:url" content="${cfg.url}/insights/posts/${slug}">
 <meta property="og:image" content="${cfg.ogImage}">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
+<scr'+'ipt type="application/ld+json">
 ${schema}
-</script>
-<script type="application/ld+json">${JSON.stringify({
+</scr\'+\'ipt>
+<scr'+'ipt type="application/ld+json">${JSON.stringify({
   "@context":"https://schema.org","@type":"BreadcrumbList",
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":`${cfg.url}/`},
     {"@type":"ListItem","position":2,"name":"Insights","item":`${cfg.url}/insights/`},
     {"@type":"ListItem","position":3,"name":meta.title,"item":`${cfg.url}/insights/posts/${slug}`}
   ]
-})}</script>
+})}</scr\'+\'ipt>
 <link rel="stylesheet" href="../../assets/css/styles.css" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="../../assets/css/styles.css">
 __WEALTH_STYLE__
@@ -1279,6 +1280,7 @@ function deleteArticle(site, slug) {
   renderCards();
   toast('Article removed', 'inf');
 }
+
 </script>
 </body>
 </html>
