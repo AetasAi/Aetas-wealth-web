@@ -1,9 +1,12 @@
 # Cloudflare Pages _headers
 # Security, performance, and agentic browsing headers
-# Applied to all pages across the site.
+# Applied consistently across all pages.
+#
+# Note: X-Frame-Options omitted from global rule — it would block third-party
+# iframe embeds (GoHighLevel forms, booking widgets). Framing protection is
+# handled via CSP frame-ancestors in individual page <head> tags where needed.
 
 /*
-  X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
