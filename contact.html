@@ -70,6 +70,7 @@
   "inLanguage": "en-GB"
 }
 </script>
+<script async src="https://link.aetas-wealth.com/js/form_embed.js"></script>
 </head>
 <body>
 <a class="skip-to-content" href="#main-content">Skip to main content</a>
@@ -126,7 +127,7 @@
           <iframe
             src="https://link.aetas-wealth.com/widget/form/crliDIuvbDeEd1W5YQkw?referral_partner=Direct%20Contact"
             style="width:100%;min-height:755px;border:none;border-radius:3px;background:#fff;display:block;"
-            id="inline-crliDIuvbDeEd1W5YQkw" loading="eager"
+            id="inline-crliDIuvbDeEd1W5YQkw"
             data-layout='{"id":"INLINE"}'
             data-trigger-type="alwaysShow"
             data-trigger-value=""
@@ -136,7 +137,7 @@
             data-deactivation-value=""
             data-form-name="Aetas Wealth Enquiry Form"
             data-height="755"
-            data-layout-iframe-id="inline-crliDIuvbDeEd1W5YQkw" loading="eager"
+            data-layout-iframe-id="inline-crliDIuvbDeEd1W5YQkw"
             data-form-id="crliDIuvbDeEd1W5YQkw"
             title="Aetas Wealth Enquiry Form">
           </iframe>
@@ -369,7 +370,24 @@
 })();
 </script>
 <!-- /Cookie notice -->
-<script defer src="https://link.aetas-wealth.com/js/form_embed.js"></script>
+
+<script>
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+      var iframe = document.getElementById('inline-crliDIuvbDeEd1W5YQkw');
+      if (iframe && (iframe.style.opacity === '0' || iframe.style.visibility === 'hidden' || iframe.style.position === 'absolute')) {
+        iframe.style.opacity = '1';
+        iframe.style.visibility = 'visible';
+        iframe.style.pointerEvents = 'auto';
+        iframe.style.left = 'auto';
+        iframe.style.position = 'relative';
+        iframe.style.overflow = 'auto';
+      }
+    }, 2000);
+  });
+})();
+</script>
 </body>
 </html>
 
