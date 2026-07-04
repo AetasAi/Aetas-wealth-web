@@ -79,10 +79,17 @@ if (yr) yr.textContent = new Date().getFullYear();
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window,document,"clarity","script",CLARITY_ID);
+
+    // GHL tracking (interaction-deferred)
+    var ghl = document.createElement('script');
+    ghl.async = true;
+    ghl.src = 'https://link.aetas-wealth.com/js/external-tracking.js';
+    ghl.setAttribute('data-tracking-id', 'tk_db86e3fbbdec4a14a52fb3fcfdb0a517');
+    document.head.appendChild(ghl);
   }
 
   ['scroll','click','keydown','touchstart'].forEach(function(evt){
     window.addEventListener(evt, loadAnalytics, { once: true, passive: true });
   });
-  setTimeout(loadAnalytics, 5000);
+  setTimeout(loadAnalytics, 8000);
 })();
