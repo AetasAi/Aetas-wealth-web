@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://aetas-wealth.com/our-people</loc>
+    <lastmod>2026-07-04</lastmod>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/peter-rose-650x650.webp</image:loc>
+      <image:title>Peter Rose — Chartered Financial Planner</image:title>
+      <image:caption>Peter Rose APFS, Chartered Financial Planner at Aetas Wealth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/daniel-cottam-650x650.webp</image:loc>
+      <image:title>Daniel Cottam — Financial Planner</image:title>
+      <image:caption>Daniel Cottam, Financial Planner at Aetas Wealth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/matthew-steiner-650x650.webp</image:loc>
+      <image:title>Matthew Steiner — Managing Director</image:title>
+      <image:caption>Matthew Steiner, Managing Director at Aetas Wealth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/cii-chartered-fp-badge-blue.webp</image:loc>
+      <image:title>CII Chartered Financial Planner badge</image:title>
+      <image:caption>Chartered Financial Planners — Chartered Insurance Institute badge</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/team/peter-rose</loc>
+    <lastmod>2026-07-04</lastmod>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/peter-rose-650x650.webp</image:loc>
+      <image:title>Peter Rose — Chartered Financial Planner</image:title>
+      <image:caption>Peter Rose APFS, Chartered Financial Planner at Aetas Wealth, Mayfair London</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/cii-chartered-fp-badge-blue.webp</image:loc>
+      <image:title>CII Chartered Financial Planner badge</image:title>
+      <image:caption>Chartered Financial Planners — Chartered Insurance Institute badge</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/team/daniel-cottam</loc>
+    <lastmod>2026-07-04</lastmod>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/daniel-cottam-650x650.webp</image:loc>
+      <image:title>Daniel Cottam — Financial Planner</image:title>
+      <image:caption>Daniel Cottam, Financial Planner at Aetas Wealth</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/team/matthew-steiner</loc>
+    <lastmod>2026-07-04</lastmod>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/assets/images/matthew-steiner-650x650.webp</image:loc>
+      <image:title>Matthew Steiner — Managing Director</image:title>
+      <image:caption>Matthew Steiner, Managing Director and Co-Founder of Aetas Wealth</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aetas-wealth.com/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <image:image>
+      <image:loc>https://aetas-wealth.com/og-image.png</image:loc>
+      <image:title>Aetas Wealth</image:title>
+      <image:caption>Aetas Wealth — Independent Financial Planning, Mayfair London</image:caption>
+    </image:image>
+  </url>
+</urlset>
