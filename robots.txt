@@ -66,6 +66,7 @@ Allow: /
 # ─────────────────────────────────────────────
 
 Sitemap: https://aetas-wealth.com/sitemap.xml
+Sitemap: https://aetas-wealth.com/image-sitemap.xml
 
 # ─────────────────────────────────────────────
 # AI agent discovery files
