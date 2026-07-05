@@ -1,3 +1,4 @@
+<!-- batch-commit-test: helper verified -->
 ﻿# Aetas Wealth €” Website Repository
 
 The source code for **aetas-wealth.com**, hosted on GitHub Pages and served from the `main` branch.
