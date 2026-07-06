@@ -10,6 +10,26 @@ if (toggle && links) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
+// ---------- Life Stages dropdown (keyboard & touch) ----------
+document.querySelectorAll('.nav-has-dropdown').forEach(function(item) {
+  var toggle = item.querySelector('.nav-dropdown-toggle');
+  var dropdown = item.querySelector('.nav-dropdown');
+  if (!toggle || !dropdown) return;
+  // Toggle on click (touch/keyboard)
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    var open = dropdown.classList.toggle('is-open-mobile');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Close on Escape
+  item.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('is-open-mobile');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
+});
 // ---------- Highlight active nav link ----------
 const path = window.location.pathname.replace(/\/$/, '');
 document.querySelectorAll('.nav-links a').forEach(function (a) {
