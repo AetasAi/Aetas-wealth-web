@@ -79,6 +79,10 @@
   "inLanguage": "en-GB"
 }
 </script>
+<style>
+.filter-pill-stage{background:var(--aetas-blue-soft,#f4f6fb);border-color:var(--line,#e6e8ee);color:var(--aetas-blue,#00205B);}
+.filter-pill-stage.is-active{background:var(--aetas-blue,#00205B);color:#fff;border-color:var(--aetas-blue,#00205B);}
+</style>
 </head>
 
 <body>
@@ -162,13 +166,13 @@
 
   <div class="container-narrow">
 
-    <div class="insights-filter" role="tablist" aria-label="Filter articles by category" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0;">
+    <div class="insights-filter" role="tablist" aria-label="Filter articles by category" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem;">
 
       <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All articles</button>
 
       <button class="filter-pill" data-filter="pensions" role="tab" aria-selected="false">Pensions</button>
 
-      <button class="filter-pill" data-filter="investments" role="tab" aria-selected="false">Investments &amp; ISAs</button>
+      <button class="filter-pill" data-filter="investments" role="tab" aria-selected="false">Investments</button>
 
       <button class="filter-pill" data-filter="iht" role="tab" aria-selected="false">Inheritance Tax</button>
 
@@ -176,8 +180,19 @@
 
       <button class="filter-pill" data-filter="planning" role="tab" aria-selected="false">Planning</button>
 
-      <button class="filter-pill" data-filter="workplace" role="tab" aria-selected="false">SMEs</button>
+      <button class="filter-pill" data-filter="workplace" role="tab" aria-selected="false">Business</button>
 
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;">
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aetas-gold);align-self:center;margin-right:0.25rem;">By life stage:</span>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-yp" role="tab" aria-selected="false">Young Professionals</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-3040" role="tab" aria-selected="false">30s &amp; 40s</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-ml" role="tab" aria-selected="false">Mid-Life</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-bo" role="tab" aria-selected="false">Business Owners</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-ar" role="tab" aria-selected="false">Approaching Retirement</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-ir" role="tab" aria-selected="false">In Retirement</button>
+      <button class="filter-pill filter-pill-stage" data-filter="stage-lg" role="tab" aria-selected="false">Legacy</button>
     </div>
 
   </div>
