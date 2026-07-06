@@ -32,11 +32,11 @@ document.querySelectorAll('.nav-has-dropdown').forEach(function(item) {
 
   // Desktop: hover with 300ms close delay so user can move mouse to dropdown
   item.addEventListener('mouseenter', openDropdown);
-  item.addEventListener('mouseleave', function() { closeDropdown(300); });
+  item.addEventListener('mouseleave', function() { closeDropdown(500); });
   dropdown.addEventListener('mouseenter', function() {
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
   });
-  dropdown.addEventListener('mouseleave', function() { closeDropdown(300); });
+  dropdown.addEventListener('mouseleave', function() { closeDropdown(500); });
 
   // Mobile/keyboard: toggle on click
   toggle.addEventListener('click', function(e) {
