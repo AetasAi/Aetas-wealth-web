@@ -10,12 +10,35 @@ if (toggle && links) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
-// ---------- Life Stages dropdown (keyboard & touch) ----------
+// ---------- Life Stages dropdown ----------
 document.querySelectorAll('.nav-has-dropdown').forEach(function(item) {
   var toggle = item.querySelector('.nav-dropdown-toggle');
   var dropdown = item.querySelector('.nav-dropdown');
   if (!toggle || !dropdown) return;
-  // Toggle on click (touch/keyboard)
+  var closeTimer = null;
+
+  function openDropdown() {
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+    dropdown.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+  function closeDropdown(delay) {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('is-open');
+      dropdown.classList.remove('is-open-mobile');
+      toggle.setAttribute('aria-expanded', 'false');
+    }, delay || 0);
+  }
+
+  // Desktop: hover with 300ms close delay so user can move mouse to dropdown
+  item.addEventListener('mouseenter', openDropdown);
+  item.addEventListener('mouseleave', function() { closeDropdown(300); });
+  dropdown.addEventListener('mouseenter', function() {
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+  });
+  dropdown.addEventListener('mouseleave', function() { closeDropdown(300); });
+
+  // Mobile/keyboard: toggle on click
   toggle.addEventListener('click', function(e) {
     e.preventDefault();
     var open = dropdown.classList.toggle('is-open-mobile');
@@ -24,10 +47,13 @@ document.querySelectorAll('.nav-has-dropdown').forEach(function(item) {
   // Close on Escape
   item.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-      dropdown.classList.remove('is-open-mobile');
-      toggle.setAttribute('aria-expanded', 'false');
+      closeDropdown(0);
       toggle.focus();
     }
+  });
+  // Close when focus leaves
+  item.addEventListener('focusout', function(e) {
+    if (!item.contains(e.relatedTarget)) { closeDropdown(100); }
   });
 });
 // ---------- Highlight active nav link ----------
