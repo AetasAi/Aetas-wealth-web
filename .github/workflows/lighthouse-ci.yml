@@ -1,4 +1,4 @@
-﻿name: Lighthouse CI
+name: Lighthouse CI
 
 on:
   push:
@@ -15,25 +15,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install http-server
-        run: npm install -g http-server
-
-      - name: Start local server
-        run: http-server . -p 8080 --silent &
-
-      - name: Wait for server
-        run: sleep 3
-
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: |
-            http://localhost:8080/index.html
+            https://aetas-wealth.com/
+            https://aetas-wealth.com/life-stage/
+            https://aetas-wealth.com/approaching-retirement/
           configPath: .lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
