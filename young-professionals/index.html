@@ -41,6 +41,17 @@
     .stage-pill { padding: 0.4rem 1rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: rgba(255,255,255,0.7); font-size: 0.82rem; text-decoration: none; transition: all 180ms; }
     .stage-pill:hover { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.5); }
     .stage-pill.current { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.6); }
+  
+    .journey-section { padding: 4.5rem 0; background: var(--paper-warm, #fafaf7); border-top: 1px solid var(--line, #e6e8ee); }
+    .journey-section h2 { font-size: 1.75rem; font-weight: 700; color: var(--aetas-blue, #00205B); margin: 0 0 0.5rem; }
+    .journey-section p.intro { font-size: 1.05rem; color: var(--ink-soft, #4a5269); margin: 0 0 2.5rem; max-width: 680px; }
+    .journey-steps { display: flex; flex-wrap: wrap; gap: 0; counter-reset: journey; }
+    .journey-step { flex: 1 1 160px; position: relative; padding: 1.5rem 1.25rem 1.5rem 1rem; }
+    .journey-step::before { counter-increment: journey; content: counter(journey); width: 36px; height: 36px; border-radius: 50%; background: var(--aetas-blue, #00205B); color: #fff; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .journey-step h4 { font-size: 0.95rem; color: var(--aetas-blue, #00205B); margin: 0 0 0.4rem; }
+    .journey-step p { font-size: 0.88rem; color: var(--ink-muted, #606882); margin: 0; line-height: 1.6; }
+    .journey-arrow { align-self: center; color: var(--aetas-gold, #896C2E); font-size: 1.5rem; padding: 0 0.25rem; flex-shrink: 0; }
+    @media (max-width: 640px) { .journey-arrow { display: none; } }
   </style>
 <link rel="stylesheet" href="../assets/css/styles-v3.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="../assets/css/styles-v3.css"></noscript>
@@ -450,7 +461,45 @@
     </div>
   </section>
 
-  <section class="faq-section">
+  <section class="journey-section">
+  <div class="container">
+    <h2>Where most young professionals start.</h2>
+    <p class="intro">A predictable sequence of priorities. You do not need to tackle everything at once -- getting the order right matters more than getting everything perfect immediately.</p>
+    <div class="journey-steps">
+        <div class="journey-step reveal">
+          <h4>Join the workplace pension</h4>
+          <p>Enrol, set contributions, and understand what your employer matches. Free money is the highest return available.</p>
+        </div>
+        <div class="journey-arrow">&#8594;</div>
+        <div class="journey-step reveal">
+          <h4>Build an emergency fund</h4>
+          <p>Three to six months of outgoings in cash before you invest anything. Prevents forced selling at the wrong time.</p>
+        </div>
+        <div class="journey-arrow">&#8594;</div>
+        <div class="journey-step reveal">
+          <h4>Open and use an ISA</h4>
+          <p>Tax-free growth from day one. The annual allowance is use-it-or-lose-it.</p>
+        </div>
+        <div class="journey-arrow">&#8594;</div>
+        <div class="journey-step reveal">
+          <h4>Start investing</h4>
+          <p>Low-cost, diversified, long-term. Time in the market matters more than anything else at this stage.</p>
+        </div>
+        <div class="journey-arrow">&#8594;</div>
+        <div class="journey-step reveal">
+          <h4>Protect your income</h4>
+          <p>Income protection and life cover if you have dependants or a mortgage. Often cheaper than people expect.</p>
+        </div>
+        <div class="journey-arrow">&#8594;</div>
+        <div class="journey-step reveal">
+          <h4>Get a financial plan</h4>
+          <p>Joining it all together into a clear direction -- pensions, ISA, protection, goals -- is where advice pays for itself.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
     <div class="container-narrow">
       <h2>Questions we hear most often.</h2>
       <div class="faq-item">
