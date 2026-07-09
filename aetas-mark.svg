@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Aetas Partners">
+  <title>Aetas Partners</title>
+<g fill="none" stroke-width="14" stroke-linecap="round">
+  <circle cx="198" cy="197" r="92" stroke="#005357"/>
+  <circle cx="152" cy="102" r="92" stroke="#0d2c6c"/>
+  <circle cx="95" cy="193" r="92" stroke="#00aabb"/>
+  <path d="M 157.25 279.48 A 92 92 0 0 1 131.49 260.57" stroke="#005357"/>
+  <path d="M 136.62 128.47 A 92 92 0 0 1 163.77 111.61" stroke="#005357"/>
+</g>
+</svg>
