@@ -526,6 +526,36 @@
 </head>
 <body>
 
+  <!-- Aetas nav dropdown fix: restores hover-to-open behaviour on the partner
+       landing pages, which shipped without the site stylesheet's .nav-dropdown
+       rules and so rendered the sub-menus permanently expanded. Desktop-scoped
+       (min-width:881px) so the existing mobile menu is untouched. -->
+  <style id="aetas-nav-dropdown-fix">
+    @media (min-width: 881px) {
+      .nav-has-dropdown { position: relative; }
+      .nav-dropdown {
+        position: absolute; top: 100%; left: -1rem; min-width: 230px;
+        background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+        box-shadow: var(--shadow-md); padding: 0.75rem 0 0.5rem; list-style: none; margin: 0;
+        opacity: 0; pointer-events: none; transform: translateY(-4px);
+        transition: opacity 200ms var(--ease), transform 200ms var(--ease); z-index: 200;
+      }
+      .nav-has-dropdown:hover .nav-dropdown,
+      .nav-has-dropdown:focus-within .nav-dropdown,
+      .nav-dropdown.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .nav-dropdown li { width: 100%; }
+      .nav-dropdown a {
+        display: block; padding: 0.6rem 1.25rem; font-size: 0.875rem;
+        font-weight: 500; color: var(--ink); white-space: nowrap;
+      }
+      .nav-dropdown a:hover { color: var(--aetas-turquoise); background: #f7f5f2; }
+      .nav-dropdown-toggle::after {
+        content: ""; display: inline-block; width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+        transform: rotate(45deg) translateY(-2px); margin-left: 5px; vertical-align: middle;
+      }
+    }
+  </style>
   <header class="site-header">
     <div class="container nav-inner">
       <a href="https://aetas-wealth.com" class="brand">
