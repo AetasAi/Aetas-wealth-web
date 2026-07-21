@@ -697,5 +697,10 @@
     <priority>0.9</priority>
   </url>
 
-</urlset>
+  <url>
+    <loc>https://aetas-wealth.com/your-business/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url></urlset>
 
