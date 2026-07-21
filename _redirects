@@ -6,6 +6,12 @@
 # Index pages
 /index.html / 301
 
+# Retired duplicate/orphan pages -> canonical
+/millennials/book /book 301
+/millennials/book.html /book 301
+/millennials/* /planning-in-your-30s-and-40s/ 301
+/business-planning/* /business-owners 301
+
 # Splat redirect: any /*.html -> /* (strips extension)
 # Note: Cloudflare Pages processes rules top-to-bottom, first match wins.
 # The splat below handles all remaining .html -> clean URL redirects.
