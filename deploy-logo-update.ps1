@@ -1,0 +1,79 @@
+# ============================================================
+#  Aetas Wealth - Logo update deployment
+#  Replaces the header logo (rings mark + "AETAS / Wealth" text)
+#  with the new AETAS WEALTH lockup SVG across every site page,
+#  then commits and pushes. Cloudflare Pages redeploys on push.
+#
+#  Run from the repo root, e.g.:
+#      cd C:\Repos\Aetas-wealth-web
+#      .\deploy-logo-update.ps1
+# ============================================================
+$ErrorActionPreference = "Stop"
+
+# --- Safety check: confirm we are in the Aetas Wealth repo root ---
+if (-not (Test-Path "CNAME") -or ((Get-Content -Raw "CNAME").Trim() -ne "aetas-wealth.com")) {
+    Write-Error "This does not look like the Aetas Wealth repo root (CNAME missing or not 'aetas-wealth.com'). Aborting."
+    exit 1
+}
+
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+
+# --- 1) Write the new logo SVG ---------------------------------
+$svg = @'
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846.9 234.0" role="img" aria-label="Aetas Wealth">
+  <title>Aetas Wealth</title>
+  <g transform="translate(10.00,12.00) scale(0.70000)">
+    <g fill="none" stroke-width="14" stroke-linecap="round">
+      <circle cx="198" cy="197" r="92" stroke="#005357"/>
+      <circle cx="152" cy="102" r="92" stroke="#0d2c6c"/>
+      <circle cx="95" cy="193" r="92" stroke="#00aabb"/>
+      <path d="M 157.25 279.48 A 92 92 0 0 1 131.49 260.57" stroke="#005357"/>
+      <path d="M 136.62 128.47 A 92 92 0 0 1 163.77 111.61" stroke="#005357"/>
+    </g>
+  </g>
+  <g fill="#0d2c6c">
+  <path transform="translate(272.00,102.00) scale(0.13050,-0.13050)" d="M499 124H237L195 0H16L270 702H468L722 0H541ZM455 256 368 513 282 256ZM1246.9999999998618 565V423H1475.9999999998618V291H1246.9999999998618V137H1505.9999999998618V0H1075.9999999998618V702H1505.9999999998618V565ZM2398.9999999997235 702V565H2212.9999999997235V0H2041.9999999997235V565H1855.9999999997235V702ZM3198.9999999995853 124H2936.9999999995853L2894.9999999995853 0H2715.9999999995853L2969.9999999995853 702H3167.9999999995853L3421.9999999995853 0H3240.9999999995853ZM3154.9999999995853 256 3067.9999999995853 513 2981.9999999995853 256ZM3755.999999999447 210H3937.999999999447Q3941.999999999447 171 3964.999999999447 150.5Q3987.999999999447 130 4024.999999999447 130Q4062.999999999447 130 4084.999999999447 147.5Q4106.999999999447 165 4106.999999999447 196Q4106.999999999447 222 4089.499999999447 239.0Q4071.999999999447 256 4046.499999999447 267.0Q4020.999999999447 278 3973.999999999447 292Q3905.999999999447 313 3862.999999999447 334.0Q3819.999999999447 355 3788.999999999447 396.0Q3757.999999999447 437 3757.999999999447 503Q3757.999999999447 601 3828.999999999447 656.5Q3899.999999999447 712 4013.999999999447 712Q4129.999999999447 712 4200.999999999447 656.5Q4271.999999999447 601 4276.999999999447 502H4091.999999999447Q4089.999999999447 536 4066.999999999447 555.5Q4043.999999999447 575 4007.999999999447 575Q3976.999999999447 575 3957.999999999447 558.5Q3938.999999999447 542 3938.999999999447 511Q3938.999999999447 477 3970.999999999447 458.0Q4002.999999999447 439 4070.999999999447 417Q4138.999999999447 394 4181.499999999447 373.0Q4223.999999999447 352 4254.999999999447 312.0Q4285.999999999447 272 4285.999999999447 209Q4285.999999999447 149 4255.499999999447 100.0Q4224.999999999447 51 4166.999999999447 22.0Q4108.999999999447 -7 4029.999999999447 -7Q3952.999999999447 -7 3891.999999999447 18.0Q3830.999999999447 43 3794.499999999447 92.0Q3757.999999999447 141 3755.999999999447 210Z"/>
+  <path transform="translate(272.00,224.00) scale(0.13050,-0.13050)" d="M1028 702 845 0H638L526 462L410 0H203L25 702H208L309 191L434 702H622L742 191L844 702ZM1325 565V423H1554V291H1325V137H1584V0H1154V702H1584V565ZM2172 124H1910L1868 0H1689L1943 702H2141L2395 0H2214ZM2128 256 2041 513 1955 256ZM2683 132H2907V0H2512V702H2683ZM3534 702V565H3348V0H3177V565H2991V702ZM4268 702V0H4097V289H3831V0H3660V702H3831V427H4097V702Z"/>
+  </g>
+</svg>
+'@
+$svgDir = "assets/images"
+if (-not (Test-Path $svgDir)) { New-Item -ItemType Directory -Force -Path $svgDir | Out-Null }
+$svgPath = [System.IO.Path]::GetFullPath((Join-Path $svgDir "aetas-wealth-logo.svg"))
+[System.IO.File]::WriteAllText($svgPath, $svg, $utf8NoBom)
+Write-Host "Wrote assets/images/aetas-wealth-logo.svg"
+
+# --- 2) Patch the header on every page -------------------------
+$pattern = '<span class="brand-mark"><img[^>]*src="/aetas-mark\.svg"[^>]*></span>\s*<span class="brand-text">\s*<span class="brand-name">AETAS</span><span class="brand-division">Wealth</span>\s*</span>'
+$replacement = '<img class="brand-logo" fetchpriority="high" src="/assets/images/aetas-wealth-logo.svg" alt="Aetas Wealth" width="188" height="52" style="height:52px;width:auto;max-width:none;display:block">'
+$rx = [regex]::new($pattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+
+$changed = 0
+Get-ChildItem -Path . -Recurse -Filter *.html | ForEach-Object {
+    $raw = [System.IO.File]::ReadAllText($_.FullName)
+    if ($rx.IsMatch($raw)) {
+        $new = $rx.Replace($raw, $replacement)
+        if ($new -ne $raw) {
+            [System.IO.File]::WriteAllText($_.FullName, $new, $utf8NoBom)
+            $changed++
+            Write-Host ("  patched " + $_.FullName.Substring((Get-Location).Path.Length + 1))
+        }
+    }
+}
+Write-Host ("Patched $changed HTML file(s).")
+
+if ($changed -eq 0) {
+    Write-Warning "No pages matched the expected header pattern - nothing was patched. Check the repo state before pushing."
+}
+
+# --- 3) Commit and push ---------------------------------------
+git add -A
+$pending = git status --porcelain
+if ([string]::IsNullOrWhiteSpace($pending)) {
+    Write-Host "No changes to commit."
+} else {
+    git commit -m "Update header logo to new AETAS WEALTH lockup (SVG) across all pages"
+    git push
+    Write-Host ""
+    Write-Host "Committed and pushed. Cloudflare Pages will redeploy in a minute or two."
+}
