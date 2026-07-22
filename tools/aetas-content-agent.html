@@ -408,18 +408,18 @@ const PROXY = 'https://aetas-wealth.com/api/claude'; // Cloudflare Worker
 
 const SITES = {
   itw: {
-    name:'Aetas Performance', short:'ITW',
-    url:'https://performance.aetas-wealth.com',
+    name:'Aetas Workplace', short:'ITW',
+    url:'https://workplace.aetas-wealth.com',
     repo:'AetasAi/AetasInTheWorkplace',
     articleDir:'insights', indexPath:'insights.html',
     roeiUrl:'/roei.html', auditUrl:'https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V',
-    ga4:'G-HNH05BKNFX', ogImage:'https://performance.aetas-wealth.com/og-image.png',
+    ga4:'G-HNH05BKNFX', ogImage:'https://workplace.aetas-wealth.com/og-image.png',
     tone:'commercial and direct, speak to MDs, FDs and business owners. Every claim needs a business consequence. No HR jargon. Focus on measurable outcomes.',
     audience:'Managing Directors, Finance Directors and HR Directors of UK SMEs with 10-250 employees',
     schemaType:'BlogPosting',
-    publisherName:'Aetas Performance',
-    publisherUrl:'https://performance.aetas-wealth.com/',
-    authorId:'https://performance.aetas-wealth.com/#person-matthew-steiner',
+    publisherName:'Aetas Workplace',
+    publisherUrl:'https://workplace.aetas-wealth.com/',
+    authorId:'https://workplace.aetas-wealth.com/#person-matthew-steiner',
     cta:`<div style="margin-top:2rem;padding:1.5rem;background:var(--gold-pale);border-radius:var(--radius);border-left:3px solid var(--gold);"><p><strong>Want to measure the Return on Employee Investment in your organisation?</strong></p><p style="margin-top:.75rem;">The Business Performance Review identifies where, and what a proportionate response looks like. No cost, no obligation. <a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Book an Audit →</a> &nbsp;·&nbsp; <a href="/roei.html" style="color:var(--gold);">About the ROEI Framework</a></p></div>`
   },
   charities: {
@@ -644,7 +644,7 @@ async function generateBody(site, meta, topic, brief) {
   const topicLabel = TOPIC_LABELS[topic];
   const publishDate = document.getElementById('publishDate').value;
 
-  const sys = `You are Matthew Steiner, founding director of Aetas Wealth and Aetas Performance, writing for ${cfg.name}.
+  const sys = `You are Matthew Steiner, founding director of Aetas Wealth and Aetas Workplace, writing for ${cfg.name}.
 Tone: ${cfg.tone}
 Audience: ${cfg.audience}
 UK English. No em dashes. No generic openers. No jargon. No bullet points as main structure, use flowing prose with H2 subheadings.
